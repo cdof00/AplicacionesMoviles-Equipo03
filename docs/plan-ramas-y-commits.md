@@ -1,5 +1,9 @@
 # Plan de ramas y commits (HU01 / HU02)
 
+## Historial Git aplicado en este repositorio (referencia)
+
+En `main`, después de la reorganización, el orden quedó aproximadamente: documentación compartida → baseline del proyecto → merge de `feature/HU01-catalogo-albumes` (fecha de lanzamiento en catálogo) → commit en `feature/HU02-detalle-album` y fast-forward a `main` (navegación con `albumId`). Ver `git log --oneline` para hashes exactos en tu clon.
+
 ## Nombres de ramas y objetivo
 
 | Rama | Objetivo |
