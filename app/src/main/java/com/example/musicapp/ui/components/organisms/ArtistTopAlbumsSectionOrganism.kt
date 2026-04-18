@@ -27,7 +27,7 @@ fun ArtistTopAlbumsSectionOrganism(
     seeAllLabel: String,
     albums: List<ArtistDetailTopAlbum>,
     onSeeAllClick: () -> Unit,
-    onAlbumClick: () -> Unit,
+    onAlbumClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -89,15 +89,15 @@ fun ArtistTopAlbumsSectionOrganism(
 private fun ArtistTopAlbumsSectionOrganismPreview() {
     DesignSystemPreviewSurface {
         val albums = listOf(
-            ArtistDetailTopAlbum("Kind of Blue", "1959 • 5 Tracks", 1),
-            ArtistDetailTopAlbum("Bitches Brew", "1970 • 6 Tracks", 2),
+            ArtistDetailTopAlbum("art-kob", "Kind of Blue", "1959 • 5 Tracks", 1),
+            ArtistDetailTopAlbum("art-bb", "Bitches Brew", "1970 • 6 Tracks", 2),
         )
         ArtistTopAlbumsSectionOrganism(
             sectionTitle = "Top Albums",
             seeAllLabel = "See All",
             albums = albums,
             onSeeAllClick = {},
-            onAlbumClick = {},
+            onAlbumClick = { _ -> },
             modifier = Modifier.padding(AppTheme.spacing.md),
         )
     }

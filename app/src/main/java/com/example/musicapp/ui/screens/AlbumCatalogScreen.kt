@@ -25,7 +25,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun AlbumCatalogScreen(
     innerPadding: PaddingValues,
     modifier: Modifier = Modifier,
-    onAlbumClick: () -> Unit = {},
+    onAlbumClick: (String) -> Unit = {},
 ) {
     val s = AppTheme.spacing
     CatalogContentOrganism(

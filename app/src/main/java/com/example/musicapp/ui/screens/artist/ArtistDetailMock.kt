@@ -7,6 +7,7 @@ data class ArtistDetailAward(
 )
 
 data class ArtistDetailTopAlbum(
+    val albumId: String,
     val title: String,
     val metaLine: String,
     val coverVariantIndex: Int,
@@ -63,9 +64,9 @@ val artistDetailUiMock: ArtistDetailUiModel = ArtistDetailUiModel(
     topAlbumsSectionTitle = "Top Albums",
     seeAllLabel = "See All",
     topAlbums = listOf(
-        ArtistDetailTopAlbum("Kind of Blue", "1959 • 5 Tracks", 1),
-        ArtistDetailTopAlbum("Bitches Brew", "1970 • 6 Tracks", 2),
-        ArtistDetailTopAlbum("In a Silent Way", "1969 • 2 Tracks", 3),
-        ArtistDetailTopAlbum("Sketches of Spain", "1960 • 5 Tracks", 4),
+        ArtistDetailTopAlbum("art-kob", "Kind of Blue", "1959 • 5 Tracks", 1),
+        ArtistDetailTopAlbum("art-bb", "Bitches Brew", "1970 • 6 Tracks", 2),
+        ArtistDetailTopAlbum("art-iasw", "In a Silent Way", "1969 • 2 Tracks", 3),
+        ArtistDetailTopAlbum("art-sos", "Sketches of Spain", "1960 • 5 Tracks", 4),
     ),
 )

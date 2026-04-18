@@ -5,7 +5,7 @@
 | HU | Nombre | Estado en código (auditoría) |
 |----|--------|------------------------------|
 | **HU01** | Consultar catálogo de álbumes | Listado **mock** en `LazyVerticalGrid`, título y artista en tile, carátula como **placeholder por gradiente** (no URL). Scroll vertical vía grid. **Pendiente** respecto a CA: API, fecha de lanzamiento en modelo/UI (ver commits en rama), estados vacío/error/reintento/carga, carátula por defecto ante URL ausente en API. |
-| **HU02** | Consultar información detallada de un álbum | Pantalla de detalle con **mock** (`AlbumDetailUiModel`), `LazyColumn` con metadatos, tracklist y tarjetas informativas. **Pendiente**: API, estados carga/error/reintento, lectura de `albumId` desde navegación (ver rama `feature/HU02-detalle-album`). |
+| **HU02** | Consultar información detallada de un álbum | Pantalla de detalle con **mock** (`AlbumDetailUiModel`), `LazyColumn` con metadatos, tracklist y tarjetas informativas. Ruta de navegación `album_detail/{albumId}` y parámetro `albumId` en `AlbumDetailScreen` (gancho `LaunchedEffect` para futura API). **Pendiente**: API, estados carga/error/reintento, sustituir mock por datos reales. |
 | **Infra** | Tema, navegación global, otras pestañas | Compose, `AppTheme`, `MusicAppRoot` (varias rutas), plantillas compartidas, componentes de diseño reutilizados. |
 
 ## Archivos que pertenecen principalmente a HU01

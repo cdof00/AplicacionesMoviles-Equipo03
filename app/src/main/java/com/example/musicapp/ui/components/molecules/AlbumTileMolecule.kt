@@ -16,13 +16,13 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun AlbumTileMolecule(
     album: CatalogAlbum,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
+    onClick: (String) -> Unit = {},
 ) {
     val s = AppTheme.spacing
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick),
+            .clickable(onClick = { onClick(album.id) }),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
         AppAlbumCoverPlaceholder(variantIndex = album.coverVariantIndex)
@@ -41,6 +41,7 @@ private fun AlbumTileMoleculePreview() {
     DesignSystemPreviewSurface {
         AlbumTileMolecule(
             album = CatalogAlbum(
+                id = "cat-05",
                 title = "Dust & Diamond",
                 artist = "The Outlaws",
                 coverVariantIndex = 4,
@@ -48,7 +49,7 @@ private fun AlbumTileMoleculePreview() {
                 releaseDate = "1982-09-14",
             ),
             modifier = Modifier.fillMaxWidth(),
-            onClick = {},
+            onClick = { _ -> },
         )
     }
 }

@@ -16,7 +16,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun ArtistTopAlbumTileMolecule(
     album: ArtistDetailTopAlbum,
-    onClick: () -> Unit,
+    onClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -24,7 +24,7 @@ fun ArtistTopAlbumTileMolecule(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick),
+            .clickable(onClick = { onClick(album.albumId) }),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
         AppAlbumCoverPlaceholder(variantIndex = album.coverVariantIndex)
@@ -46,8 +46,8 @@ fun ArtistTopAlbumTileMolecule(
 private fun ArtistTopAlbumTileMoleculePreview() {
     DesignSystemPreviewSurface {
         ArtistTopAlbumTileMolecule(
-            album = ArtistDetailTopAlbum("Kind of Blue", "1959 • 5 Tracks", 1),
-            onClick = {},
+            album = ArtistDetailTopAlbum("art-kob", "Kind of Blue", "1959 • 5 Tracks", 1),
+            onClick = { _ -> },
             modifier = Modifier.fillMaxWidth(),
         )
     }

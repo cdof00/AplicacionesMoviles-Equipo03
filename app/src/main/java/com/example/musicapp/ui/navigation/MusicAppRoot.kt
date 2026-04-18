@@ -8,9 +8,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.musicapp.ui.components.organisms.CatalogBottomNavBarOrganism
 import com.example.musicapp.ui.components.organisms.FloatingAddButtonOrganism
 import com.example.musicapp.ui.components.templates.CatalogScreenTemplate
@@ -28,7 +30,7 @@ import com.example.musicapp.ui.screens.NewReleaseScreen
 
 private const val ROUTE_MAIN = "main"
 private const val ROUTE_COLLECTOR_DETAIL = "collector_detail"
-private const val ROUTE_ALBUM_DETAIL = "album_detail"
+private const val ROUTE_ALBUM_DETAIL = "album_detail/{albumId}"
 private const val ROUTE_ARTIST_DETAIL = "artist_detail"
 
 @Composable
@@ -46,8 +48,8 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxSize(),
                 selectedTab = selectedTab,
                 onTabSelected = { selectedTab = it },
-                onOpenAlbumDetail = {
-                    navController.navigate(ROUTE_ALBUM_DETAIL) {
+                onOpenAlbumDetail = { albumId ->
+                    navController.navigate("album_detail/$albumId") {
                         launchSingleTop = true
                     }
                 },
@@ -71,15 +73,22 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
                     selectedTab = index
                     navController.popBackStack(ROUTE_MAIN, inclusive = false)
                 },
-                onAlbumClick = {
-                    navController.navigate(ROUTE_ALBUM_DETAIL) {
+                onAlbumClick = { albumId ->
+                    navController.navigate("album_detail/$albumId") {
                         launchSingleTop = true
                     }
                 },
             )
         }
-        composable(ROUTE_ALBUM_DETAIL) {
+        composable(
+            route = ROUTE_ALBUM_DETAIL,
+            arguments = listOf(
+                navArgument("albumId") { type = NavType.StringType },
+            ),
+        ) { backStackEntry ->
+            val albumId = backStackEntry.arguments?.getString("albumId").orEmpty()
             AlbumDetailScreen(
+                albumId = albumId,
                 modifier = Modifier.fillMaxSize(),
                 onBack = { navController.popBackStack() },
                 onTabSelected = { index ->
@@ -106,7 +115,7 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
 private fun MainTabScaffold(
     selectedTab: Int,
     onTabSelected: (Int) -> Unit,
-    onOpenAlbumDetail: () -> Unit,
+    onOpenAlbumDetail: (String) -> Unit,
     onOpenCollectorDetail: () -> Unit,
     onOpenArtistDetail: () -> Unit,
     modifier: Modifier = Modifier,

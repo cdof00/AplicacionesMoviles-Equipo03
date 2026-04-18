@@ -25,7 +25,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun CatalogContentOrganism(
     albums: List<CatalogAlbum>,
     modifier: Modifier = Modifier,
-    onAlbumClick: () -> Unit = {},
+    onAlbumClick: (String) -> Unit = {},
     contentPadding: PaddingValues = PaddingValues(),
     brandTitle: String = "Album Catalog",
     collectionTitle: String = "Collection",
@@ -61,7 +61,7 @@ fun CatalogContentOrganism(
                 modifier = Modifier.padding(bottom = s.xs),
             )
         }
-        items(items = albums, key = { it.title }) { album ->
+        items(items = albums, key = { it.id }) { album ->
             AlbumTileMolecule(
                 album = album,
                 modifier = Modifier.fillMaxWidth(),

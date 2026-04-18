@@ -23,7 +23,7 @@ fun ArtistDetailContentOrganism(
     onMenuClick: () -> Unit,
     onViewArchiveClick: () -> Unit,
     onSeeAllAlbumsClick: () -> Unit,
-    onAlbumClick: () -> Unit,
+    onAlbumClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
