@@ -1,0 +1,80 @@
+package com.example.musicapp.ui.components.organisms
+
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.ui.components.molecules.CatalogCollectionHeaderMolecule
+import com.example.musicapp.ui.components.molecules.CollectorListItemMolecule
+import com.example.musicapp.ui.components.molecules.CollectorsHeroSectionMolecule
+import com.example.musicapp.ui.components.molecules.FilterChipRowMolecule
+import com.example.musicapp.ui.screens.collectors.collectorsFilterChipLabels
+import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
+import com.example.musicapp.ui.screens.collectors.collectorsMockList
+import com.example.musicapp.ui.theme.theme.AppTheme
+
+@Composable
+fun CollectorsContentOrganism(
+    innerPadding: PaddingValues,
+    onOpenCollectorDetail: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val s = AppTheme.spacing
+    var selectedChipIndex by rememberSaveable { mutableIntStateOf(0) }
+    LazyColumn(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(innerPadding)
+            .padding(horizontal = s.xl),
+        contentPadding = PaddingValues(bottom = s.xxl),
+    ) {
+        item {
+            CatalogCollectionHeaderMolecule(title = "Collection")
+        }
+        item {
+            CollectorsHeroSectionMolecule(
+                watermarkNumber = "04",
+                title = "COLLECTORS",
+                subtitle = "Connecting with the elite circles of the high-fidelity community.",
+            )
+        }
+        item {
+            FilterChipRowMolecule(
+                labels = collectorsFilterChipLabels,
+                selectedIndex = selectedChipIndex,
+                onSelect = { selectedChipIndex = it },
+                modifier = Modifier.padding(bottom = s.md),
+            )
+        }
+        items(
+            items = collectorsMockList,
+            key = { it.name },
+        ) { entry ->
+            CollectorListItemMolecule(
+                entry = entry,
+                onClick = onOpenCollectorDetail,
+                modifier = Modifier.padding(bottom = s.md),
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFF0A0A0A, heightDp = 720)
+@Composable
+private fun CollectorsContentOrganismPreview() {
+    DesignSystemPreviewSurface {
+        val s = AppTheme.spacing
+        CollectorsContentOrganism(
+            innerPadding = PaddingValues(top = s.sm, bottom = s.md),
+            onOpenCollectorDetail = {},
+        )
+    }
+}
