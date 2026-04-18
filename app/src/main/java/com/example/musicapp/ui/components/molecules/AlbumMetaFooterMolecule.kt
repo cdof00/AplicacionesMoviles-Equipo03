@@ -23,6 +23,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun AlbumMetaFooterMolecule(
     title: String,
     artist: String,
+    releaseDate: String,
     modifier: Modifier = Modifier,
     showAccentStar: Boolean = false,
 ) {
@@ -67,6 +68,13 @@ fun AlbumMetaFooterMolecule(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
+            AppText(
+                text = releaseDate,
+                style = AppTheme.typography.labelSmall,
+                color = colors.onSurfaceVariant.copy(alpha = 0.85f),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
         }
     }
 }
@@ -78,6 +86,7 @@ private fun AlbumMetaFooterMoleculePreview() {
         AlbumMetaFooterMolecule(
             title = "Dust & Diamond",
             artist = "The Outlaws",
+            releaseDate = "1982-09-14",
             showAccentStar = true,
         )
     }

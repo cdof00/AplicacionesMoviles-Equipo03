@@ -37,10 +37,10 @@ val collectorFavoriteArtists: List<FavoriteArtistMock> = listOf(
 )
 
 val collectorRecentlyAddedAlbums: List<CatalogAlbum> = listOf(
-    CatalogAlbum("Visions of Light", "The Sun Ra Arkestra", 5),
-    CatalogAlbum("Floating Points", "Crush", 6),
-    CatalogAlbum("Selected Works", "Aphex Twin", 7),
-    CatalogAlbum("Blue Train", "John Coltrane", 0),
+    CatalogAlbum("Visions of Light", "The Sun Ra Arkestra", 5, releaseDate = "1978-05-01"),
+    CatalogAlbum("Floating Points", "Crush", 6, releaseDate = "2019-10-18"),
+    CatalogAlbum("Selected Works", "Aphex Twin", 7, releaseDate = "2002-03-11"),
+    CatalogAlbum("Blue Train", "John Coltrane", 0, releaseDate = "1957-09-15"),
 )
 
 val collectorDetailUiMock: CollectorDetailUiModel = CollectorDetailUiModel(

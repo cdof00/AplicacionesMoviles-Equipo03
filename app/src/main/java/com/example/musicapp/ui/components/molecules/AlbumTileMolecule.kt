@@ -29,6 +29,7 @@ fun AlbumTileMolecule(
         AlbumMetaFooterMolecule(
             title = album.title,
             artist = album.artist,
+            releaseDate = album.releaseDate,
             showAccentStar = album.showAccentStar,
         )
     }
@@ -44,6 +45,7 @@ private fun AlbumTileMoleculePreview() {
                 artist = "The Outlaws",
                 coverVariantIndex = 4,
                 showAccentStar = true,
+                releaseDate = "1982-09-14",
             ),
             modifier = Modifier.fillMaxWidth(),
             onClick = {},
