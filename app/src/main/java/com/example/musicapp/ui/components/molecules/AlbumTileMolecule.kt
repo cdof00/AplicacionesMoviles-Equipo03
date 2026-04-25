@@ -7,14 +7,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.atoms.AppAlbumCoverPlaceholder
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
-import com.example.musicapp.ui.screens.catalog.CatalogAlbum
 import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun AlbumTileMolecule(
-    album: CatalogAlbum,
+    album: Album,
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {},
 ) {
@@ -25,12 +25,11 @@ fun AlbumTileMolecule(
             .clickable(onClick = onClick),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
-        AppAlbumCoverPlaceholder(variantIndex = album.coverVariantIndex)
+        AppAlbumCoverPlaceholder(album.cover)
         AlbumMetaFooterMolecule(
-            title = album.title,
-            artist = album.artist,
+            title = album.name,
+            genre = album.genre,
             releaseDate = album.releaseDate,
-            showAccentStar = album.showAccentStar,
         )
     }
 }
@@ -40,12 +39,14 @@ fun AlbumTileMolecule(
 private fun AlbumTileMoleculePreview() {
     DesignSystemPreviewSurface {
         AlbumTileMolecule(
-            album = CatalogAlbum(
-                title = "Dust & Diamond",
-                artist = "The Outlaws",
-                coverVariantIndex = 4,
-                showAccentStar = true,
+            album = Album(
+                albumId = 1,
+                name = "Dust & Diamonds",
+                cover = "https://example.com/cover.jpg",
                 releaseDate = "1982-09-14",
+                description = "A collection of 12 tracks",
+                genre = "Folk",
+                recordLabel = "Columbia"
             ),
             modifier = Modifier.fillMaxWidth(),
             onClick = {},

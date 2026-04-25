@@ -22,7 +22,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun AlbumMetaFooterMolecule(
     title: String,
-    artist: String,
+    genre: String,
     releaseDate: String,
     modifier: Modifier = Modifier,
     showAccentStar: Boolean = false,
@@ -62,7 +62,7 @@ fun AlbumMetaFooterMolecule(
                 }
             }
             AppText(
-                text = artist,
+                text = genre,
                 style = AppTheme.typography.labelMedium,
                 color = colors.onSurfaceVariant,
                 maxLines = 1,
@@ -85,9 +85,8 @@ private fun AlbumMetaFooterMoleculePreview() {
     DesignSystemPreviewSurface {
         AlbumMetaFooterMolecule(
             title = "Dust & Diamond",
-            artist = "The Outlaws",
+            genre = "Folk",
             releaseDate = "1982-09-14",
-            showAccentStar = true,
         )
     }
 }

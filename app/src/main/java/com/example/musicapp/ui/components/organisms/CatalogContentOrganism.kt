@@ -12,18 +12,18 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.molecules.AlbumTileMolecule
 import com.example.musicapp.ui.components.molecules.CatalogBrandRowMolecule
 import com.example.musicapp.ui.components.molecules.CatalogCollectionHeaderMolecule
 import com.example.musicapp.ui.components.molecules.FeaturedSpunCardMolecule
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
-import com.example.musicapp.ui.screens.catalog.CatalogAlbum
 import com.example.musicapp.ui.screens.catalog.catalogAlbumMockList
 import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun CatalogContentOrganism(
-    albums: List<CatalogAlbum>,
+    albums: List<Album>,
     modifier: Modifier = Modifier,
     onAlbumClick: () -> Unit = {},
     contentPadding: PaddingValues = PaddingValues(),
@@ -31,7 +31,7 @@ fun CatalogContentOrganism(
     collectionTitle: String = "Collection",
     featuredTitle: String = "Recently Spun",
     featuredSubtitle: String = "A LOVE SUPREME • COLTRANE",
-    heroTitle: String = "CuratedVault",
+    heroTitle: String = "Curated Vault",
     heroSubtitle: String = "High-fidelity analog archives",
 ) {
     val s = AppTheme.spacing
@@ -61,7 +61,7 @@ fun CatalogContentOrganism(
                 modifier = Modifier.padding(bottom = s.xs),
             )
         }
-        items(items = albums, key = { it.title }) { album ->
+        items(items = albums, key = { it.albumId }) { album ->
             AlbumTileMolecule(
                 album = album,
                 modifier = Modifier.fillMaxWidth(),
