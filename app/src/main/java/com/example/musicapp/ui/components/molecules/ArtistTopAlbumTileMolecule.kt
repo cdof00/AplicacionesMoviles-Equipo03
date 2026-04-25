@@ -27,7 +27,7 @@ fun ArtistTopAlbumTileMolecule(
             .clickable(onClick = { onClick(album.albumId) }),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
-        AppAlbumCoverPlaceholder(variantIndex = album.coverVariantIndex)
+        AppAlbumCoverPlaceholder("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.assetsdelivery.com%2Fcompings_v2%2Falonastep%2Falonastep1602%2Falonastep160200364.jpg&f=1&nofb=1&ipt=2a3d537441750a6e329d6ac3c6d77ba1e7faa305c8720880ccaf0f1ab59c0ff5")
         AppText(
             text = album.title,
             style = AppTheme.typography.titleSmall,
