@@ -16,13 +16,13 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun AlbumTileMolecule(
     album: Album,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
+    onClick: (String) -> Unit = {},
 ) {
     val s = AppTheme.spacing
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick),
+            .clickable(onClick = { onClick(album.id) }),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
         AppAlbumCoverPlaceholder(album.cover)
@@ -49,7 +49,7 @@ private fun AlbumTileMoleculePreview() {
                 recordLabel = "Columbia"
             ),
             modifier = Modifier.fillMaxWidth(),
-            onClick = {},
+            onClick = { _ -> },
         )
     }
 }

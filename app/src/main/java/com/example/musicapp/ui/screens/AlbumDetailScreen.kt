@@ -2,6 +2,7 @@ package com.example.musicapp.ui.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.ui.components.organisms.AlbumDetailContentOrganism
@@ -14,10 +15,14 @@ private const val ALBUMS_TAB_INDEX = 0
 
 @Composable
 fun AlbumDetailScreen(
+    albumId: String,
     onBack: () -> Unit,
     onTabSelected: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    LaunchedEffect(albumId) {
+        // HU02: aquí se integrará la carga del detalle desde API usando albumId.
+    }
     AlbumDetailTemplate(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
@@ -43,6 +48,7 @@ fun AlbumDetailScreen(
 private fun AlbumDetailScreenPreview() {
     DesignSystemPreviewSurface {
         AlbumDetailScreen(
+            albumId = "preview",
             onBack = {},
             onTabSelected = {},
         )

@@ -25,7 +25,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun CatalogContentOrganism(
     albums: List<Album>,
     modifier: Modifier = Modifier,
-    onAlbumClick: () -> Unit = {},
+    onAlbumClick: (String) -> Unit = {},
     contentPadding: PaddingValues = PaddingValues(),
     brandTitle: String = "Album Catalog",
     collectionTitle: String = "Collection",

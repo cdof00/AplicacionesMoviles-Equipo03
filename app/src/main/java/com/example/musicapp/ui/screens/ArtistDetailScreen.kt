@@ -16,7 +16,7 @@ private const val ARTISTS_TAB_INDEX = 1
 fun ArtistDetailScreen(
     onBack: () -> Unit,
     onTabSelected: (Int) -> Unit,
-    onAlbumClick: () -> Unit,
+    onAlbumClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     ArtistDetailTemplate(
@@ -49,7 +49,7 @@ private fun ArtistDetailScreenPreview() {
         ArtistDetailScreen(
             onBack = {},
             onTabSelected = {},
-            onAlbumClick = {},
+            onAlbumClick = { _ -> },
         )
     }
 }
