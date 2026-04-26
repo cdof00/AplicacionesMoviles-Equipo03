@@ -10,6 +10,9 @@ import androidx.compose.material.icons.outlined.Event
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.ui.components.atoms.AppIcon
 import com.example.musicapp.ui.components.atoms.AppText
@@ -22,7 +25,6 @@ fun AlbumMetaHeaderMolecule(
     title: String,
     artist: String,
     year: String,
-    format: String,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -43,7 +45,7 @@ fun AlbumMetaHeaderMolecule(
             color = colors.primary,
         )
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(s.xs),
         ) {
@@ -69,11 +71,6 @@ fun AlbumMetaHeaderMolecule(
                 tint = metaColor,
                 sizeKey = IconSizeKey.Small,
             )
-            AppText(
-                text = format,
-                style = AppTheme.typography.bodySmall,
-                color = metaColor,
-            )
         }
     }
 }
@@ -86,7 +83,6 @@ private fun AlbumMetaHeaderMoleculePreview() {
             title = "Midnight Neon",
             artist = "SYNTHETIX WAVE",
             year = "1984",
-            format = "180g Virgin Vinyl",
         )
     }
 }

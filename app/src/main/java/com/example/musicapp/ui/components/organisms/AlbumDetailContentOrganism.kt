@@ -1,5 +1,6 @@
 package com.example.musicapp.ui.components.organisms
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -7,10 +8,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import com.example.musicapp.models.Album
+import com.example.musicapp.models.Track
+import com.example.musicapp.ui.components.atoms.AppAlbumCoverPlaceholder
 import com.example.musicapp.ui.components.molecules.AlbumMetaHeaderMolecule
 import com.example.musicapp.ui.components.molecules.DetailTopBarMolecule
 import com.example.musicapp.ui.components.molecules.InfoStatCardMolecule
@@ -19,13 +28,16 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun AlbumDetailContentOrganism(
-    ui: AlbumDetailUiModel,
+    tracks: List<Track>,
+    album: Album,
     innerPadding: PaddingValues,
     onBackClick: () -> Unit,
     onMenuClick: () -> Unit,
     onPlayClick: () -> Unit,
     modifier: Modifier = Modifier,
-) {
+
+    ) {
+
     val s = AppTheme.spacing
     LazyColumn(
         modifier = modifier
@@ -37,51 +49,31 @@ fun AlbumDetailContentOrganism(
     ) {
         item {
             DetailTopBarMolecule(
-                title = ui.screenTitle,
+                title = album.name,
                 onBackClick = onBackClick,
                 onTrailingClick = onMenuClick,
                 trailingIcon = Icons.Outlined.MoreVert,
                 trailingContentDescription = "More",
+                modifier = modifier.testTag("album_detail_header_title")
+                    .semantics {
+                        contentDescription = album.name
+                    },
             )
         }
         item {
-            AlbumHeroSectionOrganism(
-                coverVariantIndex = ui.coverVariantIndex,
-                onPlayClick = onPlayClick,
-            )
+            AppAlbumCoverPlaceholder(album.cover)
         }
         item {
             AlbumMetaHeaderMolecule(
-                title = ui.title,
-                artist = ui.artist,
-                year = ui.year,
-                format = ui.format,
+                title = album.name,
+                artist = album.genre,
+                year = album.releaseDate.split("-")[0],
             )
         }
         item {
             TracklistCardOrganism(
-                totalTracksLabel = ui.totalTracksLabel,
-                totalDurationLabel = ui.totalDurationLabel,
-                tracks = ui.tracks,
+                tracks = tracks,
             )
-        }
-        item {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(s.md),
-            ) {
-                InfoStatCardMolecule(
-                    label = "Matrix",
-                    value = ui.matrixCode,
-                    modifier = Modifier.weight(1f),
-                )
-                InfoStatCardMolecule(
-                    label = "Condition",
-                    value = ui.condition,
-                    highlightValuePrimary = true,
-                    modifier = Modifier.weight(1f),
-                )
-            }
         }
     }
 }

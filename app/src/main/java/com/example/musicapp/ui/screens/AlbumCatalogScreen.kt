@@ -4,7 +4,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -13,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
@@ -35,14 +38,15 @@ import com.example.musicapp.viewmodels.AlbumViewModel
 fun AlbumCatalogScreen(
     innerPadding: PaddingValues,
     modifier: Modifier = Modifier,
-    onAlbumClick: () -> Unit = {},
+    onAlbumClick: (Int) -> Unit = {},
     albumViewModel: AlbumViewModel = viewModel()
 ) {
     val s = AppTheme.spacing
     val albumListUiState by albumViewModel.uiState.collectAsState()
 
     if (albumListUiState.albums.isEmpty()){
-        CircularProgressIndicator(modifier = modifier.fillMaxSize())
+        CircularProgressIndicator(modifier = Modifier.fillMaxSize()
+            .wrapContentSize(align = Alignment.Center))
     }
     else{
         CatalogContentOrganism(

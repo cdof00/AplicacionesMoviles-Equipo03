@@ -1,38 +1,162 @@
 package musicapp
 
+import android.util.Log
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
-import com.example.musicapp.models.Album
-import com.example.musicapp.ui.components.organisms.CatalogContentOrganism
+import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
+import com.example.musicapp.MainActivity
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertNotNull
+import junit.framework.TestCase.assertTrue
 import org.junit.Rule
 import org.junit.Test
 
 class AlbumTest {
 
-    @JvmField
-    @Rule
-    var composeTestRule = createComposeRule()
+    @get:Rule
+    var composeTestRule = createAndroidComposeRule<MainActivity>()
 
-    val albums: List<Album> = listOf(
-        Album(100, "Buscando América", "https://i.pinimg.com/564x/aa/5f/ed/aa5fed7fac61cc8f41d1e79db917a7cd.jpg", "1984-08-01T00:00:00.000Z","Buscando América es el primer álbum de la banda de Rubén Blades y Seis del Solar lanzado en 1984. La producción, bajo el sello Elektra, fusiona diferentes ritmos musicales tales como la salsa, reggae, rock, y el jazz latino. El disco fue grabado en Eurosound Studios en Nueva York entre mayo y agosto de 1983.","Salsa","Elektra"),
-        Album(101,"Poeta del pueblo","https://cdn.shopify.com/s/files/1/0275/3095/products/image_4931268b-7acf-4702-9c55-b2b3a03ed999_1024x1024.jpg","1984-08-01T00:00:00.000Z","Recopilación de 27 composiciones del cosmos Blades que los bailadores y melómanos han hecho suyas en estos 40 años de presencia de los ritmos y concordias afrocaribeños en múltiples escenarios internacionales. Grabaciones de Blades para la Fania con las orquestas de Pete Rodríguez, Ray Barreto, Fania All Stars y, sobre todo, los grandes éxitos con la Banda de Willie Colón","Salsa","Elektra"),
-        Album(102,"A Night at the Opera","https://upload.wikimedia.org/wikipedia/en/4/4d/Queen_A_Night_At_The_Opera.png", "1975-11-21T00:00:00.000Z","Es el cuarto álbum de estudio de la banda británica de rock Queen, publicado originalmente en 1975. Coproducido por Roy Thomas Baker y Queen, A Night at the Opera fue, en el tiempo de su lanzamiento, la producción más cara realizada.1​ Un éxito comercial, el álbum fue votado por el público y citado por publicaciones musicales como uno de los mejores trabajos de Queen y de la historia del rock.","Rock","EMI"),
-        Album(103,"A Day at the Races","https://www.udiscovermusic.com/wp-content/uploads/2019/11/a-day-at-the-races.jpg","1976-12-10T00:00:00.000Z","El álbum fue grabado en los Estudios Sarm West, The Manor and Wessex en Inglaterra y con el ingeniero Mike Stone. El título del álbum es una referencia directa al anterior, A Night at the Opera. Ambos álbumes están titulados como películas de los hermanos Marx.","Rock","EMI")
-    )
-
+    //Test para HU01
     @Test
-    fun catalogContent_displaysAlbumsFromList() {
-        composeTestRule.setContent {
-            CatalogContentOrganism(
-                albums = albums
-            )
+    fun test1_seMuestranDatosPantallaInicial() {
+
+        composeTestRule.waitUntil(timeoutMillis = 10000) {
+            composeTestRule
+                .onAllNodesWithText("Album Catalog")
+                .fetchSemanticsNodes()
+                .isNotEmpty()
         }
 
-        albums.forEach { album ->
+        composeTestRule
+            .onNodeWithText("Album Catalog")
+            .assertIsDisplayed()
+
+        composeTestRule
+            .onNodeWithText("Collection")
+            .assertIsDisplayed()
+
+        composeTestRule
+            .onNodeWithText("Curated Vault")
+            .assertIsDisplayed()
+
+        composeTestRule
+            .onNodeWithText("Recently Spun")
+            .assertIsDisplayed()
+    }
+
+    //Test para HU01
+    @Test
+    fun test2_seCarganAlbumesEnPantallaInicial() {
+
+        composeTestRule.waitUntil(timeoutMillis = 10000) {
             composeTestRule
-                .onNodeWithText(album.name)
-                .assertIsDisplayed()
+                .onAllNodesWithTag("album_tile")
+                .fetchSemanticsNodes()
+                .isNotEmpty()
         }
+
+        composeTestRule
+            .onAllNodesWithTag("album_tile")[0]
+            .assertIsDisplayed()
+    }
+
+    //Test para HU02
+    @Test
+    fun test3_seCargaListaDeCancionesEnPantallaDetalles() {
+
+        composeTestRule.waitUntil(timeoutMillis = 10000) {
+            composeTestRule
+                .onAllNodesWithTag("album_tile")
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
+
+        composeTestRule
+            .onAllNodesWithTag("album_tile")[0]
+            .assertIsDisplayed()
+            .performClick()
+
+
+        composeTestRule.waitUntil(timeoutMillis = 10000) {
+            composeTestRule
+                .onAllNodesWithTag("track_tile")
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
+
+        composeTestRule
+            .onAllNodesWithTag("track_tile")[0]
+            .assertIsDisplayed()
+    }
+
+    //Test para HU02
+    @Test
+    fun test4_tituloDeAlbumEsIgualEnPantallaDetallesYEnPantallaLista() {
+        composeTestRule.waitUntil(timeoutMillis = 10000) {
+            composeTestRule
+                .onAllNodesWithTag("album_tile", useUnmergedTree = true)
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
+
+        composeTestRule.waitUntil(timeoutMillis = 10000) {
+            composeTestRule
+                .onAllNodesWithTag("album_meta_footer", useUnmergedTree = true)
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
+
+        val albumNameFromFooter = composeTestRule
+            .onAllNodesWithTag("album_meta_footer", useUnmergedTree = true)[0]
+            .fetchSemanticsNode()
+            .config
+            .getOrNull(SemanticsProperties.ContentDescription)
+            ?.firstOrNull()
+
+        assertNotNull(
+            "Expected AlbumMetaFooterMolecule to expose the album name through ContentDescription",
+            albumNameFromFooter
+        )
+
+        composeTestRule
+            .onAllNodesWithTag("album_tile")[0]
+            .assertIsDisplayed()
+            .performClick()
+
+        composeTestRule.waitUntil(timeoutMillis = 20000) {
+            composeTestRule
+                .onAllNodesWithTag("album_detail_header_title", useUnmergedTree = true)
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
+
+        composeTestRule
+            .onAllNodesWithTag("album_detail_header_title", useUnmergedTree = true)[0]
+            .performScrollTo()
+            .assertIsDisplayed()
+
+        val albumNameFromHeader = composeTestRule
+            .onAllNodesWithTag("album_detail_header_title", useUnmergedTree = true)[0]
+            .fetchSemanticsNode()
+            .config
+            .getOrNull(SemanticsProperties.ContentDescription)
+            ?.firstOrNull()
+
+        assertNotNull(
+            "Expected AlbumMetaHeaderMolecule to expose the album name through ContentDescription",
+            albumNameFromHeader
+        )
+
+        assertEquals(
+            "Album name from AlbumMetaFooterMolecule should match AlbumMetaHeaderMolecule after opening details",
+            albumNameFromFooter,
+            albumNameFromHeader
+        )
     }
 }

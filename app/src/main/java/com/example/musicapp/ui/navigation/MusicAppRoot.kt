@@ -83,10 +83,11 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
         composable(
             route = ROUTE_ALBUM_DETAIL,
             arguments = listOf(
-                navArgument("albumId") { type = NavType.StringType },
+                navArgument("albumId") { type = NavType.IntType },
             ),
         ) { backStackEntry ->
-            val albumId = backStackEntry.arguments?.getString("albumId").orEmpty()
+            val album = backStackEntry.arguments?.getInt("albumId")
+            val albumId: Int = album ?: 0
             AlbumDetailScreen(
                 albumId = albumId,
                 modifier = Modifier.fillMaxSize(),
@@ -115,7 +116,7 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
 private fun MainTabScaffold(
     selectedTab: Int,
     onTabSelected: (Int) -> Unit,
-    onOpenAlbumDetail: (String) -> Unit,
+    onOpenAlbumDetail: (Int) -> Unit,
     onOpenCollectorDetail: () -> Unit,
     onOpenArtistDetail: () -> Unit,
     modifier: Modifier = Modifier,
