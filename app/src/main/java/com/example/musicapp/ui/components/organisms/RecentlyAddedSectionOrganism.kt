@@ -10,17 +10,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.molecules.AlbumTileMolecule
 import com.example.musicapp.ui.components.molecules.SectionHeaderMolecule
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
-import com.example.musicapp.ui.screens.catalog.CatalogAlbum
 import com.example.musicapp.ui.screens.collector.collectorRecentlyAddedAlbums
 import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun RecentlyAddedSectionOrganism(
-    albums: List<CatalogAlbum>,
+    albums: List<Album>,
     modifier: Modifier = Modifier,
     onViewAllClick: () -> Unit = {},
 ) {

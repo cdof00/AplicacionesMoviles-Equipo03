@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
@@ -16,7 +17,6 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun TrackListItemMolecule(
     number: Int,
     title: String,
-    subtitle: String,
     duration: String,
     modifier: Modifier = Modifier,
 ) {
@@ -24,7 +24,7 @@ fun TrackListItemMolecule(
     val colors = AppTheme.colors
     val numberText = number.toString().padStart(2, '0')
     Row(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth().testTag("track_tile"),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(s.md),
     ) {
@@ -42,11 +42,6 @@ fun TrackListItemMolecule(
                 style = AppTheme.typography.titleSmall,
                 color = colors.onSurface,
             )
-            AppText(
-                text = subtitle,
-                style = AppTheme.typography.bodySmall,
-                color = colors.onSurfaceVariant,
-            )
         }
         AppText(
             text = duration,
@@ -63,7 +58,6 @@ private fun TrackListItemMoleculePreview() {
         TrackListItemMolecule(
             number = 1,
             title = "Pulse Width Highway",
-            subtitle = "Side A — Analog Synth",
             duration = "4:12",
         )
     }

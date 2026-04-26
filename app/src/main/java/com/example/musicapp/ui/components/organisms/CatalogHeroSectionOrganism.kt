@@ -17,7 +17,7 @@ fun CatalogHeroSectionOrganism(
     title: String,
     subtitle: String,
     modifier: Modifier = Modifier,
-    watermark: String = "1.2K",
+    watermark: String = "",
 ) {
     val s = AppTheme.spacing
     val colors = AppTheme.colors
@@ -55,7 +55,7 @@ fun CatalogHeroSectionOrganism(
 private fun CatalogHeroSectionOrganismPreview() {
     DesignSystemPreviewSurface {
         CatalogHeroSectionOrganism(
-            title = "CuratedVault",
+            title = "Curated Vault",
             subtitle = "High-fidelity analog archives",
         )
     }
