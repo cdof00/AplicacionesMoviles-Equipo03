@@ -6,6 +6,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.atoms.AppAlbumCoverPlaceholder
@@ -16,13 +19,17 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun AlbumTileMolecule(
     album: Album,
     modifier: Modifier = Modifier,
-    onClick: (String) -> Unit = {},
+    onClick: (Int) -> Unit = {},
 ) {
     val s = AppTheme.spacing
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = { onClick(album.id) }),
+            .testTag("album_tile")
+            .semantics {
+                contentDescription = album.name
+            }
+            .clickable(onClick = { onClick(album.albumId) }),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
         AppAlbumCoverPlaceholder(album.cover)

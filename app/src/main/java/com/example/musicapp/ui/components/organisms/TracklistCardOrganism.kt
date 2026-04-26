@@ -7,19 +7,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.models.Track
 import com.example.musicapp.ui.components.atoms.AppSurface
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.molecules.SectionHeaderMolecule
 import com.example.musicapp.ui.components.molecules.TrackListItemMolecule
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
-import com.example.musicapp.ui.screens.album.AlbumDetailTrack
 import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun TracklistCardOrganism(
-    totalTracksLabel: String,
-    totalDurationLabel: String,
-    tracks: List<AlbumDetailTrack>,
+    tracks: List<Track>,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -37,18 +35,19 @@ fun TracklistCardOrganism(
                 title = "Tracklist",
                 action = {
                     AppText(
-                        text = "${totalTracksLabel.uppercase()} TRACKS • $totalDurationLabel",
+                        text = "${tracks.size} TRACKS",
                         style = AppTheme.typography.labelSmall,
                         color = colors.onSurfaceVariant,
                     )
                 },
             )
             Column(verticalArrangement = Arrangement.spacedBy(s.sm)) {
+                var trackNum:Int = 0
                 tracks.forEach { track ->
+                    trackNum++
                     TrackListItemMolecule(
-                        number = track.number,
-                        title = track.title,
-                        subtitle = track.subtitle,
+                        number = trackNum,
+                        title = track.name,
                         duration = track.duration,
                     )
                 }
@@ -62,13 +61,11 @@ fun TracklistCardOrganism(
 private fun TracklistCardOrganismPreview() {
     DesignSystemPreviewSurface {
         val tracks = listOf(
-            AlbumDetailTrack(1, "Pulse Width Highway", "Side A", "4:12"),
-            AlbumDetailTrack(2, "Chrome Mirage", "Instrumental", "5:01"),
-            AlbumDetailTrack(3, "Digital Sunset", "Vocal", "4:48"),
+            Track(1, "Pulse Width Highway",  "4:12",1),
+            Track(2, "Chrome Mirage",  "5:01",1),
+            Track(3, "Digital Sunset",  "4:48",1),
         )
         TracklistCardOrganism(
-            totalTracksLabel = "12",
-            totalDurationLabel = "48:22",
             tracks = tracks,
             modifier = Modifier.padding(AppTheme.spacing.md),
         )

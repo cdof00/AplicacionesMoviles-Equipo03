@@ -15,7 +15,6 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun AlbumHeroSectionOrganism(
-    coverVariantIndex: Int,
     onPlayClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -38,7 +37,6 @@ fun AlbumHeroSectionOrganism(
 private fun AlbumHeroSectionOrganismPreview() {
     DesignSystemPreviewSurface {
         AlbumHeroSectionOrganism(
-            coverVariantIndex = 2,
             onPlayClick = {},
         )
     }

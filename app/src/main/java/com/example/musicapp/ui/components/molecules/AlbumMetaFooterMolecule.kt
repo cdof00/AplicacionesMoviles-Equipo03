@@ -10,6 +10,9 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.ui.components.atoms.AppIcon
@@ -30,7 +33,11 @@ fun AlbumMetaFooterMolecule(
     val s = AppTheme.spacing
     val colors = AppTheme.colors
     AppSurface(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth()
+            .testTag("album_meta_footer")
+            .semantics {
+                contentDescription = title
+            },
         shape = AppTheme.shapes.roundedLg(),
         color = colors.surfaceContainer.copy(alpha = 0.92f),
         borderColor = colors.outlineSubtle,
@@ -50,7 +57,9 @@ fun AlbumMetaFooterMolecule(
                     color = colors.onSurface,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(1f, fill = false),
+                    modifier = Modifier.weight(1f, fill = false).testTag("album_tile_title").semantics {
+                        contentDescription = title
+                    },
                 )
                 if (showAccentStar) {
                     AppIcon(

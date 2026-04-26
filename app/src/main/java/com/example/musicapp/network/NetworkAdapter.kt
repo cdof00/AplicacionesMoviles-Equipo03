@@ -11,6 +11,7 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.musicapp.models.Album
+import com.example.musicapp.models.Track
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -37,6 +38,23 @@ class NetworkServiceAdapter constructor(context: Context) {
                 for (i in 0 until resp.length()) {
                     val item = resp.getJSONObject(i)
                     list.add(i, Album(albumId = item.getInt("id"),name = item.getString("name"), cover = item.getString("cover"), recordLabel = item.getString("recordLabel"), releaseDate = item.getString("releaseDate").split("-")[0], genre = item.getString("genre"), description = item.getString("description")))
+                }
+                onComplete(list)
+            },
+            {
+                onError(it)
+            }))
+    }
+
+    fun getTracks(albumId:Int, onComplete:(resp:List<Track>)->Unit, onError: (error:VolleyError)->Unit) {
+        requestQueue.add(getRequest("albums/$albumId/tracks",
+            { response ->
+                val resp = JSONArray(response)
+                val list = mutableListOf<Track>()
+                var item:JSONObject? = null
+                for (i in 0 until resp.length()) {
+                    item = resp.getJSONObject(i)
+                    list.add(i, Track(trackId = item.getInt("id"), name = item.getString("name").toString(), duration = item.getString("duration"), albumId = albumId))
                 }
                 onComplete(list)
             },
