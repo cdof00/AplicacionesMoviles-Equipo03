@@ -14,8 +14,6 @@ import com.example.musicapp.models.Collector
 import com.example.musicapp.models.Musician
 import com.example.musicapp.models.Performer
 import com.example.musicapp.models.Track
-import com.example.musicapp.models.Collector
-import com.example.musicapp.models.Performer
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 
