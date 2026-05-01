@@ -44,6 +44,7 @@ class CollectorViewModel(application: Application, collectorId: Int) :
                 _eventNetworkError.value = true
             })
             collectorRepository.refreshCollectorDetail(id, {
+                android.util.Log.d("CollectorVM", "Collector: ${it.name}, Performers: ${it.favoritePerformers.size}")
                 _collectorDetail.value = CollectorDetailUiState(it)
             }, {
                 _eventNetworkError.value = true
