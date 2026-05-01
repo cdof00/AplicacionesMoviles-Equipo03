@@ -24,7 +24,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun CollectorsScreen(
     innerPadding: PaddingValues,
-    onOpenCollectorDetail: () -> Unit,
+    onOpenCollectorDetail: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     CollectorsContentOrganism(
@@ -60,7 +60,7 @@ private fun CollectorsScreenPreview() {
                     top = scaffoldPadding.calculateTopPadding() + s.sm,
                     bottom = scaffoldPadding.calculateBottomPadding() + s.md,
                 ),
-                onOpenCollectorDetail = {},
+                onOpenCollectorDetail = { _ -> },
             )
         }
     }
