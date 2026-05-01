@@ -31,7 +31,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun CollectorListItemMolecule(
     entry: CollectorListEntry,
-    onClick: () -> Unit,
+    onClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -40,7 +40,7 @@ fun CollectorListItemMolecule(
     AppSurface(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick),
+            .clickable { onClick(entry.collectorId) },
         shape = AppTheme.shapes.roundedLg(),
         color = colors.surfaceContainer.copy(alpha = 0.92f),
         borderColor = colors.outlineSubtle,
@@ -106,13 +106,14 @@ private fun CollectorListItemMoleculePreview() {
     DesignSystemPreviewSurface {
         CollectorListItemMolecule(
             entry = CollectorListEntry(
+                collectorId = 1,
                 name = "Marcus Vane",
                 lpCount = 1_240,
                 tierLabel = "ELITE",
                 highlightAvatarBadge = true,
                 avatarGradientIndex = 0,
             ),
-            onClick = {},
+            onClick = { _ -> },
         )
     }
 }

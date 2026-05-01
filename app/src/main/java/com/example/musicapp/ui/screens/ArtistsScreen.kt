@@ -16,14 +16,11 @@ import com.example.musicapp.ui.components.templates.ArtistsScreenTemplate
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.ui.theme.theme.AppTheme
 
-/**
- * Artists discovery list. Scaffold (bottom bar + FAB) is provided by [com.example.musicapp.ui.navigation.MusicAppRoot].
- */
 @Composable
 fun ArtistsScreen(
     innerPadding: PaddingValues,
     modifier: Modifier = Modifier,
-    onArtistClick: () -> Unit = {},
+    onArtistClick: (Int) -> Unit = {},
 ) {
     ArtistsContentOrganism(
         innerPadding = innerPadding,
@@ -54,7 +51,7 @@ private fun ArtistsScreenPreview() {
                     top = scaffoldPadding.calculateTopPadding() + s.sm,
                     bottom = scaffoldPadding.calculateBottomPadding() + s.md,
                 ),
-                onArtistClick = {},
+                onArtistClick = { _ -> },
             )
         }
     }

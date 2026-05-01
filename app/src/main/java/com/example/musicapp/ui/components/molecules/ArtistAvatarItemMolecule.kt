@@ -2,12 +2,17 @@ package com.example.musicapp.ui.components.molecules
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import coil.compose.AsyncImage
 import com.example.musicapp.ui.components.atoms.AppAvatar
 import com.example.musicapp.ui.components.atoms.AppAvatarSize
 import com.example.musicapp.ui.components.atoms.AppText
@@ -18,6 +23,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun ArtistAvatarItemMolecule(
     name: String,
     gradientVariantIndex: Int,
+    imageUrl: String = "",
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -28,12 +34,23 @@ fun ArtistAvatarItemMolecule(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
-        AppAvatar(
-            initials = name,
-            size = AppAvatarSize.ArtistRow,
-            accentRing = true,
-            gradientVariantIndex = gradientVariantIndex,
-        )
+        if (imageUrl.isNotEmpty()) {
+            AsyncImage(
+                model = imageUrl,
+                contentDescription = name,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(comp.artistRowAvatar)
+                    .clip(CircleShape),
+            )
+        } else {
+            AppAvatar(
+                initials = name,
+                size = AppAvatarSize.ArtistRow,
+                accentRing = true,
+                gradientVariantIndex = gradientVariantIndex,
+            )
+        }
         AppText(
             text = name,
             style = AppTheme.typography.labelMedium,
