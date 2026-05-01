@@ -29,7 +29,7 @@ import com.example.musicapp.ui.screens.CollectorsScreen
 import com.example.musicapp.ui.screens.NewReleaseScreen
 
 private const val ROUTE_MAIN = "main"
-private const val ROUTE_COLLECTOR_DETAIL = "collector_detail"
+private const val ROUTE_COLLECTOR_DETAIL = "collector_detail/{collectorId}"
 private const val ROUTE_ALBUM_DETAIL = "album_detail/{albumId}"
 private const val ROUTE_ARTIST_DETAIL = "artist_detail"
 
@@ -53,8 +53,8 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
                         launchSingleTop = true
                     }
                 },
-                onOpenCollectorDetail = {
-                    navController.navigate(ROUTE_COLLECTOR_DETAIL) {
+                onOpenCollectorDetail = { collectorId ->
+                    navController.navigate("collector_detail/$collectorId") {
                         launchSingleTop = true
                     }
                 },
@@ -65,18 +65,21 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
                 },
             )
         }
-        composable(ROUTE_ARTIST_DETAIL) {
-            ArtistDetailScreen(
+        composable(
+            route = ROUTE_COLLECTOR_DETAIL,
+            arguments = listOf(
+                navArgument("collectorId") { type = NavType.IntType }
+            )
+        ) { backStackEntry ->
+            val collectorId = backStackEntry.arguments?.getInt("collectorId") ?: 0
+            CollectorDetailScreen(
+                collectorId = collectorId,
                 modifier = Modifier.fillMaxSize(),
                 onBack = { navController.popBackStack() },
+                onShare = {},
                 onTabSelected = { index ->
                     selectedTab = index
                     navController.popBackStack(ROUTE_MAIN, inclusive = false)
-                },
-                onAlbumClick = { albumId ->
-                    navController.navigate("album_detail/$albumId") {
-                        launchSingleTop = true
-                    }
                 },
             )
         }
@@ -98,17 +101,6 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
                 },
             )
         }
-        composable(ROUTE_COLLECTOR_DETAIL) {
-            CollectorDetailScreen(
-                modifier = Modifier.fillMaxSize(),
-                onBack = { navController.popBackStack() },
-                onShare = {},
-                onTabSelected = { index ->
-                    selectedTab = index
-                    navController.popBackStack(ROUTE_MAIN, inclusive = false)
-                },
-            )
-        }
     }
 }
 
@@ -117,7 +109,7 @@ private fun MainTabScaffold(
     selectedTab: Int,
     onTabSelected: (Int) -> Unit,
     onOpenAlbumDetail: (Int) -> Unit,
-    onOpenCollectorDetail: () -> Unit,
+    onOpenCollectorDetail: (Int) -> Unit,
     onOpenArtistDetail: () -> Unit,
     modifier: Modifier = Modifier,
 ) {

@@ -24,7 +24,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun CollectorsContentOrganism(
     innerPadding: PaddingValues,
-    onOpenCollectorDetail: () -> Unit,
+    onOpenCollectorDetail: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -60,7 +60,7 @@ fun CollectorsContentOrganism(
         ) { entry ->
             CollectorListItemMolecule(
                 entry = entry,
-                onClick = onOpenCollectorDetail,
+                onClick = { onOpenCollectorDetail(entry.collectorId) },
                 modifier = Modifier.padding(bottom = s.md),
             )
         }
@@ -74,7 +74,7 @@ private fun CollectorsContentOrganismPreview() {
         val s = AppTheme.spacing
         CollectorsContentOrganism(
             innerPadding = PaddingValues(top = s.sm, bottom = s.md),
-            onOpenCollectorDetail = {},
+            onOpenCollectorDetail = { _ -> },
         )
     }
 }
