@@ -70,13 +70,30 @@ class NetworkServiceAdapter constructor(context: Context) {
         requestQueue.add(getRequest("collectors/$collectorId",
             { response ->
                 val item = JSONObject(response)
-                val collector = Collector(
+                val performers = mutableListOf<Performer>()
+
+                if (item.has("favoritePerformers")) {
+                    val performersArray = item.getJSONArray("favoritePerformers")
+                    for (i in 0 until performersArray.length()) {
+                        val p = performersArray.getJSONObject(i)
+                        performers.add(Performer(
+                            performerId = p.getInt("id"),
+                            name = p.getString("name"),
+                            image = p.getString("image"),
+                            description = p.getString("description")
+                        ))
+                    }
+                }
+
+                android.util.Log.d("NetworkAdapter", "Performers parsed: ${performers.size}")
+
+                onComplete(Collector(
                     collectorId = item.getInt("id"),
                     name = item.getString("name"),
                     telephone = item.getString("telephone"),
-                    email = item.getString("email")
-                )
-                onComplete(collector)
+                    email = item.getString("email"),
+                    favoritePerformers = performers
+                ))
             },
             { onError(it) }))
     }

@@ -51,10 +51,11 @@ fun CollectorDetailScreen(
             followLabel = "Follow",
             heroAvatarGradientIndex = 0,
             genres = emptyList(),
-            artists = collector.favoritePerformers.map { performer ->
+            artists = collector.favoritePerformers.mapIndexed { index, performer ->
                 FavoriteArtistMock(
                     name = performer.name,
-                    gradientVariantIndex = 0
+                    gradientVariantIndex = index % 5,
+                    imageUrl = performer.image
                 )
             },
             recentAlbums = emptyList()
