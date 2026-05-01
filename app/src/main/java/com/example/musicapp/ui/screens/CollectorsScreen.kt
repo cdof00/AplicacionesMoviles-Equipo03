@@ -18,9 +18,6 @@ import com.example.musicapp.ui.components.templates.CollectorsScreenTemplate
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.ui.theme.theme.AppTheme
 
-/**
- * Collectors discovery list. Scaffold (bottom bar + FAB) is provided by [com.example.musicapp.ui.navigation.MusicAppRoot].
- */
 @Composable
 fun CollectorsScreen(
     innerPadding: PaddingValues,

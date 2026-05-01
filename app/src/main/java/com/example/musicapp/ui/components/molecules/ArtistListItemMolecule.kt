@@ -25,7 +25,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun ArtistListItemMolecule(
     entry: ArtistListEntry,
-    onClick: () -> Unit,
+    onClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -34,7 +34,7 @@ fun ArtistListItemMolecule(
     AppSurface(
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick),
+            .clickable { onClick(entry.artistId) },
         shape = AppTheme.shapes.roundedLg(),
         color = colors.surfaceContainer.copy(alpha = 0.92f),
         borderColor = colors.outlineSubtle,
@@ -83,8 +83,8 @@ fun ArtistListItemMolecule(
 private fun ArtistListItemMoleculePreview() {
     DesignSystemPreviewSurface {
         ArtistListItemMolecule(
-            entry = ArtistListEntry("Miles Davis", 14, 0),
-            onClick = {},
+            entry = ArtistListEntry(1, "Miles Davis", 14, 0),
+            onClick = { _ -> },
         )
     }
 }

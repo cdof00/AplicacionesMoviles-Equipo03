@@ -12,7 +12,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+<<<<<<< feature/HU04-detalle-artista
+=======
 import androidx.compose.ui.unit.dp
+>>>>>>> main
 import coil.compose.AsyncImage
 import com.example.musicapp.ui.components.atoms.AppAvatar
 import com.example.musicapp.ui.components.atoms.AppAvatarSize
@@ -26,6 +29,10 @@ fun ArtistAvatarItemMolecule(
     name: String,
     gradientVariantIndex: Int,
     imageUrl: String = "",
+<<<<<<< feature/HU04-detalle-artista
+    modifier: Modifier = Modifier,
+=======
+>>>>>>> main
 ) {
     val s = AppTheme.spacing
     val colors = AppTheme.colors

@@ -11,16 +11,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.organisms.AlbumDetailContentOrganism
 import com.example.musicapp.ui.components.organisms.CatalogBottomNavBarOrganism
 import com.example.musicapp.ui.components.templates.AlbumDetailTemplate
-import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.viewmodels.AlbumViewModel
 import com.example.musicapp.viewmodels.TrackViewModel
-
 
 private const val ALBUMS_TAB_INDEX = 0
 
@@ -63,4 +60,3 @@ fun AlbumDetailScreen(
         }
     }
 }
-

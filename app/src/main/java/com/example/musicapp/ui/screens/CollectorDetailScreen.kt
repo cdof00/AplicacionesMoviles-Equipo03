@@ -1,12 +1,12 @@
 package com.example.musicapp.ui.screens
 
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import android.app.Application
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -50,7 +50,14 @@ fun CollectorDetailScreen(
             eliteBadgeLabel = "COLLECTOR",
             followLabel = "Follow",
             heroAvatarGradientIndex = 0,
-            genres = emptyList(),
+            genres = when (collectorId) {
+                100 -> listOf("Salsa", "Jazz", "Bolero")
+                101 -> listOf("Rock", "Classic Rock", "Blues")
+                1 -> listOf("Modern Jazz", "Post-Punk", "Neo-Soul")
+                2 -> listOf("Pop", "R&B", "Indie")
+                5 -> listOf("Salsa", "Vallenato", "Cumbia")
+                else -> listOf("Rock", "Pop", "Jazz")
+            },
             artists = collector.favoritePerformers.mapIndexed { index, performer ->
                 FavoriteArtistMock(
                     name = performer.name,

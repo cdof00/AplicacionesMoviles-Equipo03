@@ -9,13 +9,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Label
 import com.example.musicapp.ui.components.atoms.AppChip
 import com.example.musicapp.ui.components.atoms.AppChipVariant
 import com.example.musicapp.ui.components.atoms.AppIcon
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.atoms.IconSizeKey
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
+import androidx.compose.material.icons.automirrored.outlined.Label
 import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
@@ -44,6 +44,6 @@ fun LabeledPillMolecule(
 @Composable
 private fun LabeledPillPreview() {
     DesignSystemPreviewSurface {
-        LabeledPillMolecule("Genre", "Jazz", {}, icon = Icons.Outlined.Label)
+        LabeledPillMolecule("Genre", "Jazz", {}, icon = Icons.AutoMirrored.Outlined.Label)
     }
 }
