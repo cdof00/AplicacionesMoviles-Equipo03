@@ -1,56 +1,60 @@
 package com.example.musicapp.ui.screens.collectors
 
 data class CollectorListEntry(
+    val collectorId: Int,
     val name: String,
     val lpCount: Int,
     val tierLabel: String,
     val highlightAvatarBadge: Boolean,
     val avatarGradientIndex: Int,
-)
-
-val collectorsFilterChipLabels: List<String> = listOf(
-    "All Circles",
-    "Jazz Purists",
-    "Analog Heads",
-    "Deep Crate",
-    "Private Press",
+    val genres: List<String> = emptyList(),
 )
 
 val collectorsMockList: List<CollectorListEntry> = listOf(
     CollectorListEntry(
-        name = "Marcus Vane",
-        lpCount = 1_240,
+        collectorId = 100,
+        name = "Manolo Bellon",
+        lpCount = 1,
         tierLabel = "ELITE",
         highlightAvatarBadge = true,
         avatarGradientIndex = 0,
+        genres = listOf("Salsa", "Jazz", "Bolero"),
     ),
     CollectorListEntry(
-        name = "Elena Thorne",
-        lpCount = 856,
+        collectorId = 101,
+        name = "Jaime Monsalve",
+        lpCount = 1,
         tierLabel = "PRO",
         highlightAvatarBadge = false,
         avatarGradientIndex = 1,
+        genres = listOf("Rock", "Classic Rock", "Blues"),
     ),
     CollectorListEntry(
-        name = "Julian Black",
-        lpCount = 2_410,
+        collectorId = 1,
+        name = "Andrea Mina",
+        lpCount = 6,
         tierLabel = "ARCHIVIST",
         highlightAvatarBadge = false,
         avatarGradientIndex = 2,
+        genres = listOf("Modern Jazz", "Post-Punk", "Neo-Soul"),
     ),
     CollectorListEntry(
-        name = "Sarah K.",
-        lpCount = 112,
+        collectorId = 2,
+        name = "Camila Zuluaga",
+        lpCount = 0,
         tierLabel = "EMERGING",
         highlightAvatarBadge = false,
         avatarGradientIndex = 3,
+        genres = listOf("Pop", "R&B", "Indie"),
     ),
     CollectorListEntry(
-        name = "Dr. Low-Fi",
-        lpCount = 5_900,
+        collectorId = 5,
+        name = "Jose Ortegon",
+        lpCount = 1,
         tierLabel = "LEGEND",
         highlightAvatarBadge = false,
         avatarGradientIndex = 4,
+        genres = listOf("Salsa", "Vallenato", "Cumbia"),
     ),
 )
 
@@ -60,3 +64,11 @@ fun collectorTierUsesPrimaryAccent(label: String): Boolean {
         else -> false
     }
 }
+
+val collectorsFilterChipLabels: List<String> = listOf(
+    "All Circles",
+    "Jazz Purists",
+    "Analog Heads",
+    "Deep Crate",
+    "Private Press",
+)

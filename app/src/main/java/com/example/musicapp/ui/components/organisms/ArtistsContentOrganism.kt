@@ -18,7 +18,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun ArtistsContentOrganism(
     innerPadding: PaddingValues,
-    onArtistClick: () -> Unit,
+    onArtistClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -45,7 +45,7 @@ fun ArtistsContentOrganism(
         ) { entry ->
             ArtistListItemMolecule(
                 entry = entry,
-                onClick = onArtistClick,
+                onClick = { onArtistClick(entry.artistId) },
                 modifier = Modifier.padding(bottom = s.md),
             )
         }
@@ -59,7 +59,7 @@ private fun ArtistsContentOrganismPreview() {
         val s = AppTheme.spacing
         ArtistsContentOrganism(
             innerPadding = PaddingValues(top = s.sm, bottom = s.md),
-            onArtistClick = {},
+            onArtistClick = { _ -> },
         )
     }
 }
