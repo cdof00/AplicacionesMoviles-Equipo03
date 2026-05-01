@@ -1,20 +1,26 @@
 package com.example.musicapp.network
 
+<<<<<<< feature/HU04-detalle-artista
+=======
+import android.util.Log
+import org.json.JSONArray
+import org.json.JSONObject
+>>>>>>> main
 import android.content.Context
 import com.android.volley.Request
-import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.VolleyError
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.StringRequest
+import com.android.volley.RequestQueue
 import com.android.volley.toolbox.Volley
 import com.example.musicapp.models.Album
 import com.example.musicapp.models.Collector
 import com.example.musicapp.models.Musician
 import com.example.musicapp.models.Performer
 import com.example.musicapp.models.Track
-import org.json.JSONArray
-import org.json.JSONObject
+import com.example.musicapp.models.Collector
+import com.example.musicapp.models.Performer
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.StringRequest
 
 class NetworkServiceAdapter constructor(context: Context) {
     companion object {
@@ -54,7 +60,61 @@ class NetworkServiceAdapter constructor(context: Context) {
             { onError(it) }))
     }
 
+<<<<<<< feature/HU04-detalle-artista
     fun getTracks(albumId: Int, onComplete: (resp: List<Track>) -> Unit, onError: (error: VolleyError) -> Unit) {
+=======
+    fun getCollectors(onComplete:(resp:List<Collector>)->Unit, onError: (error:VolleyError)->Unit){
+        requestQueue.add(getRequest("collectors",
+            { response ->
+                val resp = JSONArray(response)
+                val list = mutableListOf<Collector>()
+                for (i in 0 until resp.length()) {
+                    val item = resp.getJSONObject(i)
+                    list.add(i, Collector(
+                        collectorId = item.getInt("id"),
+                        name = item.getString("name"),
+                        telephone = item.getString("telephone"),
+                        email = item.getString("email")
+                    ))
+                }
+                onComplete(list)
+            },
+            { onError(it) }))
+    }
+
+    fun getCollectorDetail(collectorId: Int, onComplete:(resp:Collector)->Unit, onError: (error:VolleyError)->Unit){
+        requestQueue.add(getRequest("collectors/$collectorId",
+            { response ->
+                val item = JSONObject(response)
+                val performers = mutableListOf<Performer>()
+
+                if (item.has("favoritePerformers")) {
+                    val performersArray = item.getJSONArray("favoritePerformers")
+                    for (i in 0 until performersArray.length()) {
+                        val p = performersArray.getJSONObject(i)
+                        performers.add(Performer(
+                            performerId = p.getInt("id"),
+                            name = p.getString("name"),
+                            image = p.getString("image"),
+                            description = p.getString("description")
+                        ))
+                    }
+                }
+
+                android.util.Log.d("NetworkAdapter", "Performers parsed: ${performers.size}")
+
+                onComplete(Collector(
+                    collectorId = item.getInt("id"),
+                    name = item.getString("name"),
+                    telephone = item.getString("telephone"),
+                    email = item.getString("email"),
+                    favoritePerformers = performers
+                ))
+            },
+            { onError(it) }))
+    }
+    fun getTracks(albumId:Int, onComplete:(resp:List<Track>)->Unit, onError: (error:VolleyError)->Unit) {
+>>>>>>> main
         requestQueue.add(getRequest("albums/$albumId/tracks",
             { response ->
                 val resp = JSONArray(response)
