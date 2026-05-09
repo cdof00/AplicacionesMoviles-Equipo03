@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.ui.components.atoms.AppAvatar
 import com.example.musicapp.ui.components.atoms.AppAvatarSize
@@ -37,9 +38,11 @@ fun CollectorListItemMolecule(
     val s = AppTheme.spacing
     val colors = AppTheme.colors
     val tierPrimary = collectorTierUsesPrimaryAccent(entry.tierLabel)
+
     AppSurface(
         modifier = modifier
             .fillMaxWidth()
+            .testTag("collector_tile")
             .clickable { onClick(entry.collectorId) },
         shape = AppTheme.shapes.roundedLg(),
         color = colors.surfaceContainer.copy(alpha = 0.92f),
@@ -60,6 +63,7 @@ fun CollectorListItemMolecule(
                     accentRing = entry.highlightAvatarBadge,
                     gradientVariantIndex = entry.avatarGradientIndex,
                 )
+
                 if (entry.highlightAvatarBadge) {
                     Box(
                         modifier = Modifier
@@ -70,6 +74,7 @@ fun CollectorListItemMolecule(
                     )
                 }
             }
+
             Column(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(s.xxs),
@@ -79,17 +84,20 @@ fun CollectorListItemMolecule(
                     style = AppTheme.typography.titleMedium,
                     color = colors.onSurface,
                 )
+
                 AppText(
                     text = "${entry.lpCount} LPs in Crate",
                     style = AppTheme.typography.bodySmall,
                     color = colors.onSurfaceVariant,
                 )
             }
+
             AppText(
                 text = entry.tierLabel,
                 style = AppTheme.typography.labelSmall,
                 color = if (tierPrimary) colors.primary else colors.onSurfaceVariant,
             )
+
             AppIcon(
                 imageVector = Icons.AutoMirrored.Outlined.KeyboardArrowRight,
                 contentDescription = null,

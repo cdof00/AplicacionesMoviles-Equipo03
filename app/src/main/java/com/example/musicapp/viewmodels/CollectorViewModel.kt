@@ -24,6 +24,12 @@ class CollectorViewModel(application: Application, collectorId: Int) :
     private val _collectorDetail = MutableStateFlow(CollectorDetailUiState())
     val collectorDetail: StateFlow<CollectorDetailUiState> = _collectorDetail
 
+    private val _isLoading = MutableStateFlow(true)
+    val isLoading: StateFlow<Boolean> = _isLoading
+
+    private val _hasError = MutableStateFlow(false)
+    val hasError: StateFlow<Boolean> = _hasError
+
     private val collectorRepository = CollectorRepository(application)
 
     private var _eventNetworkError = MutableLiveData<Boolean>(false)
@@ -38,17 +44,33 @@ class CollectorViewModel(application: Application, collectorId: Int) :
 
     private fun refreshDataFromNetwork() {
         viewModelScope.launch {
-            collectorRepository.refreshData({
-                _uiState.value = CollectorListUiState(it)
-            }, {
-                _eventNetworkError.value = true
-            })
-            collectorRepository.refreshCollectorDetail(id, {
-                android.util.Log.d("CollectorVM", "Collector: ${it.name}, Performers: ${it.favoritePerformers.size}")
-                _collectorDetail.value = CollectorDetailUiState(it)
-            }, {
-                _eventNetworkError.value = true
-            })
+            _isLoading.value = true
+            _hasError.value = false
+
+            collectorRepository.refreshData(
+                { collectors ->
+                    _uiState.value = CollectorListUiState(collectors)
+                    _isLoading.value = false
+                },
+                {
+                    _eventNetworkError.value = true
+                    _hasError.value = true
+                    _isLoading.value = false
+                }
+            )
+
+            if (id > 0) {
+                collectorRepository.refreshCollectorDetail(
+                    id,
+                    { collector ->
+                        _collectorDetail.value = CollectorDetailUiState(collector)
+                    },
+                    {
+                        _eventNetworkError.value = true
+                        _hasError.value = true
+                    }
+                )
+            }
         }
     }
 
