@@ -33,19 +33,26 @@ fun AppAvatar(
     val comp = AppTheme.dimensions.component
     val colors = AppTheme.colors
     val b = AppTheme.borders
+
     val dim = when (size) {
         AppAvatarSize.Small -> comp.avatarSm
         AppAvatarSize.Medium -> comp.avatarMd
         AppAvatarSize.Large -> comp.avatarLg
         AppAvatarSize.ArtistRow -> comp.artistRowAvatar
     }
+
     val shape = CircleShape
+
     val ringColor = if (accentRing) {
         colors.primary.copy(alpha = 0.88f)
     } else {
         colors.glassEdge
     }
-    val bgBrush: Brush? = gradientVariantIndex?.let { coverGradientBrush(it, colors) }
+
+    val bgBrush: Brush? = gradientVariantIndex?.let {
+        coverGradientBrush(it, colors)
+    }
+
     Box(
         modifier = modifier
             .size(dim)
@@ -60,13 +67,24 @@ fun AppAvatar(
             ),
         contentAlignment = Alignment.Center,
     ) {
-        if (bgBrush == null) {
-            AppText(
-                text = initials.take(2).uppercase(),
-                style = AppTheme.typography.labelMedium,
-                color = colors.onSurfaceVariant,
-            )
-        }
+        AppText(
+            text = getAvatarInitials(initials),
+            style = AppTheme.typography.labelMedium,
+            color = colors.onSurface,
+        )
+    }
+}
+
+private fun getAvatarInitials(name: String): String {
+    val words = name
+        .trim()
+        .split(" ")
+        .filter { it.isNotBlank() }
+
+    return when {
+        words.size >= 2 -> "${words[0].first()}${words[1].first()}".uppercase()
+        words.size == 1 -> words[0].take(2).uppercase()
+        else -> "?"
     }
 }
 
@@ -74,6 +92,6 @@ fun AppAvatar(
 @Composable
 private fun AppAvatarPreview() {
     DesignSystemPreviewSurface {
-        AppAvatar("JD")
+        AppAvatar("Manolo Bellon", gradientVariantIndex = 0)
     }
 }
