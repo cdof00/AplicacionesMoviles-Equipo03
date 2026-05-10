@@ -18,6 +18,7 @@ data class CollectorDetailUiModel(
 data class FavoriteArtistMock(
     val name: String,
     val gradientVariantIndex: Int,
+    val imageUrl: String = "",
 )
 
 val collectorDetailGenres: List<String> = listOf(

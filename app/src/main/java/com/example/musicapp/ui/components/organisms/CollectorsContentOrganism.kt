@@ -16,6 +16,7 @@ import com.example.musicapp.ui.components.molecules.CatalogCollectionHeaderMolec
 import com.example.musicapp.ui.components.molecules.CollectorListItemMolecule
 import com.example.musicapp.ui.components.molecules.CollectorsHeroSectionMolecule
 import com.example.musicapp.ui.components.molecules.FilterChipRowMolecule
+import com.example.musicapp.ui.screens.collectors.CollectorListEntry
 import com.example.musicapp.ui.screens.collectors.collectorsFilterChipLabels
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.ui.screens.collectors.collectorsMockList
@@ -24,11 +25,13 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 @Composable
 fun CollectorsContentOrganism(
     innerPadding: PaddingValues,
-    onOpenCollectorDetail: () -> Unit,
+    collectors: List<CollectorListEntry>,
+    onOpenCollectorDetail: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
     var selectedChipIndex by rememberSaveable { mutableIntStateOf(0) }
+
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
@@ -39,6 +42,7 @@ fun CollectorsContentOrganism(
         item {
             CatalogCollectionHeaderMolecule(title = "Collection")
         }
+
         item {
             CollectorsHeroSectionMolecule(
                 watermarkNumber = "04",
@@ -46,6 +50,7 @@ fun CollectorsContentOrganism(
                 subtitle = "Connecting with the elite circles of the high-fidelity community.",
             )
         }
+
         item {
             FilterChipRowMolecule(
                 labels = collectorsFilterChipLabels,
@@ -54,13 +59,14 @@ fun CollectorsContentOrganism(
                 modifier = Modifier.padding(bottom = s.md),
             )
         }
+
         items(
-            items = collectorsMockList,
-            key = { it.name },
+            items = collectors,
+            key = { it.collectorId },
         ) { entry ->
             CollectorListItemMolecule(
                 entry = entry,
-                onClick = onOpenCollectorDetail,
+                onClick = { onOpenCollectorDetail(entry.collectorId) },
                 modifier = Modifier.padding(bottom = s.md),
             )
         }
@@ -74,7 +80,8 @@ private fun CollectorsContentOrganismPreview() {
         val s = AppTheme.spacing
         CollectorsContentOrganism(
             innerPadding = PaddingValues(top = s.sm, bottom = s.md),
-            onOpenCollectorDetail = {},
+            collectors = collectorsMockList,
+            onOpenCollectorDetail = { _ -> },
         )
     }
 }

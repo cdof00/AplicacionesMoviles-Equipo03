@@ -49,6 +49,7 @@ fun FavoriteArtistsSectionOrganism(
                 ArtistAvatarItemMolecule(
                     name = artist.name,
                     gradientVariantIndex = artist.gradientVariantIndex,
+                    imageUrl = artist.imageUrl,
                 )
             }
         }
