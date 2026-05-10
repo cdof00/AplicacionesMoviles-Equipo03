@@ -12,3 +12,7 @@
 *.ap_
 *.aab
 .vscode/
+.kotlin/
+*.keystore
+*.jks
+keystore.properties
