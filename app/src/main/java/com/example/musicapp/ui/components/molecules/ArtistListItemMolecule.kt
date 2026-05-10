@@ -28,6 +28,7 @@ import com.example.musicapp.ui.components.atoms.IconSizeKey
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.ui.screens.artists.ArtistListEntry
 import com.example.musicapp.ui.theme.theme.AppTheme
+import androidx.compose.ui.platform.testTag
 
 @Composable
 fun ArtistListItemMolecule(
@@ -40,6 +41,7 @@ fun ArtistListItemMolecule(
     AppSurface(
         modifier = modifier
             .fillMaxWidth()
+            .testTag("artist_list_item")
             .clickable { onClick(entry.artistId) },
         shape = AppTheme.shapes.roundedLg(),
         color = colors.surfaceContainer.copy(alpha = 0.92f),
