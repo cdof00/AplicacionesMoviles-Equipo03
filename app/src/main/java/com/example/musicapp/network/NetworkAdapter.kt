@@ -8,6 +8,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.RequestQueue
+import com.android.volley.toolbox.HurlStack
 import com.android.volley.toolbox.Volley
 import com.example.musicapp.models.Album
 import com.example.musicapp.models.Collector
@@ -17,6 +18,10 @@ import com.example.musicapp.models.Track
 import com.example.musicapp.models.CollectorAlbum
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
+import java.security.SecureRandom
+import java.security.cert.X509Certificate
+import javax.net.ssl.SSLContext
+import javax.net.ssl.X509TrustManager
 
 class NetworkServiceAdapter constructor(context: Context) {
 
@@ -35,7 +40,18 @@ class NetworkServiceAdapter constructor(context: Context) {
     }
 
     private val requestQueue: RequestQueue by lazy {
-        Volley.newRequestQueue(context.applicationContext)
+        val trustAll = arrayOf<X509TrustManager>(object : X509TrustManager {
+            override fun checkClientTrusted(chain: Array<X509Certificate>, authType: String) {}
+            override fun checkServerTrusted(chain: Array<X509Certificate>, authType: String) {}
+            override fun getAcceptedIssuers(): Array<X509Certificate> = emptyArray()
+        })
+        val sslContext = SSLContext.getInstance("TLS").apply {
+            init(null, trustAll, SecureRandom())
+        }
+        Volley.newRequestQueue(
+            context.applicationContext,
+            HurlStack(null, sslContext.socketFactory)
+        )
     }
 
     fun getAlbums(
@@ -232,6 +248,40 @@ class NetworkServiceAdapter constructor(context: Context) {
                             collectorAlbums = collectorAlbums
                         )
                     )
+                },
+                { onError(it) }
+            )
+        )
+    }
+
+    fun getMusicians(
+        onComplete: (resp: List<Musician>) -> Unit,
+        onError: (error: VolleyError) -> Unit
+    ) {
+        requestQueue.add(
+            getRequest(
+                "musicians",
+                { response ->
+                    try {
+                        val resp = JSONArray(response)
+                        val list = mutableListOf<Musician>()
+                        for (i in 0 until resp.length()) {
+                            val item = resp.getJSONObject(i)
+                            list.add(
+                                Musician(
+                                    musicianId = item.getInt("id"),
+                                    name = item.getString("name"),
+                                    image = item.optString("image", ""),
+                                    description = item.optString("description", ""),
+                                    birthDate = item.optString("birthDate", "")
+                                )
+                            )
+                        }
+                        onComplete(list)
+                    } catch (e: Exception) {
+                        Log.e("NetworkAdapter", "parse error: ${e.message}")
+                        onComplete(emptyList())
+                    }
                 },
                 { onError(it) }
             )
