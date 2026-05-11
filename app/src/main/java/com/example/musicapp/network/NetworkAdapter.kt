@@ -1,7 +1,9 @@
 package com.example.musicapp.network
 
-import android.content.Context
 import android.util.Log
+import org.json.JSONArray
+import org.json.JSONObject
+import android.content.Context
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
@@ -16,8 +18,6 @@ import com.example.musicapp.models.Track
 import com.example.musicapp.models.CollectorAlbum
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
-import org.json.JSONArray
-import org.json.JSONObject
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
 import javax.net.ssl.SSLContext
