@@ -107,7 +107,6 @@ private fun ArtistListItemMoleculePreview() {
     DesignSystemPreviewSurface {
         ArtistListItemMolecule(
             entry = ArtistListEntry(1, "Miles Davis", "Jazz trumpeter and bandleader.", "", 0),
-            entry = ArtistListEntry(1, "Miles Davis", 14, 0),
             onClick = { _ -> },
         )
     }

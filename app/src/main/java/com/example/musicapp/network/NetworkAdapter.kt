@@ -1,11 +1,11 @@
 package com.example.musicapp.network
 
 import android.content.Context
+import android.util.Log
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.VolleyError
-import com.android.volley.RequestQueue
 import com.android.volley.toolbox.HurlStack
 import com.android.volley.toolbox.Volley
 import com.example.musicapp.models.Album
@@ -16,12 +16,14 @@ import com.example.musicapp.models.Track
 import com.example.musicapp.models.CollectorAlbum
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
+import org.json.JSONArray
+import org.json.JSONObject
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
 import javax.net.ssl.SSLContext
 import javax.net.ssl.X509TrustManager
 
-class NetworkServiceAdapter constructor(context: Context) {
+class NetworkServiceAdapter (context: Context) {
 
     companion object {
 
