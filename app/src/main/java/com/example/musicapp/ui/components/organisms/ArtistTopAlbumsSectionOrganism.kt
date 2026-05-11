@@ -1,5 +1,6 @@
 package com.example.musicapp.ui.components.organisms
 
+import androidx.compose.ui.platform.testTag
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -73,7 +74,9 @@ fun ArtistTopAlbumsSectionOrganism(
                     ArtistTopAlbumTileMolecule(
                         album = album,
                         onClick = onAlbumClick,
-                        modifier = Modifier.weight(1f),
+                        modifier = Modifier
+                            .weight(1f)
+                            .testTag("artist_top_album"),
                     )
                 }
                 if (rowAlbums.size == 1) {
