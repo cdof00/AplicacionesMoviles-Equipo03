@@ -136,6 +136,7 @@ class AlbumTest {
                 .isNotEmpty()
         }
 
+
         composeTestRule
             .onAllNodesWithTag("album_detail_header_title", useUnmergedTree = true)[0]
             .performScrollTo()
