@@ -48,6 +48,7 @@ fun AlbumCatalogScreen(
         CircularProgressIndicator(modifier = Modifier.fillMaxSize()
             .wrapContentSize(align = Alignment.Center))
     }
+
     else{
         CatalogContentOrganism(
             albums = albumListUiState.albums,
