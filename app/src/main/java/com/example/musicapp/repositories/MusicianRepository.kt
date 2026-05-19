@@ -13,11 +13,26 @@ class MusicianRepository(val application: Application) {
         NetworkServiceAdapter.getInstance(application).getMusicians(onComplete, onError)
     }
 
+    fun getBandList(
+        onComplete: (resp: List<Musician>) -> Unit,
+        onError: (error: VolleyError) -> Unit
+    ) {
+        NetworkServiceAdapter.getInstance(application).getBands(onComplete, onError)
+    }
+
     fun refreshMusicianDetail(
         musicianId: Int,
         onComplete: (resp: Musician) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
         NetworkServiceAdapter.getInstance(application).getMusicianDetail(musicianId, onComplete, onError)
+    }
+
+    fun refreshBandDetail(
+        musicianId: Int,
+        onComplete: (resp: Musician) -> Unit,
+        onError: (error: VolleyError) -> Unit
+    ) {
+        NetworkServiceAdapter.getInstance(application).getBandDetail(musicianId, onComplete, onError)
     }
 }

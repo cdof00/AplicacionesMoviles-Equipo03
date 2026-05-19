@@ -64,9 +64,17 @@ fun AlbumDetailContentOrganism(
             AppAlbumCoverPlaceholder(album.cover)
         }
         item {
+            val artista = album.performers.firstOrNull()
+            var nombre = ""
+            if(artista!=null){
+                nombre = artista.name
+            }
+            else{
+                nombre = "Sin Artista"
+            }
             AlbumMetaHeaderMolecule(
                 title = album.name,
-                artist = album.genre,
+                artist = nombre,
                 year = album.releaseDate.split("-")[0],
             )
         }

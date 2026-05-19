@@ -34,8 +34,18 @@ class MusicianListViewModel(application: Application) : AndroidViewModel(applica
             _isLoading.value = true
             musicianRepository.getMusicianList(
                 { musicians ->
-                    _uiState.value = MusicianListUiState(musicians)
-                    _isLoading.value = false
+                    musicianRepository.getBandList(
+                        { bands ->
+                            val artistas = musicians + bands
+                            artistas.sortedBy { it.name }
+                            _uiState.value = MusicianListUiState(artistas)
+                            _isLoading.value = false
+                        },{ error ->
+                            Log.e("BandListVM", error.message ?: "network error")
+                            _eventNetworkError.value = true
+                            _isLoading.value = false
+                        }
+                    )
                 },
                 { error ->
                     Log.e("MusicianListVM", error.message ?: "network error")
