@@ -32,10 +32,18 @@ fun AlbumTileMolecule(
             .clickable(onClick = { onClick(album.albumId) }),
         verticalArrangement = Arrangement.spacedBy(s.sm),
     ) {
+        val artista = album.performers.firstOrNull()
+        var nombre = ""
+        if(artista!=null){
+            nombre = artista.name
+        }
+        else{
+            nombre = "Sin Artista"
+        }
         AppAlbumCoverPlaceholder(album.cover)
         AlbumMetaFooterMolecule(
             title = album.name,
-            genre = album.genre,
+            genre = nombre,
             releaseDate = album.releaseDate,
         )
     }

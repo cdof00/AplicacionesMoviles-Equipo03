@@ -1,10 +1,13 @@
 package com.example.musicapp.ui.components.organisms
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.models.Track
@@ -41,15 +44,31 @@ fun TracklistCardOrganism(
                     )
                 },
             )
-            Column(verticalArrangement = Arrangement.spacedBy(s.sm)) {
-                var trackNum:Int = 0
-                tracks.forEach { track ->
-                    trackNum++
-                    TrackListItemMolecule(
-                        number = trackNum,
-                        title = track.name,
-                        duration = track.duration,
+            if (tracks.size == 0){
+                Box(
+                    modifier = modifier
+                        .fillMaxSize()
+                        .padding(horizontal = s.xl),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    AppText(
+                        text = "Este album no tiene canciones",
+                        style = AppTheme.typography.bodyLarge,
+                        color = colors.onSurfaceVariant,
                     )
+                }
+            }
+            else{
+                Column(verticalArrangement = Arrangement.spacedBy(s.sm)) {
+                    var trackNum:Int = 0
+                    tracks.forEach { track ->
+                        trackNum++
+                        TrackListItemMolecule(
+                            number = trackNum,
+                            title = track.name,
+                            duration = track.duration,
+                        )
+                    }
                 }
             }
         }

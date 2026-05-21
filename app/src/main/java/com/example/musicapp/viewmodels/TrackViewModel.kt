@@ -34,6 +34,10 @@ class TrackViewModel(application: Application, albumId: Int) :  AndroidViewModel
     private val tracksRepository = TrackRepository(application)
     private val albumRepository = AlbumRepository(application)
 
+    private val _isLoading = MutableStateFlow(true)
+
+    val isLoading: StateFlow<Boolean> = _isLoading
+
     private var _eventNetworkError = MutableLiveData<Boolean>(false)
 
     val eventNetworkError: LiveData<Boolean>
@@ -52,24 +56,19 @@ class TrackViewModel(application: Application, albumId: Int) :  AndroidViewModel
     private fun refreshDataFromNetwork() {
         viewModelScope.launch() {
             tracksRepository.refreshData(id,{
+                Log.d("TrackVM", "Tracks: ${it}")
                 _uiState.value = TrackListUiState(it)
+                _isLoading.value = false
             },{
                 _eventNetworkError.value = true
             })
-            albumRepository.refreshData({
-                val album = getAlbumById(it, id)
-                _album.value = TrackAlbumUiState(album)
+            albumRepository.getAlbumById(id,{
+                Log.d("TrackVM", "Album: ${it}")
+                _album.value = TrackAlbumUiState(it)
             },{
                 _eventNetworkError.value = true
             })
         }
-    }
-
-    private fun getAlbumById(albums: List<Album>, albumId: Int):Album{
-        val index = albums.indexOfFirst{
-            it.albumId == albumId
-        }
-        return albums[index]
     }
 
     class Factory(val app: Application, private val albumId: Int) :
