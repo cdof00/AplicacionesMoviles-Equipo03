@@ -92,7 +92,7 @@ La evidencia de esta prueba se encuentra en:
 docs/testing/monkey/monkey_report.txt
 ```
 
-## 2. Prueba de reconocimiento sistemática tipo Ripper/Reaper con DroidBot
+## 2. Prueba de reconocimiento sistemática tipo Ripper con DroidBot
 
 ### Descripción
 
