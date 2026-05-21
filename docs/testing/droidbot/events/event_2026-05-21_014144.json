@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014144",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          132,
+          898
+        ],
+        [
+          202,
+          950
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "MB",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 27,
+      "temp_id": 28,
+      "size": "70*52",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]MB[enabled,,]",
+      "view_str": "a23b35dedae701f6fa636f6b6c212fe0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button bound_box=132,898,202,950>MB</button>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "1daf762734963e6319a5f4ef8e6a8d5d",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=a23b35dedae701f6fa636f6b6c212fe0(MainActivity/TextView-MB))"
+}

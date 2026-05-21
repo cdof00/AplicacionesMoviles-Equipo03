@@ -1,0 +1,59 @@
+{
+  "tag": "2026-05-21_013827",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        32
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          589,
+          1459
+        ],
+        [
+          980,
+          1592
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Jazz",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 30,
+      "temp_id": 31,
+      "size": "391*133",
+      "signature": "[class]android.widget.EditText[resource_id]None[text]Jazz[enabled,,]",
+      "view_str": "46ba0616e38882102da23e58d66e17a9",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<input bound_box=589,1459,980,1592>Jazz</input>"
+    }
+  },
+  "start_state": "4edbace853d27c6d936d3d9ff1e04a3a",
+  "stop_state": "4edbace853d27c6d936d3d9ff1e04a3a",
+  "event_str": "TouchEvent(state=4edbace853d27c6d936d3d9ff1e04a3a, view=46ba0616e38882102da23e58d66e17a9(MainActivity/EditText-Jazz))"
+}

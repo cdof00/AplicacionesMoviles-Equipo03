@@ -1,0 +1,36 @@
+add device 1: /dev/input/event11
+  name:     "parrot-qrd-sku1-snd-card Button Jack"
+add device 2: /dev/input/event10
+  name:     "parrot-qrd-sku1-snd-card Headset Jack"
+add device 3: /dev/input/event9
+  name:     "goodix_ts"
+add device 4: /dev/input/event8
+  name:     "double-tap"
+add device 5: /dev/input/event7
+  name:     "Moto CapSense Ch4"
+add device 6: /dev/input/event6
+  name:     "Moto CapSense Ch3"
+add device 7: /dev/input/event5
+  name:     "Moto CapSense Ch2"
+add device 8: /dev/input/event4
+  name:     "Moto CapSense Ch1"
+add device 9: /dev/input/event3
+  name:     "Moto CapSense Ch0"
+add device 10: /dev/input/event2
+  name:     "pmic_resin"
+add device 11: /dev/input/event1
+  name:     "pmic_pwrkey"
+add device 12: /dev/input/event0
+  name:     "gpio-keys"
+[  143810.896905] /dev/input/event3: EV_ABS       ABS_DISTANCE         00000002            
+[  143810.896905] /dev/input/event3: EV_SYN       SYN_REPORT           00000000            
+[  143814.634647] /dev/input/event5: EV_ABS       ABS_DISTANCE         00000001            
+[  143814.634757] /dev/input/event6: EV_ABS       ABS_DISTANCE         00000001            
+[  143814.634647] /dev/input/event5: EV_SYN       SYN_REPORT           00000000            
+[  143814.634757] /dev/input/event6: EV_SYN       SYN_REPORT           00000000            
+[  143814.735966] /dev/input/event5: EV_ABS       ABS_DISTANCE         00000002            
+[  143814.735966] /dev/input/event5: EV_SYN       SYN_REPORT           00000000            
+[  143814.836360] /dev/input/event4: EV_ABS       ABS_DISTANCE         00000002            
+[  143814.836446] /dev/input/event6: EV_ABS       ABS_DISTANCE         00000002            
+[  143814.836360] /dev/input/event4: EV_SYN       SYN_REPORT           00000000            
+[  143814.836446] /dev/input/event6: EV_SYN       SYN_REPORT           00000000            

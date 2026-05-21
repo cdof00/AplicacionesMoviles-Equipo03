@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014224",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "Poeta del pueblo",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          579,
+          1511
+        ],
+        [
+          991,
+          1580
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Poeta del pueblo",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 35,
+      "temp_id": 36,
+      "size": "412*69",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Poeta del pueblo[enabled,,]",
+      "view_str": "ed58e20fe77df1ef047c6a38805d9e34",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "16",
+      "desc": "<button text='Poeta del pueblo' bound_box=579,1511,991,1580>Poeta del pueblo</button>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "4776cd46c202eae1fdd58aaa7ec84288",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=ed58e20fe77df1ef047c6a38805d9e34(MainActivity/TextView-Poeta del ))"
+}
