@@ -37,8 +37,8 @@ class MusicianListViewModel(application: Application) : AndroidViewModel(applica
                     musicianRepository.getBandList(
                         { bands ->
                             val artistas = musicians + bands
-                            artistas.sortedBy { it.name }
-                            _uiState.value = MusicianListUiState(artistas)
+                            val general = artistas.sortedBy { it.name }
+                            _uiState.value = MusicianListUiState(general)
                             _isLoading.value = false
                         },{ error ->
                             Log.e("BandListVM", error.message ?: "network error")

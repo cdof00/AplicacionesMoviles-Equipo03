@@ -27,7 +27,7 @@ class NetworkServiceAdapter (context: Context) {
 
     companion object {
 
-        const val BASE_URL = "http://35.225.193.234:3000/"
+        const val BASE_URL = "http://35.253.100.90:3000/"
 
         var instance: NetworkServiceAdapter? = null
 
