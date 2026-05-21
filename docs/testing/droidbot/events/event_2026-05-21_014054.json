@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014054",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "Menu",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          101,
+          154
+        ],
+        [
+          168,
+          221
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "67*67",
+      "signature": "[class]android.view.View[resource_id]None[text]None[enabled,,]",
+      "view_str": "415d9afce25b9f0e8aebf9a966382670",
+      "content_free_signature": "[class]android.view.View[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button text='Menu' bound_box=101,154,168,221></button>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=415d9afce25b9f0e8aebf9a966382670(MainActivity/View-))"
+}

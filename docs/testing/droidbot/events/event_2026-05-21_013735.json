@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013735",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "Buscando Am\u00e9rica",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          89,
+          1512
+        ],
+        [
+          502,
+          1581
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Buscando Am\u00e9rica",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 27,
+      "temp_id": 28,
+      "size": "413*69",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Buscando Am\u00e9rica[enabled,,]",
+      "view_str": "daa80d11186abd69dc9b7efe6b959df1",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<button text='Buscando Am\u00e9rica' bound_box=89,1512,502,1581>Buscando Am\u00e9rica</button>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "66e92c270b5d317c9c6e4294d31c9929",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=daa80d11186abd69dc9b7efe6b959df1(MainActivity/TextView-Buscando A))"
+}

@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013709",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          244,
+          795
+        ],
+        [
+          636,
+          864
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Recently Spun",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 21,
+      "size": "392*69",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Recently Spun[enabled,,]",
+      "view_str": "3a4fd6f71e22f30d40d6aa856f1d97ec",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<p bound_box=244,795,636,864>Recently Spun</p>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "5218641ba7485633d435cf25a1a046e5",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=3a4fd6f71e22f30d40d6aa856f1d97ec(MainActivity/TextView-Recently S))"
+}

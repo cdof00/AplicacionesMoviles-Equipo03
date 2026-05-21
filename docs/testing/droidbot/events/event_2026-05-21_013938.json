@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013938",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          67,
+          364
+        ],
+        [
+          521,
+          477
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Legendary",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 17,
+      "size": "454*113",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Legendary[enabled,,]",
+      "view_str": "2ef63cdf98061e5622d15d3e05e0b017",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<p bound_box=67,364,521,477>Legendary</p>"
+    }
+  },
+  "start_state": "e2eaf667317440284d9bbac0c2d3ce91",
+  "stop_state": "e2eaf667317440284d9bbac0c2d3ce91",
+  "event_str": "TouchEvent(state=e2eaf667317440284d9bbac0c2d3ce91, view=2ef63cdf98061e5622d15d3e05e0b017(MainActivity/TextView-Legendary))"
+}

@@ -1,0 +1,2851 @@
+{
+  "tag": "2026-05-21_013335",
+  "state_str": "30d818e61ada21d91ab149b50884cd18",
+  "state_str_content_free": "e7df1e9302347f48261d2afdfccdd616",
+  "foreground_activity": "com.motorola.launcher3/com.android.launcher3.CustomizationPanelLauncher",
+  "activity_stack": [
+    "com.motorola.launcher3/com.android.launcher3.CustomizationPanelLauncher"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.gms/.chimera.PersistentInternalBoundBrokerService",
+    "com.google.android.googlequicksearchbox/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.ads.identifier.service.AdvertisingIdService",
+    "vendor.qti.iwlan/.QualifiedNetworksServiceImpl",
+    "com.qti.phone/.ExtTelephonyService",
+    "com.motorola.smartfeed/com.google.firebase.sessions.SessionLifecycleService",
+    "vendor.qti.iwlan/.IWlanDataService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.motorola.ccc.devicemanagement/com.motorola.blur.service.blur.BlurServiceMother",
+    "com.motorola.motolights/.notification.MotoLightsNotificationListener",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.motorola.smart5g/.Smart5GService",
+    "com.google.android.ext.services/com.android.textclassifier.DefaultTextClassifierService",
+    "org.codeaurora.ims/.ImsService",
+    "com.google.android.gms/.chimera.PersistentInternalApiService",
+    "com.motorola.bach.modemstats/.oemhook.NVProgrammerService",
+    "com.google.android.adservices.api/com.android.adservices.measurement.MeasurementService",
+    "com.google.android.euicc/com.android.euicc.service.EuiccServiceImpl",
+    "com.motorola.mobiledesktop/com.lenovo.hec.vault.services.FileStationService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.motorola.smart5g/.NetworkStateService",
+    "com.motorola.gamemode/.GMPersistentService",
+    "com.qualcomm.location/.LocationService",
+    "com.motorola.timeweatherwidget/com.motorola.commandcenter.weather.KeepLiveService",
+    "com.google.android.gms/.remotegestures.api.RemoteGesturesService",
+    "com.qualcomm.qti.cne/.CneApp",
+    "com.dti.motorola/com.dti.phoenix.core.service.CoreService",
+    "com.android.settings/.SettingsDumpService",
+    "com.motorola.aiservices/.controller.AiService",
+    "com.google.android.gms/.tapandpay.hce.service.TpHceService",
+    "com.google.android.carrier/.CarrierConfigService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.gms/.droidguard.DroidGuardService",
+    "com.android.bluetooth/.btservice.AdapterService",
+    "com.motorola.launcher3/com.android.quickstep.TouchInteractionService",
+    "com.qualcomm.location/.izat.IzatService",
+    "com.google.android.gms/.instantapps.service.InstantAppsService",
+    "com.bluetooth.aptxmode/com.motorola.bluetooth.btsar.BtSarService",
+    "com.motorola.batterycare/.services.BatteryCareTaskService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.gms/.personalsafety.service.SndDetectionService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "vendor.qti.frameworks.utils/.QesdkSysService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.motorola.mobiledesktop.core/.MotoDesktopService",
+    "com.motorola.actions/.features.taptap.TapTapService",
+    "com.motorola.gamemode/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.gms/.stats.eastworld.EastworldService",
+    "com.motorola.ccc.devicemanagement/com.motorola.ccc.checkin.CheckinService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.motorola.carriersettingsext/.dataroaming.DataRoamingPhoneStateService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.android.systemui/.dragdrop.MotoDragDropService",
+    "com.motorola.smart5g/.IpManagerService",
+    "com.google.android.gms/.magictether.service.TetherService",
+    "com.motorola.gamemode/com.motorola.moto_features_library.activitydetection.MFLActivityDetectionService",
+    "com.motorola.actions/.features.flashonchop.gesture.service.FlashOnChopService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "org.codeaurora.ims/.QtiImsExtService",
+    "com.motorola.bach.modemstats/.ModemStatsService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.gms/.chimera.GmsApiService",
+    "com.motorola.msimsettings/.services.PersistentService",
+    "com.android.mtp/.MtpService",
+    "com.google.android.gms/.findmydevice.spot.bleadvertising.OfflineBeaconService_Persistent",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nowoverlayservice.DrawerOverlayService",
+    "com.motorola.systemserver/.MotoSystemServer",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.dti.motorola/com.google.firebase.sessions.SessionLifecycleService",
+    "com.motorola.batterycare/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.motorola.mobiledesktop/.notification.NotificationMonitorService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.android.bluetooth/.avrcpcontroller.BluetoothMediaBrowserService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.qualcomm.qcrilmsgtunnel/.QcrilMsgTunnelService",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "com.motorola.bach.modemstats/.nrcheckin.NRCheckinService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.android.systemui/.SystemUIService",
+    "com.dolby.daxservice/.DaxService",
+    "com.google.android.gms/.cast.devicesuggestions.SuggestionsProviderChimeraService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "vendor.qti.iwlan/.IWlanNetworkService",
+    "vendor.qti.hardware.cacert.server/.CACertService",
+    "com.motorola.gamemode/com.motorola.moto_features_library.instantgames.smartstream.InstantGamesNotificationService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.motorola.batterycare/com.motorola.mya.performance.service.battery.BatteryPerformanceService",
+    "com.motorola.actions/.features.smartbattery.SmartBatteryService",
+    "com.google.android.gms/.personalsafety.service.PSAService",
+    "com.google.android.ext.services/android.ext.services.notification.Assistant",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.bluetooth.aptxmode/com.motorola.bluetooth.motobtmetrics.MotoBtMetricsService",
+    "com.google.android.gms/.auth.trustagent.GoogleTrustAgent",
+    "com.motorola.actions/.core.motoservice.MotoService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.motorola.mykey/.service.MyKeyTriggerService",
+    "com.google.android.projection.gearhead/com.google.android.gearhead.service.SharedService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.motorola.appforecast/.AppForecastService",
+    "com.motorola.android.nativedropboxagent/.NativeDropBoxAgent",
+    "com.motorola.smartfeed/.overlay.SmartFeedOverlayService",
+    "com.qti.dpmserviceapp/.DpmServiceApp",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.motorola.actions/.features.quickcapture.QuickCaptureService",
+    "com.motorola.motocare/.MotoCareService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.motorola.launcher3/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.gms/.home.wifipresence.WifiPresencePersistentService",
+    "com.google.android.apps.chromecast.app/.systemcontrol.HomeControlService",
+    "com.motorola.ccc.devicemanagement/.SystemServerBindService",
+    "com.qti.qualcomm.datastatusnotification/.DataStatusNotificationService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.motorola.bach.modemstats/.datastall.DataStallDetectService",
+    "com.motorola.smartfeed/com.devicenative.dna.DNADataOrchestrator",
+    "com.google.android.gms/.crisisalerts.init.CrisisAlertsPersistentService",
+    "co.sitic.pp/.ServicioRegistro",
+    "com.android.phone/.vvm.RemoteVvmTaskManager",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.pecan.service.impl.PecanDumpSysService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.tts/com.google.android.apps.speech.tts.googletts.service.GoogleTtsService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.motorola.dciservice/.DciStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.gms/.dtdi.lifecycle.LifecycleService",
+    "com.google.android.gms/.chimera.GmsInternalBoundBrokerService",
+    "com.qualcomm.qti.telephonyservice/.QtiTelephonyService",
+    "com.motorola.thermalservice/.BatteryTempPolicy",
+    "com.motorola.mobiledesktop.core/.WakeupService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.adservices.api/com.android.adservices.common.AdServicesCommonService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.motorola.mobiledesktop/com.motorola.bleservice.MotoBleService",
+    "com.motorola.actions/.features.quickscreenshot.service.QuickScreenshotService",
+    "com.google.android.googlequicksearchbox/com.google.android.libraries.notifications.platform.entrypoints.firebase.FirebaseMessagingServiceImpl",
+    "com.whatsapp/.messageservice.messaging.MessageService",
+    "com.google.android.gms/.advancedprotection.service.AdvancedProtectionSyncService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.motorola.motolights/.core.MotoLightsService",
+    "com.google.android.gms/.personalsafety.service.LockingTrustAgentService",
+    "com.whatsapp/.messageservice.messaging.MessageService"
+  ],
+  "width": 1080,
+  "height": 2400,
+  "views": [
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*2400",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "15995464102ab37475ed927e9f05c017",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*2400",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "4a2cb95942087ebecd61111c89c9a30a",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*2400",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[enabled,,]",
+      "view_str": "8b2938dbb4e1f3b1b83cbdbeaaa75024",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/launcher",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*2400",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/launcher[text]None[enabled,,]",
+      "view_str": "d67fc606b21227e286a428fb791aa738",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/launcher"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 8,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5,
+        6,
+        7,
+        52,
+        53,
+        56,
+        57,
+        58
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/drag_layer",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*2400",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/drag_layer[text]None[enabled,,]",
+      "view_str": "284324e48ae3b0cf035b0713afecbd19",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/drag_layer"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/background_scrim",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*2400",
+      "signature": "[class]android.view.View[resource_id]com.motorola.launcher3:id/background_scrim[text]None[enabled,,]",
+      "view_str": "becdf7c25f356246e496d54d7adfdef9",
+      "content_free_signature": "[class]android.view.View[resource_id]com.motorola.launcher3:id/background_scrim"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/scrim_view",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 6,
+      "size": "1080*2400",
+      "signature": "[class]android.view.View[resource_id]com.motorola.launcher3:id/scrim_view[text]None[enabled,,]",
+      "view_str": "8e02bbae301bec371a8b3ec3af8a7f30",
+      "content_free_signature": "[class]android.view.View[resource_id]com.motorola.launcher3:id/scrim_view"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/workspace",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 7,
+      "size": "1080*2400",
+      "signature": "[class]android.widget.ScrollView[resource_id]com.motorola.launcher3:id/workspace[text]None[enabled,,]",
+      "view_str": "6ed97b847cf65d70c0d18e9782ff579a",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]com.motorola.launcher3:id/workspace",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<scrollbar bound_box=0,0,1080,2400></scrollbar>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          98
+        ],
+        [
+          1080,
+          1971
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*1873",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[enabled,,]",
+      "view_str": "cf83815b5ad6d514e26ea5c47e993e60",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 12,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        46,
+        48,
+        49,
+        51
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          128
+        ],
+        [
+          1058,
+          1941
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "1036*1813",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[enabled,,]",
+      "view_str": "46ec4fb0079042d57672fff74c3b43fb",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Borrar",
+      "children": [
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          128
+        ],
+        [
+          1058,
+          732
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "com.android.launcher3.widget.LauncherAppWidgetHostView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "1036*604",
+      "signature": "[class]com.android.launcher3.widget.LauncherAppWidgetHostView[resource_id]None[text]None[enabled,,]",
+      "view_str": "9533d5d58da027b3993fc4163902c652",
+      "content_free_signature": "[class]com.android.launcher3.widget.LauncherAppWidgetHostView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p text='Borrar' bound_box=22,128,1058,732></p>"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12,
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          150
+        ],
+        [
+          1036,
+          710
+        ]
+      ],
+      "resource_id": "android:id/background",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "992*560",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/background[text]None[enabled,,]",
+      "view_str": "2fd6f4e66323e0d51f68fab71f318eac",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/background"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          150
+        ],
+        [
+          1036,
+          710
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "992*560",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "33ac4350154b2e98d813267465b0bc35",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        14,
+        15,
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          211
+        ],
+        [
+          1036,
+          649
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/layout_content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "992*438",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.motorola.timeweatherwidget:id/layout_content[text]None[enabled,,]",
+      "view_str": "7fc610fbe538b70f471c4113f4789edc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.motorola.timeweatherwidget:id/layout_content"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "jue, 21 de may",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          86,
+          211
+        ],
+        [
+          994,
+          290
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/v_date",
+      "checked": false,
+      "text": "jue, 21 de may",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 14,
+      "size": "908*79",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.timeweatherwidget:id/v_date[text]jue, 21 de may[enabled,,]",
+      "view_str": "62086611594499062e96a271482199dd",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.timeweatherwidget:id/v_date",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='jue, 21 de may' bound_box=86,211,994,290>jue, 21 de may</button>"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          290
+        ],
+        [
+          1036,
+          544
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/clock_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 15,
+      "size": "992*254",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.timeweatherwidget:id/clock_layout[text]None[enabled,,]",
+      "view_str": "733f708949933c4dac3f924f63e13e1e",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.timeweatherwidget:id/clock_layout"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "01:33",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          65,
+          290
+        ],
+        [
+          1015,
+          544
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/v_clock",
+      "checked": false,
+      "text": "01:33",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "950*254",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.timeweatherwidget:id/v_clock[text]01:33[enabled,,]",
+      "view_str": "438375ecb8dd475b37003aba9ffa9e81",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.timeweatherwidget:id/v_clock",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='01:33' bound_box=65,290,1015,544>01:33</button>"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          75,
+          544
+        ],
+        [
+          1005,
+          649
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/weather_include",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 17,
+      "size": "930*105",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.timeweatherwidget:id/weather_include[text]None[enabled,,]",
+      "view_str": "0bb77f7a8c765529f8cdc25b8e796e56",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.timeweatherwidget:id/weather_include"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          75,
+          544
+        ],
+        [
+          1005,
+          601
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/v_add_cities_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 18,
+      "size": "930*57",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.motorola.timeweatherwidget:id/v_add_cities_layout[text]None[enabled,,]",
+      "view_str": "d4ebe786e2002e3be24ac2dfc87a24bc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.motorola.timeweatherwidget:id/v_add_cities_layout"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          389,
+          544
+        ],
+        [
+          691,
+          601
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/v_widget_start_text",
+      "checked": false,
+      "text": "Agregar clima",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 18,
+      "temp_id": 19,
+      "size": "302*57",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.timeweatherwidget:id/v_widget_start_text[text]Agregar clima[enabled,,]",
+      "view_str": "3f95e2b6f06bd059d5e2b3d8e384971c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.timeweatherwidget:id/v_widget_start_text",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=389,544,691,601>Agregar clima</button>"
+    },
+    {
+      "package": "com.motorola.timeweatherwidget",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          234
+        ],
+        [
+          1036,
+          626
+        ]
+      ],
+      "resource_id": "com.motorola.timeweatherwidget:id/weather_anim_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 20,
+      "size": "992*392",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.timeweatherwidget:id/weather_anim_view[text]None[enabled,,]",
+      "view_str": "542373218fc332232d982f32c947ca4c",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.timeweatherwidget:id/weather_anim_view"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "WhatsApp",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          732
+        ],
+        [
+          281,
+          1034
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "WhatsApp",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 21,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]WhatsApp[enabled,,]",
+      "view_str": "bf4358bba0deb47d99369e16c61d2207",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button text='WhatsApp' bound_box=22,732,281,1034>WhatsApp</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Uber",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          281,
+          732
+        ],
+        [
+          540,
+          1034
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Uber",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 22,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Uber[enabled,,]",
+      "view_str": "fa96c5c67ec6bff684668c5644b2ca97",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button text='Uber' bound_box=281,732,540,1034>Uber</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Biblia",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          1034
+        ],
+        [
+          281,
+          1336
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Biblia",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 23,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Biblia[enabled,,]",
+      "view_str": "ed6713437c323517d159d1b100a5e33e",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button text='Biblia' bound_box=22,1034,281,1336>Biblia</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Juegos",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          281,
+          1034
+        ],
+        [
+          540,
+          1336
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Juegos",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 24,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Juegos[enabled,,]",
+      "view_str": "135cfefec9ff41e2c733a77f7f3e8f84",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<button text='Juegos' bound_box=281,1034,540,1336>Juegos</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Perplexity",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          540,
+          1034
+        ],
+        [
+          799,
+          1336
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Perplexity",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 25,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Perplexity[enabled,,]",
+      "view_str": "51cbec7c3d42bc0041da0eaa103127c9",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<button text='Perplexity' bound_box=540,1034,799,1336>Perplexity</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Ajustes",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          799,
+          1034
+        ],
+        [
+          1058,
+          1336
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Ajustes",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 26,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Ajustes[enabled,,]",
+      "view_str": "70f28462c607f63a2f68194779a74b73",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button text='Ajustes' bound_box=799,1034,1058,1336>Ajustes</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "B\u00fasqueda",
+      "children": [
+        28
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          1336
+        ],
+        [
+          1058,
+          1638
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "com.android.launcher3.widget.LauncherAppWidgetHostView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 27,
+      "size": "1036*302",
+      "signature": "[class]com.android.launcher3.widget.LauncherAppWidgetHostView[resource_id]None[text]None[enabled,,]",
+      "view_str": "ea27ec6fc5c6c53306ee5348041cfcd6",
+      "content_free_signature": "[class]com.android.launcher3.widget.LauncherAppWidgetHostView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<p text='B\u00fasqueda' bound_box=22,1336,1058,1638></p>"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        29,
+        34
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1409
+        ],
+        [
+          1036,
+          1565
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 27,
+      "temp_id": 28,
+      "size": "992*156",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets[text]None[enabled,,]",
+      "view_str": "7b6045d74ee574ba97ce6c604aeab3f4",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1409
+        ],
+        [
+          1036,
+          1565
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets_4dp",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "992*156",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets_4dp[text]None[enabled,,]",
+      "view_str": "39ab5bea14f073e09fa3106c2b620980",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets_4dp"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1409
+        ],
+        [
+          178,
+          1565
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 30,
+      "size": "134*156",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo[text]None[enabled,,]",
+      "view_str": "9f48ef58b77e23f8892194c9d38123d6",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          178,
+          1409
+        ],
+        [
+          768,
+          1565
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 31,
+      "size": "590*156",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search[text]None[enabled,,]",
+      "view_str": "9e41f343817b12a0b445b54f7e310272",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          768,
+          1409
+        ],
+        [
+          902,
+          1565
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 32,
+      "size": "134*156",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search[text]None[enabled,,]",
+      "view_str": "2b3b227764bbc04b47642831bacd8794",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          902,
+          1409
+        ],
+        [
+          1036,
+          1565
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 33,
+      "size": "134*156",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens[text]None[enabled,,]",
+      "view_str": "85be8f044f5921c77b013b323ecc47f9",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        35,
+        36,
+        37
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1420
+        ],
+        [
+          1036,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_two_right_icons",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 34,
+      "size": "992*134",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_two_right_icons[text]None[enabled,,]",
+      "view_str": "4cbd60dba31a2e036a1036a34c948c33",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_two_right_icons"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1420
+        ],
+        [
+          1036,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background_protection",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 35,
+      "size": "992*134",
+      "signature": "[class]android.widget.ImageView[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_background_protection[text]None[enabled,,]",
+      "view_str": "1e3a5acbd1091a1a37803128810dc19a",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_background_protection"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "B\u00fasqueda de Google",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1420
+        ],
+        [
+          1036,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 36,
+      "size": "992*134",
+      "signature": "[class]android.widget.ImageView[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_background[text]None[enabled,,]",
+      "view_str": "c0553763b4731219999fb47152fe4b13",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_background",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<button text='B\u00fasqueda de Google' bound_box=44,1420,1036,1554></button>"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 5,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        38,
+        40,
+        41,
+        43,
+        44
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1420
+        ],
+        [
+          1036,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_plate",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 37,
+      "size": "992*134",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_plate[text]None[enabled,,]",
+      "view_str": "157c865e5bd08e3036a2b109cb1f96c5",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_plate"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        39
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1420
+        ],
+        [
+          178,
+          1554
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 37,
+      "temp_id": 38,
+      "size": "134*134",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "f027992f4070508bac70f3796e50200e",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "App de Google",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1420
+        ],
+        [
+          178,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_google_logo",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 39,
+      "size": "134*134",
+      "signature": "[class]android.widget.ImageButton[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_google_logo[text]None[enabled,,]",
+      "view_str": "d3b8703cd26c93b33b1dd14147b67403",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_google_logo",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button text='App de Google' bound_box=44,1420,178,1554></button>"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          178,
+          1420
+        ],
+        [
+          768,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_edit_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 37,
+      "temp_id": 40,
+      "size": "590*134",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_edit_frame[text]None[enabled,,]",
+      "view_str": "ed4588d365611d217fc410aa5b309647",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_edit_frame"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        42
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          768,
+          1420
+        ],
+        [
+          902,
+          1554
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 37,
+      "temp_id": 41,
+      "size": "134*134",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "b6634d4bf3108cbadb5e1e7e9f599c01",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "B\u00fasqueda por voz",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          768,
+          1420
+        ],
+        [
+          902,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_voice_btn",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 41,
+      "temp_id": 42,
+      "size": "134*134",
+      "signature": "[class]android.widget.ImageButton[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_voice_btn[text]None[enabled,,]",
+      "view_str": "6457028c793180739bfb5017665616e9",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_voice_btn",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "14",
+      "desc": "<button text='B\u00fasqueda por voz' bound_box=768,1420,902,1554></button>"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          768,
+          1420
+        ],
+        [
+          768,
+          1554
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 37,
+      "temp_id": 43,
+      "size": "0*134",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "42a5b6503a431b883f8e58e93e71ddd4",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        45
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          902,
+          1420
+        ],
+        [
+          1036,
+          1554
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 37,
+      "temp_id": 44,
+      "size": "134*134",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "e0f6fa479ced588fc7b09a69b30678d9",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.googlequicksearchbox",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "B\u00fasqueda con c\u00e1mara",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          902,
+          1420
+        ],
+        [
+          1036,
+          1554
+        ]
+      ],
+      "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_lens_btn",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 44,
+      "temp_id": 45,
+      "size": "134*134",
+      "signature": "[class]android.widget.ImageButton[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_lens_btn[text]None[enabled,,]",
+      "view_str": "08156522cbc8b7150a54bb81f0490c9e",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]com.google.android.googlequicksearchbox:id/googleapp_search_widget_lens_btn",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<button text='B\u00fasqueda con c\u00e1mara' bound_box=902,1420,1036,1554></button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Carpeta: Google, 4 o m\u00e1s elementos",
+      "children": [
+        47
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          1638
+        ],
+        [
+          281,
+          1940
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 46,
+      "size": "259*302",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "03ef1cd4be374ff2f2c01af687d41d50",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "16",
+      "desc": "<button text='Carpeta: Google, 4 o m\u00e1s elementos' bound_box=22,1638,281,1940></button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1844
+        ],
+        [
+          259,
+          1940
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/folder_icon_name",
+      "checked": false,
+      "text": "Google",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 46,
+      "temp_id": 47,
+      "size": "215*96",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/folder_icon_name[text]Google[enabled,,]",
+      "view_str": "7c2b8d3e3b1d6ba76c38d535d7d84836",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/folder_icon_name",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "17",
+      "desc": "<button bound_box=44,1844,259,1940>Google</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Meet",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          281,
+          1638
+        ],
+        [
+          540,
+          1940
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Meet",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 48,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Meet[enabled,,]",
+      "view_str": "032be1fd6cc1f48cf803861061642be2",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "18",
+      "desc": "<button text='Meet' bound_box=281,1638,540,1940>Meet</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Carpeta: u, 4 o m\u00e1s elementos",
+      "children": [
+        50
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          540,
+          1638
+        ],
+        [
+          799,
+          1940
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 49,
+      "size": "259*302",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "9d80ca41355f11ccbc6a95349769edcd",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "19",
+      "desc": "<button text='Carpeta: u, 4 o m\u00e1s elementos' bound_box=540,1638,799,1940></button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          562,
+          1844
+        ],
+        [
+          777,
+          1940
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/folder_icon_name",
+      "checked": false,
+      "text": "u",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 50,
+      "size": "215*96",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/folder_icon_name[text]u[enabled,,]",
+      "view_str": "4e9308ac929306305aaa416e645f617c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/folder_icon_name",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "20",
+      "desc": "<button bound_box=562,1844,777,1940>u</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Play\u00a0Store",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          799,
+          1638
+        ],
+        [
+          1058,
+          1940
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Play\u00a0Store",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 9,
+      "temp_id": 51,
+      "size": "259*302",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Play\u00a0Store[enabled,,]",
+      "view_str": "e5dc681a978b1bf46d200992ac666708",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "21",
+      "desc": "<button text='Play\u00a0Store' bound_box=799,1638,1058,1940>Play\u00a0Store</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "Pantalla principal",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          98
+        ],
+        [
+          1080,
+          2266
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 52,
+      "size": "1080*2168",
+      "signature": "[class]android.view.View[resource_id]None[text]None[enabled,,]",
+      "view_str": "0e596538f78c884dc79bdf6d8a6898aa",
+      "content_free_signature": "[class]android.view.View[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "22",
+      "desc": "<p text='Pantalla principal' bound_box=0,98,1080,2266></p>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": false,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        54,
+        55
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          11,
+          187
+        ],
+        [
+          1069,
+          343
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/drop_target_bar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 53,
+      "size": "1058*156",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/drop_target_bar[text]None[enabled,,]",
+      "view_str": "ace6333ecc7e2a1bb9c72743531950cd",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/drop_target_bar"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Eliminar",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          106,
+          187
+        ],
+        [
+          478,
+          343
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/delete_target_text",
+      "checked": false,
+      "text": "Eliminar",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 53,
+      "temp_id": 54,
+      "size": "372*156",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/delete_target_text[text]Eliminar[enabled,,]",
+      "view_str": "29a574418d973c4d5a15a14278ff3161",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/delete_target_text"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Editar pila",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          556,
+          187
+        ],
+        [
+          974,
+          343
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/uninstall_target_text",
+      "checked": false,
+      "text": "Editar pila",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 53,
+      "temp_id": 55,
+      "size": "418*156",
+      "signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/uninstall_target_text[text]Editar pila[enabled,,]",
+      "view_str": "aa739cea1dd94e96b89de15338d32a5b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.motorola.launcher3:id/uninstall_target_text"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1747
+        ],
+        [
+          1080,
+          2400
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/overview_actions_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 56,
+      "size": "1080*653",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/overview_actions_view[text]None[enabled,,]",
+      "view_str": "487d0731f65ef7df3c1476e24f418e17",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.motorola.launcher3:id/overview_actions_view"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1941
+        ],
+        [
+          1080,
+          1986
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/page_indicator",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 57,
+      "size": "1080*45",
+      "signature": "[class]android.view.View[resource_id]com.motorola.launcher3:id/page_indicator[text]None[enabled,,]",
+      "view_str": "9533c427ea4ba37e3c951b50e813058e",
+      "content_free_signature": "[class]android.view.View[resource_id]com.motorola.launcher3:id/page_indicator"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        59,
+        64
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1986
+        ],
+        [
+          1080,
+          2344
+        ]
+      ],
+      "resource_id": "com.motorola.launcher3:id/hotseat",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 58,
+      "size": "1080*358",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.motorola.launcher3:id/hotseat[text]None[enabled,,]",
+      "view_str": "1d9a4cbb41af6de5c97bdd89edb5c533",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.motorola.launcher3:id/hotseat"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          1986
+        ],
+        [
+          1058,
+          2210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 59,
+      "size": "1036*224",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[enabled,,]",
+      "view_str": "a7f61ecc6b3a920fea213014d68dfa64",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Tel\u00e9fono",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          1986
+        ],
+        [
+          281,
+          2210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Tel\u00e9fono",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 59,
+      "temp_id": 60,
+      "size": "259*224",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Tel\u00e9fono[enabled,,]",
+      "view_str": "bed05d4d6a9e4d40422b2d41e4f06f7e",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "23",
+      "desc": "<button text='Tel\u00e9fono' bound_box=22,1986,281,2210>Tel\u00e9fono</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Mensajes",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          281,
+          1986
+        ],
+        [
+          540,
+          2210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Mensajes",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 59,
+      "temp_id": 61,
+      "size": "259*224",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Mensajes[enabled,,]",
+      "view_str": "87472f221234e17e2de3b11e625db870",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "24",
+      "desc": "<button text='Mensajes' bound_box=281,1986,540,2210>Mensajes</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Chrome",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          540,
+          1986
+        ],
+        [
+          799,
+          2210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Chrome",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 59,
+      "temp_id": 62,
+      "size": "259*224",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Chrome[enabled,,]",
+      "view_str": "3a2134ac7bbfce5e2403778dcc8a1b66",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "25",
+      "desc": "<button text='Chrome' bound_box=540,1986,799,2210>Chrome</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "C\u00e1mara",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          799,
+          1986
+        ],
+        [
+          1058,
+          2210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "C\u00e1mara",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 59,
+      "temp_id": 63,
+      "size": "259*224",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]C\u00e1mara[enabled,,]",
+      "view_str": "4aa91e011528dd86cc4c2a300d2c64b4",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "26",
+      "desc": "<button text='C\u00e1mara' bound_box=799,1986,1058,2210>C\u00e1mara</button>"
+    },
+    {
+      "package": "com.motorola.launcher3",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          540,
+          2188
+        ],
+        [
+          540,
+          2188
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 64,
+      "size": "0*0",
+      "signature": "[class]android.view.View[resource_id]None[text]None[enabled,,]",
+      "view_str": "bc923046de36168c2aaff7de2ef5b07c",
+      "content_free_signature": "[class]android.view.View[resource_id]None"
+    }
+  ]
+}

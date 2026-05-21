@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014139",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          766,
+          704
+        ],
+        [
+          1013,
+          756
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Analog Heads",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 24,
+      "temp_id": 25,
+      "size": "247*52",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Analog Heads[enabled,,]",
+      "view_str": "4c38375bf90a2a90e121540a7f00ca44",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<button bound_box=766,704,1013,756>Analog Heads</button>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=4c38375bf90a2a90e121540a7f00ca44(MainActivity/TextView-Analog Hea))"
+}

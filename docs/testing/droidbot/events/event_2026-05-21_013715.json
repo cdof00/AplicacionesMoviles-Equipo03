@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013715",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          244,
+          870
+        ],
+        [
+          924,
+          922
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "A LOVE SUPREME \u2022 COLTRANE",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 22,
+      "size": "680*52",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]A LOVE SUPREME \u2022 COLTRANE[enabled,,]",
+      "view_str": "d95c624b3ba44716d93413d04111f763",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<p bound_box=244,870,924,922>A LOVE SUPREME \u2022 COLTRANE</p>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "5218641ba7485633d435cf25a1a046e5",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=d95c624b3ba44716d93413d04111f763(MainActivity/TextView-A LOVE SUP))"
+}

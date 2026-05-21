@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014128",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          100,
+          704
+        ],
+        [
+          322,
+          756
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "All Circles",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "222*52",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]All Circles[enabled,,]",
+      "view_str": "3a5af36070246e07562fbd743797e457",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button bound_box=100,704,322,756>All Circles</button>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=3a5af36070246e07562fbd743797e457(MainActivity/TextView-All Circle))"
+}

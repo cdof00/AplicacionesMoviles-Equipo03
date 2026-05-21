@@ -1,0 +1,11 @@
+{
+  "tag": "2026-05-21_013329",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "stop_intent": "am force-stop com.example.musicapp"
+  },
+  "start_state": "dde54d0eb7200a1ac5bbbd8dcff74873",
+  "stop_state": "30d818e61ada21d91ab149b50884cd18",
+  "event_str": "KillAppEvent()"
+}

@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013810",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          849,
+          120
+        ],
+        [
+          991,
+          254
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "SAVE",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 13,
+      "size": "142*134",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]SAVE[enabled,,]",
+      "view_str": "6fc14f7fc592bb1e08d731c0edb3278c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=849,120,991,254>SAVE</button>"
+    }
+  },
+  "start_state": "4edbace853d27c6d936d3d9ff1e04a3a",
+  "stop_state": "4edbace853d27c6d936d3d9ff1e04a3a",
+  "event_str": "TouchEvent(state=4edbace853d27c6d936d3d9ff1e04a3a, view=6fc14f7fc592bb1e08d731c0edb3278c(MainActivity/TextView-SAVE))"
+}
