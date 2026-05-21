@@ -52,7 +52,7 @@ adb shell monkey -p com.example.musicapp -v --throttle 500 10000 > ~/Descargas/m
 | `-v` | Activa el modo verbose para registrar mayor detalle de los eventos |
 | `--throttle 500` | Agrega una espera de 500 ms entre eventos |
 | `10000` | Cantidad total de eventos generados |
-| '> monkey_report.txt 2>&1' | Redirige la salida estándar y errores al archivo de reporte |
+| `> monkey_report.txt 2>&1` | Redirige la salida estándar y errores al archivo de reporte |
 
 ### Validación de errores
 
