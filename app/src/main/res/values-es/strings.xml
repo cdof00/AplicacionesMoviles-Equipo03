@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicApp</string>
+
+    <!-- Asociación de tracks -->
+    <string name="tracklist_title">Tracklist</string>
+    <string name="track_count">%1$d TRACKS</string>
+    <string name="empty_tracklist_message">Este álbum no tiene canciones</string>
+
+    <string name="track_name_label">NOMBRE DEL TRACK</string>
+    <string name="track_name_placeholder">Ejemplo: Bohemian Rhapsody</string>
+
+    <string name="track_duration_label">DURACIÓN</string>
+    <string name="track_duration_placeholder">Ejemplo: 3:45</string>
+
+    <string name="add_track_button">Agregar track</string>
+
+    <string name="track_name_required_error">El nombre del track es obligatorio</string>
+    <string name="track_duration_required_error">La duración del track es obligatoria</string>
+    <string name="track_duration_format_error">Usa el formato m:ss. Ejemplo: 3:45</string>
+
+    <!-- Accesibilidad -->
+    <string name="tracklist_content_description">Lista de canciones del álbum</string>
+    <string name="add_track_form_content_description">Formulario para agregar un track al álbum</string>
+    <string name="add_track_button_content_description">Agregar track al álbum</string>
+    <string name="track_name_input_content_description">Campo para escribir el nombre del track</string>
+    <string name="track_duration_input_content_description">Campo para escribir la duración del track</string>
+
+</resources>

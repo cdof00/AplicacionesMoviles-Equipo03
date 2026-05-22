@@ -18,12 +18,14 @@ fun LabeledInputFieldMolecule(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
+    inputModifier: Modifier = Modifier,
     placeholder: String? = null,
     surfaceStyle: AppInputSurfaceStyle = AppInputSurfaceStyle.Elevated,
     singleLine: Boolean = true,
 ) {
     val s = AppTheme.spacing
     val colors = AppTheme.colors
+
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(s.xs),
@@ -33,12 +35,14 @@ fun LabeledInputFieldMolecule(
             style = AppTheme.typography.labelSmall,
             color = colors.onSurfaceVariant,
         )
+
         AppInput(
             value = value,
             onValueChange = onValueChange,
             placeholder = placeholder,
             surfaceStyle = surfaceStyle,
             singleLine = singleLine,
+            inputModifier = inputModifier,
         )
     }
 }

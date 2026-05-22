@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">MusicApp</string>
+
+    <!-- Track association -->
+    <string name="tracklist_title">Tracklist</string>
+    <string name="track_count">%1$d TRACKS</string>
+    <string name="empty_tracklist_message">This album has no tracks</string>
+
+    <string name="track_name_label">TRACK NAME</string>
+    <string name="track_name_placeholder">Example: Bohemian Rhapsody</string>
+
+    <string name="track_duration_label">DURATION</string>
+    <string name="track_duration_placeholder">Example: 3:45</string>
+
+    <string name="add_track_button">Add track</string>
+
+    <string name="track_name_required_error">Track name is required</string>
+    <string name="track_duration_required_error">Track duration is required</string>
+    <string name="track_duration_format_error">Use m:ss format. Example: 3:45</string>
+
+    <!-- Accessibility -->
+    <string name="tracklist_content_description">Album track list</string>
+    <string name="add_track_form_content_description">Form to add a track to the album</string>
+    <string name="add_track_button_content_description">Add track to album</string>
+    <string name="track_name_input_content_description">Input field for track name</string>
+    <string name="track_duration_input_content_description">Input field for track duration</string>
+
 </resources>
