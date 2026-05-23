@@ -12,11 +12,17 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.DragHandle
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.models.CreateTrack
 import com.example.musicapp.ui.components.atoms.AppIcon
+import com.example.musicapp.ui.components.atoms.AppInputSurfaceStyle
 import com.example.musicapp.ui.components.atoms.AppSurface
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.atoms.IconSizeKey
@@ -25,14 +31,15 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
 fun ReleaseTrackRowMolecule(
-    trackNumberLabel: String,
-    title: String,
-    duration: String,
+    trackNumberLabel: Int,
+    track: CreateTrack,
+    onUpdate: (CreateTrack) -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
     val colors = AppTheme.colors
+
     AppSurface(
         modifier = modifier
             .fillMaxWidth()
@@ -57,27 +64,26 @@ fun ReleaseTrackRowMolecule(
                 contentAlignment = Alignment.Center,
             ) {
                 AppText(
-                    text = trackNumberLabel,
+                    text = trackNumberLabel.toString().padStart(2, '0') ,
                     style = AppTheme.typography.labelMedium,
                     color = colors.primary,
                 )
             }
-            AppText(
-                text = title,
-                style = AppTheme.typography.titleSmall,
-                color = colors.onSurface,
+            LabeledInputFieldMolecule(
+                label = "TITLE",
+                value = track.name,
+                onValueChange =  { onUpdate(track.copy(name = it)) },
+                placeholder = "",
+                surfaceStyle = AppInputSurfaceStyle.Elevated,
                 modifier = Modifier.weight(1f),
             )
-            AppText(
-                text = duration,
-                style = AppTheme.typography.bodySmall,
-                color = colors.onSurfaceVariant,
-            )
-            AppIcon(
-                imageVector = Icons.Outlined.DragHandle,
-                contentDescription = null,
-                tint = colors.onSurfaceVariant.copy(alpha = 0.6f),
-                sizeKey = IconSizeKey.Medium,
+            LabeledInputFieldMolecule(
+                label = "DURATION",
+                value = track.duration,
+                onValueChange = { onUpdate(track.copy(duration = it)) },
+                placeholder = "",
+                surfaceStyle = AppInputSurfaceStyle.Elevated,
+                modifier = Modifier.weight(1f),
             )
         }
     }
@@ -88,11 +94,11 @@ fun ReleaseTrackRowMolecule(
 private fun ReleaseTrackRowMoleculePreview() {
     DesignSystemPreviewSurface {
         ReleaseTrackRowMolecule(
-            trackNumberLabel = "01",
-            title = "So What",
-            duration = "9:22",
+            trackNumberLabel = 1,
             onClick = {},
             modifier = Modifier.padding(AppTheme.spacing.md),
+            track = TODO(),
+            onUpdate = TODO(),
         )
     }
 }

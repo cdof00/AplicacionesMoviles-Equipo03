@@ -23,6 +23,7 @@ import com.example.musicapp.ui.screens.ArtistsScreen
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PersonAdd
+import androidx.navigation.NavHostController
 import com.example.musicapp.ui.screens.CollectorDetailScreen
 import com.example.musicapp.ui.screens.CollectorsScreen
 import com.example.musicapp.ui.screens.NewReleaseScreen
@@ -46,6 +47,7 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
     ) {
         composable(ROUTE_MAIN) {
             MainTabScaffold(
+                navController = navController,
                 modifier = Modifier.fillMaxSize(),
                 selectedTab = selectedTab,
                 onTabSelected = { selectedTab = it },
@@ -128,6 +130,7 @@ fun MusicAppRoot(modifier: Modifier = Modifier) {
 
 @Composable
 private fun MainTabScaffold(
+    navController: NavHostController,
     selectedTab: Int,
     onTabSelected: (Int) -> Unit,
     onOpenAlbumDetail: (Int) -> Unit,
@@ -143,16 +146,10 @@ private fun MainTabScaffold(
     }
     val fab: @Composable () -> Unit = {
         when (selectedTab) {
-            0, 1 -> FloatingAddButtonOrganism(onClick = {})
             2 -> FloatingAddButtonOrganism(
                 onClick = {},
                 imageVector = Icons.Filled.PersonAdd,
                 contentDescription = "Add collector",
-            )
-            3 -> FloatingAddButtonOrganism(
-                onClick = {},
-                imageVector = Icons.Filled.Check,
-                contentDescription = "Confirm",
             )
             else -> {}
         }
@@ -177,6 +174,7 @@ private fun MainTabScaffold(
                 onOpenCollectorDetail = onOpenCollectorDetail,
             )
             else -> NewReleaseScreen(
+                navController = navController,
                 innerPadding = innerPadding,
                 onClose = { onTabSelected(0) },
                 onSave = {},

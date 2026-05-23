@@ -18,6 +18,7 @@ import com.example.musicapp.models.Track
 import com.example.musicapp.models.CollectorAlbum
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
+import com.example.musicapp.models.CreateAlbum
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
 import javax.net.ssl.SSLContext
@@ -478,6 +479,91 @@ class NetworkServiceAdapter (context: Context) {
                     )
                 },
                 { onError(it) }
+            )
+        )
+    }
+
+    fun createAlbum(album: CreateAlbum,  onComplete:(resp:Album)->Unit , onError: (error:VolleyError)->Unit){
+        val albumJson = JSONObject().apply {
+            put("name", album.name)
+            put("cover", album.cover)
+            put("releaseDate", album.releaseDate)
+            put("description", album.description)
+            put("genre", album.genre)
+            put("recordLabel", album.recordLabel)
+        }
+        Log.d("NetworkAdapter", "post album: ${albumJson}")
+        requestQueue.add(
+            postRequest(
+                "albums",
+                albumJson,
+                { response ->
+                    val album = Album(
+                        albumId = response.getInt("id"),
+                        name = response.getString("name"),
+                        cover = response.optString("cover", ""),
+                        releaseDate = response.optString("releaseDate", ""),
+                        description = response.optString("description", ""),
+                        genre = response.optString("genre", ""),
+                        recordLabel = response.optString("recordLabel", "")
+                    )
+                    onComplete(album)
+                },
+                { onError(it)
+                    Log.e("NetworkAdapter", "post error: ${it}")
+                }
+            )
+        )
+    }
+
+    fun associateMusician(artistId: Int, albumId: Int,  onComplete:(resp:Album)->Unit , onError: (error:VolleyError)->Unit){
+        var body = JSONObject()
+        Log.d("NetworkAdapter", "post album: ${artistId}")
+        requestQueue.add(
+            postRequest(
+                "albums/$albumId/musicians/$artistId",
+                body,
+                { response ->
+                    val album = Album(
+                        albumId = response.getInt("id"),
+                        name = response.getString("name"),
+                        cover = response.optString("cover", ""),
+                        releaseDate = response.optString("releaseDate", ""),
+                        description = response.optString("description", ""),
+                        genre = response.optString("genre", ""),
+                        recordLabel = response.optString("recordLabel", "")
+                    )
+                    onComplete(album)
+                },
+                { onError(it)
+                    Log.e("NetworkAdapter", "post error: ${it}")
+                }
+            )
+        )
+    }
+
+    fun associateBand(artistId: Int, albumId: Int,  onComplete:(resp:Album)->Unit , onError: (error:VolleyError)->Unit){
+        var body = JSONObject()
+        Log.d("NetworkAdapter", "post album: ${artistId}")
+        requestQueue.add(
+            postRequest(
+                "albums/$albumId/bands/$artistId",
+                body,
+                { response ->
+                    val album = Album(
+                        albumId = response.getInt("id"),
+                        name = response.getString("name"),
+                        cover = response.optString("cover", ""),
+                        releaseDate = response.optString("releaseDate", ""),
+                        description = response.optString("description", ""),
+                        genre = response.optString("genre", ""),
+                        recordLabel = response.optString("recordLabel", "")
+                    )
+                    onComplete(album)
+                },
+                { onError(it)
+                    Log.e("NetworkAdapter", "post error: ${it}")
+                }
             )
         )
     }

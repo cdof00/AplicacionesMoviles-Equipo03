@@ -1,56 +1,89 @@
 package com.example.musicapp.ui.components.organisms
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.example.musicapp.models.CreateTrack
+import com.example.musicapp.models.Musician
+import com.example.musicapp.ui.components.atoms.AppAlbumDialog
+import com.example.musicapp.ui.components.atoms.AppArtistDropdown
+import com.example.musicapp.ui.components.atoms.AppDropdown
 import com.example.musicapp.ui.components.atoms.AppInputSurfaceStyle
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.molecules.AddTrackPlaceholderRowMolecule
-import com.example.musicapp.ui.components.molecules.ArtworkUploadCardMolecule
 import com.example.musicapp.ui.components.molecules.DetailTopBarMolecule
 import com.example.musicapp.ui.components.molecules.LabeledInputFieldMolecule
 import com.example.musicapp.ui.components.molecules.ReleaseTrackRowMolecule
 import com.example.musicapp.ui.components.molecules.TrackListSectionHeaderMolecule
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.ui.theme.theme.AppTheme
+import com.example.musicapp.viewmodels.CreateAlbumViewModel
 
 @Composable
 fun NewReleaseContentOrganism(
+    navController : NavHostController,
+    viewModel: CreateAlbumViewModel,
+    musicians: List<Musician>,
+    isLoading: Boolean,
     innerPadding: PaddingValues,
     onClose: () -> Unit,
     onSave: () -> Unit,
-    onUploadArtworkClick: () -> Unit,
     onAddTrackClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+
     val s = AppTheme.spacing
     val colors = AppTheme.colors
     val b = AppTheme.borders
 
+    val uiState by viewModel.uiState.collectAsState()
+    val idCreatedAlbum by viewModel.createdAlbumId.collectAsState()
+
     var albumTitle by rememberSaveable { mutableStateOf("") }
-    var artist by rememberSaveable { mutableStateOf("") }
+    var description by rememberSaveable { mutableStateOf("") }
     var year by rememberSaveable { mutableStateOf("") }
-    var genre by rememberSaveable { mutableStateOf("Jazz") }
-    var matrixNumber by rememberSaveable { mutableStateOf("") }
-    var label by rememberSaveable { mutableStateOf("") }
+    var artwork by rememberSaveable { mutableStateOf("") }
+
+    if(idCreatedAlbum != 0){
+        AppAlbumDialog(
+            albumId = idCreatedAlbum,
+            onDismissRequest={},
+            onConfirmation={
+                navController.navigate("album_detail/$idCreatedAlbum") {
+                    launchSingleTop = true
+                }
+                viewModel.createdAlbumId.value = 0
+                albumTitle = ""
+                description = ""
+                year = ""
+                artwork = ""
+            },
+            dialogTitle= "Album created successfully",
+            dialogText="This album has been created successfully. Do you want to see it?",
+        )
+
+    }
 
     LazyColumn(
         modifier = modifier
@@ -74,30 +107,44 @@ fun NewReleaseContentOrganism(
                         color = colors.primary,
                         modifier = Modifier
                             .padding(end = s.sm)
-                            .clickable(onClick = onSave),
+                            .clickable(onClick = {viewModel.createAlbum()}),
                     )
                 },
             )
         }
         item {
-            ArtworkUploadCardMolecule(onClick = onUploadArtworkClick)
-        }
-        item {
             LabeledInputFieldMolecule(
                 label = "ALBUM TITLE",
                 value = albumTitle,
-                onValueChange = { albumTitle = it },
-                placeholder = "",
+                onValueChange = {
+                    uiState.albumTitle = it
+                    albumTitle = uiState.albumTitle
+                                },
+                placeholder = "Title",
                 surfaceStyle = AppInputSurfaceStyle.Elevated,
             )
         }
         item {
             LabeledInputFieldMolecule(
-                label = "ARTIST / ENSEMBLE",
-                value = artist,
-                onValueChange = { artist = it },
-                placeholder = "",
+                label = "ALBUM DESCRIPTION",
+                value = description,
+                onValueChange = {
+                    uiState.description = it
+                    description = uiState.description
+                                },
+                placeholder = "Description",
                 surfaceStyle = AppInputSurfaceStyle.Elevated,
+            )
+        }
+        item {
+            AppArtistDropdown(
+                label = "ARTIST / ENSEMBLE",
+                search = "",
+                value = uiState.artist,
+                artists = musicians,
+                onValueChange = {
+                    uiState.artist = it
+                }
             )
         }
         item {
@@ -108,77 +155,79 @@ fun NewReleaseContentOrganism(
                 LabeledInputFieldMolecule(
                     label = "YEAR",
                     value = year,
-                    onValueChange = { year = it },
-                    placeholder = "",
+                    onValueChange = {
+                        uiState.year = it
+                        year = uiState.year
+                                    },
+                    placeholder = "2026",
                     surfaceStyle = AppInputSurfaceStyle.Elevated,
-                    modifier = Modifier.weight(1f),
-                )
-                LabeledInputFieldMolecule(
-                    label = "GENRE",
-                    value = genre,
-                    onValueChange = { genre = it },
-                    placeholder = "Jazz",
-                    surfaceStyle = AppInputSurfaceStyle.Default,
                     modifier = Modifier.weight(1f),
                 )
             }
         }
         item {
-            TrackListSectionHeaderMolecule(
-                title = "Track List",
-                subtitle = "DIGITAL CURATION — SIDE A / B",
-                watermarkNumber = "01",
+            AppDropdown(
+                label = "GENRE",
+                search = "",
+                value = uiState.genre,
+                list = listOf("Classical","Salsa","Rock","Folk"),
+                onValueChange = {
+                    uiState.genre = it
+                }
+            )
+        }
+
+        item {
+            LabeledInputFieldMolecule(
+                label = "ARTWORK URL",
+                value = artwork,
+                onValueChange = {
+                    uiState.artwork = it
+                    artwork = uiState.artwork
+                },
+                placeholder = "URL",
+                surfaceStyle = AppInputSurfaceStyle.Elevated,
             )
         }
         item {
-            Column(verticalArrangement = Arrangement.spacedBy(s.sm)) {
-                ReleaseTrackRowMolecule(
-                    trackNumberLabel = "01",
-                    title = "So What",
-                    duration = "9:22",
-                    onClick = {},
-                )
-                ReleaseTrackRowMolecule(
-                    trackNumberLabel = "02",
-                    title = "Freddie Freeloader",
-                    duration = "9:46",
-                    onClick = {},
-                )
-                AddTrackPlaceholderRowMolecule(
-                    label = "Add next track…",
-                    onClick = onAddTrackClick,
-                )
-            }
+            AppDropdown(
+                label = "RECORD LABEL",
+                search = "",
+                value = uiState.recordLabel,
+                list = listOf("Sony Music", "EMI", "Discos Fuentes", "Elektra", "Fania Records"),
+                onValueChange = {
+                    uiState.recordLabel = it
+                }
+            )
         }
-        item {
-            Column(verticalArrangement = Arrangement.spacedBy(s.md)) {
-                AppText(
-                    text = "PRESSING DETAILS",
-                    style = AppTheme.typography.labelSmall,
-                    color = colors.onSurfaceVariant,
-                )
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(b.thin)
-                        .background(colors.outlineSubtle.copy(alpha = 0.45f)),
-                )
-                LabeledInputFieldMolecule(
-                    label = "MATRIX NUMBER",
-                    value = matrixNumber,
-                    onValueChange = { matrixNumber = it },
-                    placeholder = "",
-                    surfaceStyle = AppInputSurfaceStyle.Elevated,
-                )
-                LabeledInputFieldMolecule(
-                    label = "LABEL",
-                    value = label,
-                    onValueChange = { label = it },
-                    placeholder = "",
-                    surfaceStyle = AppInputSurfaceStyle.Elevated,
-                )
-            }
-        }
+
+//        item {
+//            TrackListSectionHeaderMolecule(
+//                title = "Track List",
+//                subtitle = "DIGITAL CURATION — SIDE A / B",
+//                watermarkNumber = uiState.tracks.size,
+//            )
+//        }
+//        item {
+//            Column(verticalArrangement = Arrangement.spacedBy(s.sm)) {
+//
+//                tracks.forEachIndexed { index, track ->
+//                    ReleaseTrackRowMolecule(
+//                        trackNumberLabel = index+1,
+//                        track = track,
+//                        onUpdate = { updatedTrack ->
+//                            tracks[index] = updatedTrack
+//                            uiState.tracks = tracks.toList()
+//                        },
+//                        onClick = {}
+//                    )
+//                }
+//                AddTrackPlaceholderRowMolecule(
+//                    label = "Add next track",
+//                    onClick =  {tracks.add(CreateTrack("",""))},
+//                )
+//            }
+//        }
     }
 }
 
@@ -187,12 +236,16 @@ fun NewReleaseContentOrganism(
 private fun NewReleaseContentOrganismPreview() {
     DesignSystemPreviewSurface {
         val s = AppTheme.spacing
+        val createAlbumViewModel: CreateAlbumViewModel = viewModel()
         NewReleaseContentOrganism(
+            navController = rememberNavController(),
             innerPadding = PaddingValues(top = s.sm, bottom = s.md),
             onClose = {},
             onSave = {},
-            onUploadArtworkClick = {},
             onAddTrackClick = {},
+            musicians = listOf(Musician(1, "Prueba", "Imagen", "","")),
+            isLoading = false,
+            viewModel = createAlbumViewModel
         )
     }
 }

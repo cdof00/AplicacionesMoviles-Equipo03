@@ -1,21 +1,14 @@
 package com.example.musicapp.viewmodels
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.CreationExtras
-import com.example.musicapp.models.Album
 import com.example.musicapp.repositories.AlbumRepository
 import com.example.musicapp.ui.states.AlbumListUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 
@@ -41,10 +34,12 @@ class AlbumViewModel(application: Application) :  AndroidViewModel(application) 
     init {
         this.refreshDataFromNetwork()
     }
-    private fun refreshDataFromNetwork() {
+    fun refreshDataFromNetwork() {
+        isLoading.value = true
         viewModelScope.launch() {
             albumsRepository.refreshData({
                 _uiState.value = AlbumListUiState(it)
+                isLoading.value = false
             },{
                 _eventNetworkError.value = true
             })

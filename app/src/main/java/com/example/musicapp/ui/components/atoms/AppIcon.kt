@@ -19,6 +19,7 @@ fun AppIcon(
     modifier: Modifier = Modifier,
     tint: Color = AppTheme.colors.onSurface,
     sizeKey: IconSizeKey = IconSizeKey.Medium,
+
 ) {
     val dim = AppTheme.dimensions.icon
     val size = when (sizeKey) {
