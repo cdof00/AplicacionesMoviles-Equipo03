@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014236",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "A Night at the Opera",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          89,
+          2257
+        ],
+        [
+          502,
+          2266
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "A Night at the Opera",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 43,
+      "temp_id": 44,
+      "size": "413*9",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]A Night at the Opera[enabled,,]",
+      "view_str": "501bb61dd7e91a676dfad90dd4e134df",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "21",
+      "desc": "<button text='A Night at the Opera' bound_box=89,2257,502,2266>A Night at the Opera</button>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "745287ee7400de8f9ed1dd8accdcd7e7",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=501bb61dd7e91a676dfad90dd4e134df(MainActivity/TextView-A Night at))"
+}

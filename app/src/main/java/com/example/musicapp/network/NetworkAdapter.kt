@@ -24,10 +24,9 @@ import java.security.cert.X509Certificate
 import javax.net.ssl.SSLContext
 import javax.net.ssl.X509TrustManager
 
-class NetworkServiceAdapter (context: Context) {
+class NetworkServiceAdapter(context: Context) {
 
     companion object {
-
         const val BASE_URL = "http://35.253.100.90:3000/"
 
         var instance: NetworkServiceAdapter? = null
@@ -59,21 +58,18 @@ class NetworkServiceAdapter (context: Context) {
         onComplete: (resp: List<Album>) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "albums",
                 { response ->
-
                     val resp = JSONArray(response)
                     val list = mutableListOf<Album>()
 
                     for (i in 0 until resp.length()) {
-
                         val item = resp.getJSONObject(i)
-
                         val performersResp = item.getJSONArray("performers")
-                        var performers = mutableListOf<Performer>()
+                        val performers = mutableListOf<Performer>()
+
                         for (j in 0 until performersResp.length()) {
                             val performer = performersResp.getJSONObject(j)
                             performers.add(
@@ -113,16 +109,14 @@ class NetworkServiceAdapter (context: Context) {
         onComplete: (resp: Album) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "albums/$albumId",
                 { response ->
-
                     val resp = JSONObject(response)
-
                     val performersResp = resp.getJSONArray("performers")
-                    var performers = mutableListOf<Performer>()
+                    val performers = mutableListOf<Performer>()
+
                     for (j in 0 until performersResp.length()) {
                         val performer = performersResp.getJSONObject(j)
                         performers.add(
@@ -158,24 +152,21 @@ class NetworkServiceAdapter (context: Context) {
         onComplete: (resp: List<Track>) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "albums/$albumId/tracks",
                 { response ->
-
                     val resp = JSONArray(response)
                     val list = mutableListOf<Track>()
 
                     for (i in 0 until resp.length()) {
-
                         val item = resp.getJSONObject(i)
 
                         list.add(
                             i,
                             Track(
                                 trackId = item.getInt("id"),
-                                name = item.getString("name").toString(),
+                                name = item.getString("name"),
                                 duration = item.getString("duration"),
                                 albumId = albumId
                             )
@@ -189,31 +180,56 @@ class NetworkServiceAdapter (context: Context) {
         )
     }
 
+    fun createTrack(
+        albumId: Int,
+        name: String,
+        duration: String,
+        onComplete: (resp: Track) -> Unit,
+        onError: (error: VolleyError) -> Unit
+    ) {
+        val body = JSONObject().apply {
+            put("name", name)
+            put("duration", duration)
+        }
+
+        requestQueue.add(
+            postRequest(
+                "albums/$albumId/tracks",
+                body,
+                { response ->
+                    val track = Track(
+                        trackId = response.getInt("id"),
+                        name = response.getString("name"),
+                        duration = response.getString("duration"),
+                        albumId = albumId
+                    )
+
+                    onComplete(track)
+                },
+                { onError(it) }
+            )
+        )
+    }
+
     fun getCollectors(
         onComplete: (resp: List<Collector>) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "collectors",
                 { response ->
-
                     val resp = JSONArray(response)
                     val list = mutableListOf<Collector>()
 
                     for (i in 0 until resp.length()) {
-
                         val item = resp.getJSONObject(i)
-
                         val collectorAlbums = mutableListOf<CollectorAlbum>()
 
                         if (item.has("collectorAlbums")) {
-
                             val albumsArray = item.getJSONArray("collectorAlbums")
 
                             for (j in 0 until albumsArray.length()) {
-
                                 val album = albumsArray.getJSONObject(j)
 
                                 collectorAlbums.add(
@@ -250,22 +266,17 @@ class NetworkServiceAdapter (context: Context) {
         onComplete: (resp: Collector) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "collectors/$collectorId",
                 { response ->
-
                     val item = JSONObject(response)
-
                     val performers = mutableListOf<Performer>()
 
                     if (item.has("favoritePerformers")) {
-
                         val performersArray = item.getJSONArray("favoritePerformers")
 
                         for (i in 0 until performersArray.length()) {
-
                             val p = performersArray.getJSONObject(i)
 
                             performers.add(
@@ -282,11 +293,9 @@ class NetworkServiceAdapter (context: Context) {
                     val collectorAlbums = mutableListOf<CollectorAlbum>()
 
                     if (item.has("collectorAlbums")) {
-
                         val albumsArray = item.getJSONArray("collectorAlbums")
 
                         for (i in 0 until albumsArray.length()) {
-
                             val album = albumsArray.getJSONObject(i)
 
                             collectorAlbums.add(
@@ -326,8 +335,10 @@ class NetworkServiceAdapter (context: Context) {
                     try {
                         val resp = JSONArray(response)
                         val list = mutableListOf<Musician>()
+
                         for (i in 0 until resp.length()) {
                             val item = resp.getJSONObject(i)
+
                             list.add(
                                 Musician(
                                     musicianId = item.getInt("id"),
@@ -338,6 +349,7 @@ class NetworkServiceAdapter (context: Context) {
                                 )
                             )
                         }
+
                         onComplete(list)
                     } catch (e: Exception) {
                         Log.e("NetworkAdapter", "parse error: ${e.message}")
@@ -360,8 +372,10 @@ class NetworkServiceAdapter (context: Context) {
                     try {
                         val resp = JSONArray(response)
                         val list = mutableListOf<Musician>()
+
                         for (i in 0 until resp.length()) {
                             val item = resp.getJSONObject(i)
+
                             list.add(
                                 Musician(
                                     musicianId = item.getInt("id"),
@@ -372,6 +386,7 @@ class NetworkServiceAdapter (context: Context) {
                                 )
                             )
                         }
+
                         onComplete(list)
                     } catch (e: Exception) {
                         Log.e("NetworkAdapter", "parse error: ${e.message}")
@@ -388,20 +403,15 @@ class NetworkServiceAdapter (context: Context) {
         onComplete: (resp: Musician) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "musicians/$musicianId",
                 { response ->
-
                     val item = JSONObject(response)
-
                     val albums = mutableListOf<Album>()
-
                     val albumsArray = item.getJSONArray("albums")
 
                     for (i in 0 until albumsArray.length()) {
-
                         val a = albumsArray.getJSONObject(i)
 
                         albums.add(
@@ -438,20 +448,15 @@ class NetworkServiceAdapter (context: Context) {
         onComplete: (resp: Musician) -> Unit,
         onError: (error: VolleyError) -> Unit
     ) {
-
         requestQueue.add(
             getRequest(
                 "bands/$bandId",
                 { response ->
-
                     val item = JSONObject(response)
-
                     val albums = mutableListOf<Album>()
-
                     val albumsArray = item.getJSONArray("albums")
 
                     for (i in 0 until albumsArray.length()) {
-
                         val a = albumsArray.getJSONObject(i)
 
                         albums.add(
@@ -573,7 +578,6 @@ class NetworkServiceAdapter (context: Context) {
         responseListener: Response.Listener<String>,
         errorListener: Response.ErrorListener
     ): StringRequest {
-
         return StringRequest(
             Request.Method.GET,
             BASE_URL + path,
@@ -588,7 +592,6 @@ class NetworkServiceAdapter (context: Context) {
         responseListener: Response.Listener<JSONObject>,
         errorListener: Response.ErrorListener
     ): JsonObjectRequest {
-
         return JsonObjectRequest(
             Request.Method.POST,
             BASE_URL + path,
@@ -604,7 +607,6 @@ class NetworkServiceAdapter (context: Context) {
         responseListener: Response.Listener<JSONObject>,
         errorListener: Response.ErrorListener
     ): JsonObjectRequest {
-
         return JsonObjectRequest(
             Request.Method.PUT,
             BASE_URL + path,

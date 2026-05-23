@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014106",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          379,
+          146
+        ],
+        [
+          701,
+          229
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Collection",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 12,
+      "size": "322*83",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Collection[enabled,,]",
+      "view_str": "0a5570fc12285eee32d1142abb981416",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=379,146,701,229>Collection</p>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=0a5570fc12285eee32d1142abb981416(MainActivity/TextView-Collection))"
+}

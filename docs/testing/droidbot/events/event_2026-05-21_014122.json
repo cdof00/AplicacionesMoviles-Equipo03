@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014122",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          356,
+          422
+        ],
+        [
+          1013,
+          636
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Connecting with the elite circles of the high-fidelity community.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 18,
+      "size": "657*214",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]None[enabled,,]",
+      "view_str": "46918befb2e7fd94b86f30ee1a79bd92",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<p bound_box=356,422,1013,636>Connecting with the elite circles of the high-fidelity community.</p>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=46918befb2e7fd94b86f30ee1a79bd92(MainActivity/TextView-Connecting))"
+}

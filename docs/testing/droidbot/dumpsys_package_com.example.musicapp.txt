@@ -1,0 +1,167 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        68cfcbe com.example.musicapp/.MainActivity filter 7fdb11f
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        ff60c6c com.example.musicapp/androidx.profileinstaller.ProfileInstallReceiver filter 1d6403b
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        ff60c6c com.example.musicapp/androidx.profileinstaller.ProfileInstallReceiver filter b146235
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        ff60c6c com.example.musicapp/androidx.profileinstaller.ProfileInstallReceiver filter 79826ca
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        ff60c6c com.example.musicapp/androidx.profileinstaller.ProfileInstallReceiver filter 86d8358
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.example.musicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (68a9857):
+    sourcePackage=com.example.musicapp
+    uid=10399 gids=[] type=0 prot=signature
+    perm=PermissionInfo{4ed09c4 com.example.musicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.example.musicapp/androidx.startup.InitializationProvider:
+    Provider{37f10ad com.example.musicapp/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.example.musicapp.androidx-startup]:
+    Provider{37f10ad com.example.musicapp/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{db78f44 com.example.musicapp}
+
+Key Set Manager:
+  [com.example.musicapp]
+      Signing KeySets: 107
+
+Packages:
+  Package [com.example.musicapp] (541f498):
+    appId=10399
+    pkg=Package{492fe30 com.example.musicapp}
+    codePath=/data/app/~~mzQy2jggq_ik0m3D2jfcfQ==/com.example.musicapp-ydWOPEPaQOy7k2utU4wPIA==
+    resourcePath=/data/app/~~mzQy2jggq_ik0m3D2jfcfQ==/com.example.musicapp-ydWOPEPaQOy7k2utU4wPIA==
+    legacyNativeLibraryDir=/data/app/~~mzQy2jggq_ik0m3D2jfcfQ==/com.example.musicapp-ydWOPEPaQOy7k2utU4wPIA==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=arm64-v8a
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=1 minSdk=26 targetSdk=35
+    minExtensionVersions=[]
+    versionName=1.0
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=2
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    pageSizeCompat=0
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      androidx.window.extensions
+      androidx.window.sidecar
+    usesLibraryFiles:
+      /system_ext/framework/androidx.window.extensions.jar
+      /system_ext/framework/androidx.window.sidecar.jar
+    timeStamp=2026-05-20 23:04:57
+    lastUpdateTime=2026-05-20 23:04:57
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{b6f382e version:2, signatures:[76b5241e], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.example.musicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.INTERNET
+      com.example.musicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.INTERNET: granted=true
+      com.example.musicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+    User 0: ceDataInode=26124 deDataInode=3315 installed=true hidden=false suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/com.example.musicapp
+      firstInstallTime=2026-05-20 23:04:57
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-TeQT.frro
+        /product/overlay/FontRookeryRegular/FontRookeryRegularOverlay.apk
+        /data/resource-cache/com.android.systemui-accent-LQmk.frro
+        /data/resource-cache/com.android.systemui-dynamic-Nge0.frro
+      legacy overlay paths:
+        /product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk
+        /product/overlay/FontRookeryRegular/FontRookeryRegularOverlay.apk
+      gids=[3003]
+      runtime permissions:
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      com.example.musicapp
+    com.motorola.gamemode:
+      com.example.musicapp
+    com.motorola.actions:
+      com.example.musicapp
+    com.motorola.appforecast:
+      com.example.musicapp
+    com.motorola.mobiledesktop:
+      com.example.musicapp
+    com.motorola.om:
+      com.example.musicapp
+    com.google.android.as.oss:
+      com.example.musicapp
+    com.android.settings.intelligence:
+      com.example.musicapp
+    com.taboola.mip:
+      com.example.musicapp
+    com.motorola.ccc.notification:
+      com.example.musicapp
+    com.document.pdf.scanner.free.all:
+      com.example.musicapp
+    ball.sort.puzzle.color.sorting.bubble.games:
+      com.example.musicapp
+    com.vitastudio.mahjong:
+      com.example.musicapp
+    ai.perplexity.app.android:
+      com.example.musicapp
+    com.whatsapp:
+      com.example.musicapp
+  queryable via interaction:
+    User 0:
+      [com.android.inputdevices,com.motorola.android.providers.settings,vendor.qti.frameworks.utils,com.android.location.fused,com.android.dynsystem,android,com.qualcomm.qti.xrvd.service,com.android.keychain,com.android.localtransport,com.android.DeviceAsWebcam,com.android.settings,com.android.providers.settings,com.android.server.telecom]:
+        com.example.musicapp
+      [com.google.android.gms,com.google.android.gsf]:
+        com.example.musicapp
+      com.google.android.inputmethod.latin:
+        com.example.musicapp
+  queryable via uses-library:
+
+Dexopt state:
+  [com.example.musicapp]
+    path: /data/app/~~mzQy2jggq_ik0m3D2jfcfQ==/com.example.musicapp-ydWOPEPaQOy7k2utU4wPIA==/base.apk
+      arm64: [status=run-from-apk] [reason=unknown] [primary-abi]
+        [location is error]
+
+Compiler stats:
+  [com.example.musicapp]
+     base.apk - 3599

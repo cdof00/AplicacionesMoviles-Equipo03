@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014007",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          89,
+          1645
+        ],
+        [
+          180,
+          1689
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "1984",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 27,
+      "temp_id": 30,
+      "size": "91*44",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]1984[enabled,,]",
+      "view_str": "d957e3a949e28d1c3e77aed8a6e95aa7",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button bound_box=89,1645,180,1689>1984</button>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "66e92c270b5d317c9c6e4294d31c9929",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=d957e3a949e28d1c3e77aed8a6e95aa7(MainActivity/TextView-1984))"
+}

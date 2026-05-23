@@ -1,15 +1,10 @@
 package com.example.musicapp.ui.components.organisms
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.runtime.Composable
@@ -22,8 +17,6 @@ import com.example.musicapp.models.Track
 import com.example.musicapp.ui.components.atoms.AppAlbumCoverPlaceholder
 import com.example.musicapp.ui.components.molecules.AlbumMetaHeaderMolecule
 import com.example.musicapp.ui.components.molecules.DetailTopBarMolecule
-import com.example.musicapp.ui.components.molecules.InfoStatCardMolecule
-import com.example.musicapp.ui.screens.album.AlbumDetailUiModel
 import com.example.musicapp.ui.theme.theme.AppTheme
 
 @Composable
@@ -34,11 +27,11 @@ fun AlbumDetailContentOrganism(
     onBackClick: () -> Unit,
     onMenuClick: () -> Unit,
     onPlayClick: () -> Unit,
+    onCreateTrack: (String, String) -> Unit,
     modifier: Modifier = Modifier,
-
-    ) {
-
+) {
     val s = AppTheme.spacing
+
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
@@ -54,33 +47,32 @@ fun AlbumDetailContentOrganism(
                 onTrailingClick = onMenuClick,
                 trailingIcon = Icons.Outlined.MoreVert,
                 trailingContentDescription = "More",
-                modifier = modifier.testTag("album_detail_header_title")
+                modifier = Modifier
+                    .testTag("album_detail_header_title")
                     .semantics {
                         contentDescription = album.name
                     },
             )
         }
+
         item {
             AppAlbumCoverPlaceholder(album.cover)
         }
+
         item {
-            val artista = album.performers.firstOrNull()
-            var nombre = ""
-            if(artista!=null){
-                nombre = artista.name
-            }
-            else{
-                nombre = "Sin Artista"
-            }
+            val artistName = album.performers.firstOrNull()?.name ?: "Sin Artista"
+
             AlbumMetaHeaderMolecule(
                 title = album.name,
-                artist = nombre,
+                artist = artistName,
                 year = album.releaseDate.split("-")[0],
             )
         }
+
         item {
             TracklistCardOrganism(
                 tracks = tracks,
+                onCreateTrack = onCreateTrack,
             )
         }
     }

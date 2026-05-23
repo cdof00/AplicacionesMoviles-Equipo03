@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013657",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          67,
+          496
+        ],
+        [
+          646,
+          609
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Curated Vault",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 17,
+      "size": "579*113",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Curated Vault[enabled,,]",
+      "view_str": "60cf8afee9aa432acbfa3b2103eb98ce",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<p bound_box=67,496,646,609>Curated Vault</p>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "5218641ba7485633d435cf25a1a046e5",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=60cf8afee9aa432acbfa3b2103eb98ce(MainActivity/TextView-Curated Va))"
+}
