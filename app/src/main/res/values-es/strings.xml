@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicApp</string>
+
+    <!-- Asociación de tracks -->
+    <string name="tracklist_title">Tracklist</string>
+    <string name="track_count">%1$d TRACKS</string>
+    <string name="empty_tracklist_message">Este álbum no tiene canciones</string>
+
+    <string name="track_name_label">NOMBRE DEL TRACK</string>
+    <string name="track_name_placeholder">Ejemplo: Bohemian Rhapsody</string>
+
+    <string name="track_duration_label">DURACIÓN</string>
+    <string name="track_duration_placeholder">Ejemplo: 3:45</string>
+
+    <string name="add_track_button">Agregar track</string>
+
+    <string name="track_name_required_error">El nombre del track es obligatorio</string>
+    <string name="track_duration_required_error">La duración del track es obligatoria</string>
+    <string name="track_duration_format_error">Usa el formato m:ss. Ejemplo: 3:45</string>
+
+    <!-- Accesibilidad -->
+    <string name="tracklist_content_description">Lista de canciones del álbum</string>
+    <string name="add_track_form_content_description">Formulario para agregar un track al álbum</string>
+    <string name="add_track_button_content_description">Agregar track al álbum</string>
+    <string name="track_name_input_content_description">Campo para escribir el nombre del track</string>
+    <string name="track_duration_input_content_description">Campo para escribir la duración del track</string>
+
+    <!-- BottomBar -->
+    <string name="bottom_bar_albums">ÁLBUMES</string>
+    <string name="bottom_bar_artists">ARTISTAS</string>
+    <string name="bottom_bar_collectors">COLECCIONISTAS</string>
+    <string name="bottom_bar_add">AGREGAR</string>
+
+    <!-- AlbumScreen -->
+    <string name="album_title">Catálogo de álbumes</string>
+    <string name="collection">Colección</string>
+    <string name="spun">Reproducido recientemente</string>
+    <string name="vault">Bóveda curada</string>
+    <string name="archive">Archivos analógicos de alta fidelidad</string>
+
+    <!-- ArtistsScreen -->
+    <string name="artists_not_found">Catálogo de álbumes</string>
+    <string name="artist_header">Artistas</string>
+    <string name="collection_title">COLECCIÓN CURADA</string>
+    <string name="primary_title_artists">Legendarias</string>
+    <string name="secondary_title_artists">Voces</string>
+
+    <!-- CollectorsScreen -->
+    <string name="error_loading">Error al cargar coleccionistas</string>
+    <string name="no_collectors">No se encontraron coleccionistas</string>
+    <string name="elite">ÉLITE</string>
+    <string name="pro">PRO</string>
+    <string name="archivist">ARCHIVISTA</string>
+    <string name="legend">LEYENDA</string>
+    <string name="emerging">EMERGENTE</string>
+    <string name="collectors">COLECCIONISTAS</string>
+    <string name="collectors_title">Colección</string>
+    <string name="collectors_subtitle">Conectando con los círculos élite de la comunidad de alta fidelidad.</string>
+    <string name="musical_taste">Gusto musical</string>
+    <string name="top_genres">GÉNEROS PRINCIPALES</string>
+    <string name="collector_detail_title">Detalle del coleccionista</string>
+    <string name="collector">COLECCIONISTA</string>
+    <string name="follow">Seguir</string>
+    <string name="favorite_artists">Artistas favoritos</string>
+    <string name="view_all">VER TODO</string>
+    <string name="recently_added">Agregado recientemente</string>
+
+    <!-- CreateAlbumScreen -->
+    <string name="album_title_required_error">Por favor escribe un título de álbum.</string>
+    <string name="album_description_required_error">Por favor escribe una descripción del álbum.</string>
+    <string name="album_artist_required_error">Por favor selecciona un artista.</string>
+    <string name="album_year_required_error">Por favor escribe el año de lanzamiento del álbum.</string>
+    <string name="album_genre_required_error">Por favor selecciona un género.</string>
+    <string name="album_url_required_error">Por favor inserta una URL válida.</string>
+    <string name="album_cover_required_error">Por favor inserta la URL de la portada del álbum.</string>
+    <string name="album_label_required_error">Por favor selecciona una disquera.</string>
+    <string name="album_created_success">Álbum creado exitosamente</string>
+    <string name="album_created_success_message">Este álbum se ha creado exitosamente. ¿Quieres verlo?</string>
+
+    <string name="new_release_header">Nuevo álbum</string>
+    <string name="save_button">GUARDAR</string>
+
+    <string name="title_form_header">TÍTULO DEL ÁLBUM</string>
+    <string name="description_form_header">DESCRIPCIÓN DEL ÁLBUM</string>
+    <string name="artist_form_header">ARTISTA / ENSAMBLE</string>
+    <string name="year_form_header">AÑO</string>
+    <string name="genre_form_header">GÉNERO</string>
+    <string name="cover_form_header">URL DE LA PORTADA</string>
+    <string name="label_form_header">DISQUERA</string>
+
+    <string name="title_placeholder">Título</string>
+    <string name="description_placeholder">Descripción</string>
+
+    <string name="confirm">Confirmar</string>
+    <string name="dismiss">Ignorar</string>
+
+</resources>

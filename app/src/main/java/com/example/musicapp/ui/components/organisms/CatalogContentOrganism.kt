@@ -11,7 +11,9 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.R
 import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.molecules.AlbumTileMolecule
 import com.example.musicapp.ui.components.molecules.CatalogBrandRowMolecule
@@ -27,12 +29,12 @@ fun CatalogContentOrganism(
     modifier: Modifier = Modifier,
     onAlbumClick: (Int) -> Unit = {},
     contentPadding: PaddingValues = PaddingValues(),
-    brandTitle: String = "Album Catalog",
-    collectionTitle: String = "Collection",
-    featuredTitle: String = "Recently Spun",
+    brandTitle: String = stringResource(R.string.album_title),
+    collectionTitle: String = stringResource(R.string.collection),
+    featuredTitle: String = stringResource(R.string.spun),
     featuredSubtitle: String = "A LOVE SUPREME • COLTRANE",
-    heroTitle: String = "Curated Vault",
-    heroSubtitle: String = "High-fidelity analog archives",
+    heroTitle: String = stringResource(R.string.vault),
+    heroSubtitle: String = stringResource(R.string.archive),
 ) {
     val s = AppTheme.spacing
     LazyVerticalGrid(

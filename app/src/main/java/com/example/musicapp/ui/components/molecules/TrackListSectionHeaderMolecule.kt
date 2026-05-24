@@ -17,7 +17,7 @@ import com.example.musicapp.ui.theme.theme.AppTheme
 fun TrackListSectionHeaderMolecule(
     title: String,
     subtitle: String,
-    watermarkNumber: String,
+    watermarkNumber: Int,
     modifier: Modifier = Modifier,
 ) {
     val s = AppTheme.spacing
@@ -45,7 +45,7 @@ fun TrackListSectionHeaderMolecule(
             )
         }
         AppText(
-            text = watermarkNumber,
+            text = watermarkNumber.toString().padStart(2, '0'),
             style = AppTheme.typography.displayLarge,
             color = colors.primary.copy(alpha = 0.22f),
         )
@@ -59,7 +59,7 @@ private fun TrackListSectionHeaderMoleculePreview() {
         TrackListSectionHeaderMolecule(
             title = "Track List",
             subtitle = "DIGITAL CURATION — SIDE A / B",
-            watermarkNumber = "01",
+            watermarkNumber = 1,
             modifier = Modifier.padding(AppTheme.spacing.md),
         )
     }

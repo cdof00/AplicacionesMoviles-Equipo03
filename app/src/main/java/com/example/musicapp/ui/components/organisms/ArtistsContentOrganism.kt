@@ -9,7 +9,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.R
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.molecules.ArtistListItemMolecule
 import com.example.musicapp.ui.components.molecules.ArtistsHeroSectionMolecule
@@ -30,6 +32,12 @@ fun ArtistsContentOrganism(
     val s = AppTheme.spacing
     val colors = AppTheme.colors
 
+    val artistsNotFound = stringResource(R.string.artists_not_found)
+    val artistsTitle = stringResource(R.string.artist_header)
+    val collectionTile = stringResource(R.string.collection_title)
+    val primaryTitle = stringResource(R.string.primary_title_artists)
+    val secondaryTitle = stringResource(R.string.secondary_title_artists)
+
     if (!isLoading && artists.isEmpty()) {
         Box(
             modifier = modifier
@@ -39,7 +47,7 @@ fun ArtistsContentOrganism(
             contentAlignment = Alignment.Center,
         ) {
             AppText(
-                text = "No se encuentran artistas",
+                text = artistsNotFound,
                 style = AppTheme.typography.bodyLarge,
                 color = colors.onSurfaceVariant,
             )
@@ -55,13 +63,13 @@ fun ArtistsContentOrganism(
         contentPadding = PaddingValues(bottom = s.xxl),
     ) {
         item {
-            CatalogCollectionHeaderMolecule(title = "Artists")
+            CatalogCollectionHeaderMolecule(title = artistsTitle)
         }
         item {
             ArtistsHeroSectionMolecule(
-                eyebrow = "CURATED COLLECTION",
-                titleLinePrimary = "Legendary",
-                titleLineAccent = "Voices",
+                eyebrow = collectionTile,
+                titleLinePrimary = primaryTitle,
+                titleLineAccent = secondaryTitle,
             )
         }
         items(
