@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -39,7 +40,8 @@ fun AppDropdown(
     onValueChange: (String) -> Unit,
     error: String = "",
     onFieldFocusChange: () -> Unit = {},
-    onFieldFocusLoss: () -> Unit = {}
+    onFieldFocusLoss: () -> Unit = {},
+    modifier: Modifier = Modifier,
 ) {
     var expanded by remember { mutableStateOf(false) }
     var searchQuery by remember(search) { mutableStateOf(search) }
@@ -91,7 +93,7 @@ fun AppDropdown(
                     )
                 },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                modifier = Modifier
+                modifier = modifier
                     .fillMaxWidth()
                     .menuAnchor(MenuAnchorType.PrimaryEditable, enabled = true)
                     .onFocusChanged { focusState ->
@@ -153,7 +155,7 @@ fun AppDropdown(
                             expanded = false
                             focusManager.clearFocus()
                         },
-                        modifier = Modifier
+                        modifier = Modifier.testTag("dropdown_item")
                             .padding(horizontal = 8.dp),
                         colors = androidx.compose.material3.MenuDefaults.itemColors(
                             textColor = AppTheme.colors.onSurface,

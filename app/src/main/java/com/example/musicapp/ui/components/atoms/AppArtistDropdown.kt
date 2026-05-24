@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -40,7 +41,8 @@ fun AppArtistDropdown(
     onValueChange: (Musician) -> Unit,
     error: String = "",
     onFieldFocusChange: () -> Unit = {},
-    onFieldFocusLoss: () -> Unit = {}
+    onFieldFocusLoss: () -> Unit = {},
+    modifier: Modifier = Modifier,
 ) {
     var expanded by remember { mutableStateOf(false) }
     var searchQuery by remember(search) { mutableStateOf(search) }
@@ -94,6 +96,7 @@ fun AppArtistDropdown(
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                 modifier = Modifier
                     .fillMaxWidth()
+                    .testTag("album_artist_input")
                     .menuAnchor(MenuAnchorType.PrimaryEditable, enabled = true)
                     .onFocusChanged { focusState ->
                         hasFocus = focusState.isFocused
@@ -155,7 +158,7 @@ fun AppArtistDropdown(
                             expanded = false
                             focusManager.clearFocus()
                         },
-                        modifier = Modifier
+                        modifier = Modifier.testTag("artist_dropdown_item")
                             .padding(horizontal = 8.dp, vertical = 2.dp),
                         colors = androidx.compose.material3.MenuDefaults.itemColors(
                             textColor = AppTheme.colors.onSurface,

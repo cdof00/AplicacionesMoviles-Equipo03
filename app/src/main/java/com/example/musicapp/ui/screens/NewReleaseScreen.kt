@@ -1,5 +1,6 @@
 package com.example.musicapp.ui.screens
 
+import android.R.attr.contentDescription
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -25,6 +26,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
@@ -60,17 +64,19 @@ fun NewReleaseScreen(
             CircularProgressIndicator()
         }
     }
-    NewReleaseContentOrganism(
-        navController = navController,
-        viewModel = createAlbumViewModel,
-        musicians = musicians.musicians,
-        isLoading = isLoadingList,
-        innerPadding = innerPadding,
-        onClose = onClose,
-        onSave = onSave,
-        onAddTrackClick = onAddTrackClick,
-        modifier = modifier.fillMaxSize(),
-    )
+    else{
+        NewReleaseContentOrganism(
+            navController = navController,
+            viewModel = createAlbumViewModel,
+            musicians = musicians.musicians,
+            isLoading = isLoadingList,
+            innerPadding = innerPadding,
+            onClose = onClose,
+            onSave = onSave,
+            onAddTrackClick = onAddTrackClick,
+            modifier = modifier.fillMaxSize(),
+        )
+    }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFF0A0A0A, heightDp = 900)

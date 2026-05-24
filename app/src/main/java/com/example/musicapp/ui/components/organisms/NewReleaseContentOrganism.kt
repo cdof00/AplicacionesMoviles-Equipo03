@@ -17,10 +17,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.musicapp.R
 import com.example.musicapp.models.Musician
 import com.example.musicapp.ui.components.atoms.AppArtistDropdown
 import com.example.musicapp.ui.components.atoms.AppDialog
@@ -64,6 +69,36 @@ fun NewReleaseContentOrganism(
     var validArtist by rememberSaveable { mutableStateOf(true) }
     var validGenre by rememberSaveable { mutableStateOf(true) }
     var validRecordLabel by rememberSaveable { mutableStateOf(true) }
+    var validUrl by rememberSaveable { mutableStateOf(true) }
+
+    val dialogTitle = "Error"
+
+    val dialogTextTitle = stringResource(id = R.string.album_title_required_error)
+    val dialogTextDescription = stringResource(id = R.string.album_description_required_error)
+    val dialogTextArtist = stringResource(id = R.string.album_artist_required_error)
+    val dialogTextYear = stringResource(id = R.string.album_year_required_error)
+    val dialogTextGenre = stringResource(id = R.string.album_genre_required_error)
+    val dialogTextUrl = stringResource(id = R.string.album_url_required_error)
+    val dialogTextArtwork = stringResource(id = R.string.album_cover_required_error)
+    val dialogTextLabel = stringResource(id = R.string.album_label_required_error)
+    val titleSuccess = stringResource(id = R.string.album_created_success)
+    val dialogSuccess = stringResource(id = R.string.album_created_success_message)
+
+    val headerTitle = stringResource(R.string.new_release_header)
+    val saveButtonTitle = stringResource(R.string.save_button)
+
+    val titleHeader = stringResource(R.string.title_form_header)
+    val descriptionHeader = stringResource(R.string.description_form_header)
+    val artistHeader = stringResource(R.string.artist_form_header)
+    val yearHeader = stringResource(R.string.year_form_header)
+    val genreHeader = stringResource(R.string.genre_form_header)
+    val artworkHeader = stringResource(R.string.cover_form_header)
+    val recordLabelHeader = stringResource(R.string.label_form_header)
+
+    val titlePlaceholder = stringResource(R.string.title_placeholder)
+    val descriptionPlaceholder = stringResource(R.string.description_placeholder)
+    val yearPlaceholder = "2026"
+    val artworkPlaceholder = "https://example.com/cover.jpg"
 
     if(idCreatedAlbum != 0){
         AppDialog(
@@ -78,8 +113,13 @@ fun NewReleaseContentOrganism(
                 year = ""
                 artwork = ""
             },
-            dialogTitle= "Album created successfully",
-            dialogText="This album has been created successfully. Do you want to see it?",
+            dialogTitle= titleSuccess,
+            dialogText= dialogSuccess,
+            modifier = Modifier
+                .testTag("album_creation_success")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
 
     }
@@ -87,56 +127,104 @@ fun NewReleaseContentOrganism(
         AppDialog(
             onDismissRequest={validTitle = true},
             onConfirmation={validTitle = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album without title.",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextTitle,
+            modifier = Modifier
+                .testTag("album_title_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
     if(!validCover){
         AppDialog(
             onDismissRequest={validCover = true},
             onConfirmation={validCover = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album without a cover art URL.",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextArtwork,
+            modifier = Modifier
+                .testTag("album_cover_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
+        )
+    }
+    if(!validUrl){
+        AppDialog(
+            onDismissRequest={validUrl = true},
+            onConfirmation={validUrl = true},
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextUrl,
+            modifier = Modifier
+                .testTag("album_url_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
     if(!validReleaseDate){
         AppDialog(
             onDismissRequest={validReleaseDate = true},
             onConfirmation={validReleaseDate = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album without a release year",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextYear,
+            modifier = Modifier
+                .testTag("album_date_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
     if(!validDescription){
         AppDialog(
             onDismissRequest={validDescription = true},
             onConfirmation={validDescription = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album without description",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextDescription,
+            modifier = Modifier
+                .testTag("album_description_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
     if(!validArtist){
         AppDialog(
             onDismissRequest={validArtist = true},
             onConfirmation={validArtist = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album without an artist",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextArtist,
+            modifier = Modifier
+                .testTag("album_artist_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
     if(!validGenre){
         AppDialog(
             onDismissRequest={validGenre = true},
             onConfirmation={validGenre = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album without a genre",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextGenre,
+            modifier = Modifier
+                .testTag("album_genre_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
     if(!validRecordLabel){
         AppDialog(
             onDismissRequest={validRecordLabel = true},
             onConfirmation={validRecordLabel = true},
-            dialogTitle= "Error",
-            dialogText="You cannot create an album a record label",
+            dialogTitle= dialogTitle,
+            dialogText=dialogTextLabel,
+            modifier = Modifier
+                .testTag("album_label_error")
+                .semantics {
+                    contentDescription = dialogTitle
+                },
         )
     }
 
@@ -144,23 +232,25 @@ fun NewReleaseContentOrganism(
         modifier = modifier
             .fillMaxSize()
             .padding(innerPadding)
-            .padding(horizontal = s.xl),
+            .padding(horizontal = s.xl)
+            .testTag("create_album_form"),
         contentPadding = PaddingValues(bottom = s.xxl),
         verticalArrangement = Arrangement.spacedBy(s.lg),
     ) {
         item {
             DetailTopBarMolecule(
-                title = "New Release",
+                title = headerTitle,
                 onBackClick = onClose,
                 onTrailingClick = {},
                 leadingIcon = Icons.Outlined.Close,
                 leadingContentDescription = "Close",
                 customTrailing = {
                     AppText(
-                        text = "SAVE",
+                        text = saveButtonTitle,
                         style = AppTheme.typography.labelLarge,
                         color = colors.primary,
                         modifier = Modifier
+                            .testTag("create_album_button")
                             .padding(end = s.sm)
                             .clickable(onClick = {
                                 if(albumTitle.isNotEmpty() && artwork.isNotEmpty() && year.isNotEmpty() && description.isNotEmpty() && uiState.artist.musicianId != 0 && uiState.genre.isNotEmpty() && uiState.recordLabel.isNotEmpty()){
@@ -185,46 +275,59 @@ fun NewReleaseContentOrganism(
                                 else if(artwork.isEmpty()){
                                     validCover = false
                                 }
+                                else if(!artwork.matches("""https?://[\w\d\-\.]+\.[a-z]{2,6}(/[\w\d\-\./?%&=]*)?""".toRegex())){
+                                    validUrl = false
+                                }
                                 else if(uiState.recordLabel.isEmpty()){
                                     validRecordLabel = false
                                 }
                             }),
                     )
                 },
+
             )
         }
         item {
             LabeledInputFieldMolecule(
-                label = "ALBUM TITLE",
+                label = titleHeader,
                 value = albumTitle,
                 onValueChange = {
                     uiState.albumTitle = it
                     albumTitle = uiState.albumTitle
                                 },
-                placeholder = "Title",
+                placeholder = titlePlaceholder,
                 surfaceStyle = AppInputSurfaceStyle.Elevated,
+                inputModifier = Modifier.testTag("album_title_input").semantics {
+                    contentDescription = titleHeader
+                },
             )
         }
         item {
             LabeledInputFieldMolecule(
-                label = "ALBUM DESCRIPTION",
+                label = descriptionHeader,
                 value = description,
                 onValueChange = {
                     uiState.description = it
                     description = uiState.description
                                 },
-                placeholder = "Description",
+                placeholder = descriptionPlaceholder,
                 surfaceStyle = AppInputSurfaceStyle.Elevated,
+                inputModifier = Modifier.testTag("album_description_input").semantics {
+                    contentDescription = descriptionHeader
+                }
             )
         }
         item {
             AppArtistDropdown(
-                label = "ARTIST / ENSEMBLE",
+                label = artistHeader,
                 search = "",
                 value = uiState.artist,
                 artists = musicians,
                 onValueChange = {
                     uiState.artist = it
+                },
+                modifier = Modifier.testTag("album_artist_input").semantics {
+                    contentDescription = artistHeader
                 }
             )
         }
@@ -234,81 +337,64 @@ fun NewReleaseContentOrganism(
                 horizontalArrangement = Arrangement.spacedBy(s.md),
             ) {
                 LabeledInputFieldMolecule(
-                    label = "YEAR",
+                    label = yearHeader,
                     value = year,
                     onValueChange = {
                         uiState.year = it
                         year = uiState.year
                                     },
-                    placeholder = "2026",
+                    placeholder = yearPlaceholder,
                     surfaceStyle = AppInputSurfaceStyle.Elevated,
-                    modifier = Modifier.weight(1f),
+                    inputModifier = Modifier.weight(1f).testTag("album_year_input").semantics {
+                        contentDescription = yearHeader
+                    },
                 )
             }
         }
         item {
             AppDropdown(
-                label = "GENRE",
+                label = genreHeader,
                 search = "",
                 value = uiState.genre,
                 list = listOf("Classical","Salsa","Rock","Folk"),
                 onValueChange = {
                     uiState.genre = it
-                }
+                },
+                modifier = Modifier.testTag("album_genre_input").semantics {
+                    contentDescription = genreHeader
+                },
             )
         }
 
         item {
             LabeledInputFieldMolecule(
-                label = "ARTWORK URL",
+                label = artworkHeader,
                 value = artwork,
                 onValueChange = {
                     uiState.artwork = it
                     artwork = uiState.artwork
                 },
-                placeholder = "URL",
+                placeholder = artworkPlaceholder,
                 surfaceStyle = AppInputSurfaceStyle.Elevated,
+                inputModifier = Modifier.testTag("album_artwork_input").semantics {
+                    contentDescription = artworkHeader
+                }
             )
         }
         item {
             AppDropdown(
-                label = "RECORD LABEL",
+                label = recordLabelHeader,
                 search = "",
                 value = uiState.recordLabel,
                 list = listOf("Sony Music", "EMI", "Discos Fuentes", "Elektra", "Fania Records"),
                 onValueChange = {
                     uiState.recordLabel = it
+                },
+                modifier = Modifier.testTag("album_label_input").semantics {
+                    contentDescription = recordLabelHeader
                 }
             )
         }
-
-//        item {
-//            TrackListSectionHeaderMolecule(
-//                title = "Track List",
-//                subtitle = "DIGITAL CURATION — SIDE A / B",
-//                watermarkNumber = uiState.tracks.size,
-//            )
-//        }
-//        item {
-//            Column(verticalArrangement = Arrangement.spacedBy(s.sm)) {
-//
-//                tracks.forEachIndexed { index, track ->
-//                    ReleaseTrackRowMolecule(
-//                        trackNumberLabel = index+1,
-//                        track = track,
-//                        onUpdate = { updatedTrack ->
-//                            tracks[index] = updatedTrack
-//                            uiState.tracks = tracks.toList()
-//                        },
-//                        onClick = {}
-//                    )
-//                }
-//                AddTrackPlaceholderRowMolecule(
-//                    label = "Add next track",
-//                    onClick =  {tracks.add(CreateTrack("",""))},
-//                )
-//            }
-//        }
     }
 }
 

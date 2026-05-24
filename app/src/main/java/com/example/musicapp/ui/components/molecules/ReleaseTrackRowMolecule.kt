@@ -9,23 +9,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.DragHandle
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.models.CreateTrack
-import com.example.musicapp.ui.components.atoms.AppIcon
 import com.example.musicapp.ui.components.atoms.AppInputSurfaceStyle
 import com.example.musicapp.ui.components.atoms.AppSurface
 import com.example.musicapp.ui.components.atoms.AppText
-import com.example.musicapp.ui.components.atoms.IconSizeKey
 import com.example.musicapp.ui.preview.DesignSystemPreviewSurface
 import com.example.musicapp.ui.theme.theme.AppTheme
 

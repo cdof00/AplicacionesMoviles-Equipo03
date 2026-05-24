@@ -66,6 +66,11 @@ fun AlbumDetailContentOrganism(
                 title = album.name,
                 artist = artistName,
                 year = album.releaseDate.split("-")[0],
+                modifier = Modifier
+                    .testTag("album_detail_detail_title")
+                    .semantics {
+                        contentDescription = album.name
+                    },
             )
         }
 

@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.R
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.molecules.ArtistAvatarItemMolecule
 import com.example.musicapp.ui.components.molecules.SectionHeaderMolecule
@@ -26,9 +28,11 @@ fun FavoriteArtistsSectionOrganism(
     val s = AppTheme.spacing
     val colors = AppTheme.colors
     val scroll = rememberScrollState()
+
+    val favoriteArtists= stringResource(R.string.favorite_artists)
     Column(modifier = modifier.fillMaxWidth()) {
         SectionHeaderMolecule(
-            title = "Favorite Artists",
+            title = favoriteArtists,
             action = {
                 AppText(
                     text = "Top 5",

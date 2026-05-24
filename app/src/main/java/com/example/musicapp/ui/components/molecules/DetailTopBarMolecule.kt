@@ -14,6 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.musicapp.ui.components.atoms.AppIconButton
 import com.example.musicapp.ui.components.atoms.AppIconButtonVariant
@@ -107,8 +110,9 @@ private fun DetailTopBarMoleculePreview() {
 private fun DetailTopBarMoleculeSavePreview() {
     DesignSystemPreviewSurface {
         val colors = AppTheme.colors
+        val title = "New Release"
         DetailTopBarMolecule(
-            title = "New Release",
+            title = title,
             onBackClick = {},
             onTrailingClick = {},
             leadingIcon = Icons.Outlined.Close,
@@ -123,6 +127,9 @@ private fun DetailTopBarMoleculeSavePreview() {
                         .clickable(onClick = {}),
                 )
             },
+            modifier = Modifier.testTag("create_header").semantics {
+                contentDescription = title
+            }
         )
     }
 }
