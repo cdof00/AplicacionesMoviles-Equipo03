@@ -1,0 +1,11 @@
+{
+  "tag": "2026-05-21_013336",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am start com.example.musicapp/com.example.musicapp.MainActivity"
+  },
+  "start_state": "30d818e61ada21d91ab149b50884cd18",
+  "stop_state": "081661b265f214ea3a6d8868d36d4061",
+  "event_str": "IntentEvent(intent='am start com.example.musicapp/com.example.musicapp.MainActivity')"
+}

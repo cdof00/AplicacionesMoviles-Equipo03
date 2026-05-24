@@ -42,12 +42,14 @@ fun AlbumCatalogScreen(
     albumViewModel: AlbumViewModel = viewModel()
 ) {
     val s = AppTheme.spacing
+    albumViewModel.refreshDataFromNetwork()
     val albumListUiState by albumViewModel.uiState.collectAsState()
 
     if (albumListUiState.albums.isEmpty()){
         CircularProgressIndicator(modifier = Modifier.fillMaxSize()
             .wrapContentSize(align = Alignment.Center))
     }
+
     else{
         CatalogContentOrganism(
             albums = albumListUiState.albums,

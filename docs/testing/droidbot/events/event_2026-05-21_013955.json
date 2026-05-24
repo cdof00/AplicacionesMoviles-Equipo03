@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013955",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          267,
+          715
+        ],
+        [
+          458,
+          788
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Queen",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 22,
+      "size": "191*73",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Queen[enabled,,]",
+      "view_str": "63b631159b576ab30faeb2f690e867ee",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button bound_box=267,715,458,788>Queen</button>"
+    }
+  },
+  "start_state": "e2eaf667317440284d9bbac0c2d3ce91",
+  "stop_state": "8c327d5c007fb438d9f8f27d8f3f1fdc",
+  "event_str": "TouchEvent(state=e2eaf667317440284d9bbac0c2d3ce91, view=63b631159b576ab30faeb2f690e867ee(MainActivity/TextView-Queen))"
+}

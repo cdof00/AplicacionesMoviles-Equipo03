@@ -38,7 +38,12 @@ class MusicianViewModel(application: Application, musicianId: Int) :
                 android.util.Log.d("MusicianVM", "Musician: ${it.name}, Albums: ${it.albums.size}")
                 _musicianDetail.value = MusicianDetailUiState(it)
             }, {
-                _eventNetworkError.value = true
+                musicianRepository.refreshBandDetail(id, {
+                    android.util.Log.d("MusicianVM", "Musician: ${it.name}, Albums: ${it.albums.size}")
+                    _musicianDetail.value = MusicianDetailUiState(it)
+                }, {
+                    _eventNetworkError.value = true
+                })
             })
         }
     }

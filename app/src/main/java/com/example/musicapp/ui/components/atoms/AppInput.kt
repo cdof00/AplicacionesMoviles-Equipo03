@@ -25,9 +25,7 @@ enum class AppInputState {
 }
 
 enum class AppInputSurfaceStyle {
-    /** Dark glass field used across the app. */
     Default,
-    /** Light field for premium forms on dark background. */
     Elevated,
 }
 
@@ -36,6 +34,7 @@ fun AppInput(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
+    inputModifier: Modifier = Modifier,
     state: AppInputState = AppInputState.Default,
     surfaceStyle: AppInputSurfaceStyle = AppInputSurfaceStyle.Default,
     placeholder: String? = null,
@@ -55,24 +54,29 @@ fun AppInput(
         AppInputSurfaceStyle.Default -> colors.surfaceContainerHighest.copy(alpha = 0.15f)
         AppInputSurfaceStyle.Elevated -> colors.inputElevated
     }
+
     val borderColor = when {
         !enabled -> colors.outlineSubtle.copy(alpha = OpacityTokens.disabledContent)
         showFocus -> colors.primary
         surfaceStyle == AppInputSurfaceStyle.Elevated -> colors.outlineSubtle.copy(alpha = 0.35f)
         else -> colors.outlineSubtle
     }
+
     val textColor = when {
         !enabled -> when (surfaceStyle) {
             AppInputSurfaceStyle.Default -> colors.onSurface.copy(alpha = OpacityTokens.disabledContent)
             AppInputSurfaceStyle.Elevated -> colors.onInputElevated.copy(alpha = OpacityTokens.disabledContent)
         }
+
         surfaceStyle == AppInputSurfaceStyle.Elevated -> colors.onInputElevated
         else -> colors.onSurface
     }
+
     val placeholderColor = when (surfaceStyle) {
         AppInputSurfaceStyle.Default -> colors.onSurfaceVariant
         AppInputSurfaceStyle.Elevated -> colors.onInputElevated.copy(alpha = 0.45f)
     }
+
     val cursorColor = colors.primary
 
     AppSurface(
@@ -87,7 +91,7 @@ fun AppInput(
         BasicTextField(
             value = value,
             onValueChange = onValueChange,
-            modifier = Modifier
+            modifier = inputModifier
                 .fillMaxWidth()
                 .padding(horizontal = s.md, vertical = s.sm),
             enabled = enabled,

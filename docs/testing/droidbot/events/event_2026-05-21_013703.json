@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_013703",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          67,
+          620
+        ],
+        [
+          797,
+          684
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "High-fidelity analog archives",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 18,
+      "size": "730*64",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]High-fidelity analog archives[enabled,,]",
+      "view_str": "fa5ae3b55a2837b498ab1197a86bff01",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<p bound_box=67,620,797,684>High-fidelity analog archives</p>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "5218641ba7485633d435cf25a1a046e5",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=fa5ae3b55a2837b498ab1197a86bff01(MainActivity/TextView-High-fidel))"
+}

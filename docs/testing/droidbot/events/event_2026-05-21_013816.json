@@ -1,0 +1,52 @@
+{
+  "tag": "2026-05-21_013816",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15,
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          67,
+          321
+        ],
+        [
+          1013,
+          879
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 14,
+      "size": "946*558",
+      "signature": "[class]android.view.View[resource_id]None[text]None[enabled,,]",
+      "view_str": "885cd2250c5e18a7bf474c24c9385f5e",
+      "content_free_signature": "[class]android.view.View[resource_id]None"
+    }
+  },
+  "start_state": "4edbace853d27c6d936d3d9ff1e04a3a",
+  "stop_state": "4edbace853d27c6d936d3d9ff1e04a3a",
+  "event_str": "TouchEvent(state=4edbace853d27c6d936d3d9ff1e04a3a, view=885cd2250c5e18a7bf474c24c9385f5e(MainActivity/View-))"
+}

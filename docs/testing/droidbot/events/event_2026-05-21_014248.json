@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014248",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "A Day at the Races",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          579,
+          2256
+        ],
+        [
+          991,
+          2266
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "A Day at the Races",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 50,
+      "size": "412*10",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]A Day at the Races[enabled,,]",
+      "view_str": "88b3a77bc9f6a9251e5d2daef456f56f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "24",
+      "desc": "<button text='A Day at the Races' bound_box=579,2256,991,2266>A Day at the Races</button>"
+    }
+  },
+  "start_state": "5218641ba7485633d435cf25a1a046e5",
+  "stop_state": "aeac6d4920e5e5f61d298baa1f1cff08",
+  "event_str": "TouchEvent(state=5218641ba7485633d435cf25a1a046e5, view=88b3a77bc9f6a9251e5d2daef456f56f(MainActivity/TextView-A Day at t))"
+}

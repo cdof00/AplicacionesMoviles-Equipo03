@@ -17,8 +17,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.musicapp.R
 import com.example.musicapp.ui.components.organisms.CatalogBottomNavBarOrganism
 import com.example.musicapp.ui.components.organisms.CollectorsContentOrganism
 import com.example.musicapp.ui.components.organisms.FloatingAddButtonOrganism
@@ -36,6 +38,14 @@ fun CollectorsScreen(
 ) {
 
     val application = LocalContext.current.applicationContext as Application
+
+    val errorLoading = stringResource(R.string.error_loading)
+    val no_collectors = stringResource(R.string.no_collectors)
+    val elite = stringResource(R.string.elite)
+    val pro = stringResource(R.string.pro)
+    val archivist = stringResource(R.string.archivist)
+    val legend = stringResource(R.string.legend)
+    val emerging = stringResource(R.string.emerging)
 
     val collectorViewModel: CollectorViewModel = viewModel(
         factory = CollectorViewModel.Factory(
@@ -60,7 +70,7 @@ fun CollectorsScreen(
 
         hasError -> {
             Text(
-                text = "Error loading collectors",
+                text = errorLoading,
                 modifier = Modifier
                     .fillMaxSize()
                     .wrapContentSize(align = Alignment.Center)
@@ -69,7 +79,7 @@ fun CollectorsScreen(
 
         collectorListUiState.collectors.isEmpty() -> {
             Text(
-                text = "No collectors found",
+                text = no_collectors,
                 modifier = Modifier
                     .fillMaxSize()
                     .wrapContentSize(align = Alignment.Center)
@@ -81,11 +91,11 @@ fun CollectorsScreen(
             val collectorEntries = collectorListUiState.collectors.mapIndexed { index, collector ->
 
                 val tier = when (index % 5) {
-                    0 -> "ELITE"
-                    1 -> "PRO"
-                    2 -> "ARCHIVIST"
-                    3 -> "LEGEND"
-                    else -> "EMERGING"
+                    0 -> elite
+                    1 -> pro
+                    2 -> archivist
+                    3 -> legend
+                    else -> emerging
                 }
 
                 CollectorListEntry(
@@ -93,7 +103,7 @@ fun CollectorsScreen(
                     name = collector.name,
                     lpCount = collector.collectorAlbums.size,
                     tierLabel = tier,
-                    highlightAvatarBadge = tier == "ELITE",
+                    highlightAvatarBadge = tier == elite,
                     avatarGradientIndex = index,
                     genres = emptyList()
                 )

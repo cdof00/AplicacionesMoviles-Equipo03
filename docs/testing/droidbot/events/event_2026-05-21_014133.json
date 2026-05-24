@@ -1,0 +1,55 @@
+{
+  "tag": "2026-05-21_014133",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.musicapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          410,
+          704
+        ],
+        [
+          678,
+          756
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Jazz Purists",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "268*52",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Jazz Purists[enabled,,]",
+      "view_str": "ca1ffc0062efb6c5d76df9ffbbac3c61",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<button bound_box=410,704,678,756>Jazz Purists</button>"
+    }
+  },
+  "start_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "stop_state": "b21f4de8ef19f35782ffd1aac4afd13a",
+  "event_str": "TouchEvent(state=b21f4de8ef19f35782ffd1aac4afd13a, view=ca1ffc0062efb6c5d76df9ffbbac3c61(MainActivity/TextView-Jazz Puris))"
+}

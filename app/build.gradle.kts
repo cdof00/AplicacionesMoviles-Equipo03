@@ -57,6 +57,8 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.7.0")
     implementation("com.android.volley:volley:1.2.1")
+    implementation("androidx.compose.material3:material3:1.4.0")
+    implementation("androidx.compose.runtime:runtime:1.11.2")
 
     // Test rules and transitive dependencies:
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.11.0")

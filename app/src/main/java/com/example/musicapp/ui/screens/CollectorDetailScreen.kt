@@ -10,7 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.musicapp.R
 import com.example.musicapp.ui.components.organisms.CatalogBottomNavBarOrganism
 import com.example.musicapp.ui.components.organisms.CollectorDetailContentOrganism
 import com.example.musicapp.ui.components.templates.CollectorDetailTemplate
@@ -43,12 +45,12 @@ fun CollectorDetailScreen(
     } else {
         val collector = collectorDetailUiState.collector
         val uiModel = CollectorDetailUiModel(
-            screenTitle = "Collector Detail",
+            screenTitle = stringResource(R.string.collector_detail_title),
             collectorName = collector.name,
             metadata = collector.email,
             avatarInitials = collector.name.take(2).uppercase(),
-            eliteBadgeLabel = "COLLECTOR",
-            followLabel = "Follow",
+            eliteBadgeLabel = stringResource(R.string.collector),
+            followLabel = stringResource(R.string.follow),
             heroAvatarGradientIndex = 0,
             genres = when (collectorId) {
                 100 -> listOf("Salsa", "Jazz", "Bolero")
