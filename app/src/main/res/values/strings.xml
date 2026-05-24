@@ -27,4 +27,73 @@
     <string name="track_name_input_content_description">Input field for track name</string>
     <string name="track_duration_input_content_description">Input field for track duration</string>
 
+    <!-- BottomBar -->
+    <string name="bottom_bar_albums">ALBUMS</string>
+    <string name="bottom_bar_artists">ARTISTS</string>
+    <string name="bottom_bar_collectors">COLLECTORS</string>
+    <string name="bottom_bar_add">ADD</string>
+
+    <!-- AlbumScreen -->
+    <string name="album_title">Album Catalog</string>
+    <string name="collection">Collection</string>
+    <string name="spun">Recently Spun</string>
+    <string name="vault">Curated Vault</string>
+    <string name="archive">High-fidelity analog archives</string>
+
+    <!-- ArtistsScreen -->
+    <string name="artists_not_found">Album Catalog</string>
+    <string name="artist_header">Artists</string>
+    <string name="collection_title">CURATED COLLECTION</string>
+    <string name="primary_title_artists">Legendary</string>
+    <string name="secondary_title_artists">Voices</string>
+
+    <!-- CollectorsScreen -->
+    <string name="error_loading">Error loading collectors</string>
+    <string name="no_collectors">No collectors found</string>
+    <string name="elite">ELITE</string>
+    <string name="pro">PRO</string>
+    <string name="archivist">ARCHIVISTA</string>
+    <string name="legend">LEYENDA</string>
+    <string name="emerging">EMERGENTE</string>
+    <string name="collectors">COLLECTORS</string>
+    <string name="collectors_title">Collection</string>
+    <string name="collectors_subtitle">Connecting with the elite circles of the high-fidelity community.</string>
+    <string name="musical_taste">Musical Taste</string>
+    <string name="top_genres">TOP GENRES</string>
+    <string name="collector_detail_title">Collector Detail</string>
+    <string name="collector">COLLECTOR</string>
+    <string name="follow">Follow</string>
+    <string name="favorite_artists">Favorite Artists</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="recently_added">Recently Added</string>
+
+    <!-- CreateAlbumScreen -->
+    <string name="album_title_required_error">Please type an album title.</string>
+    <string name="album_description_required_error">Please type an album description.</string>
+    <string name="album_artist_required_error">Please select an artist.</string>
+    <string name="album_year_required_error">Please type the album release year.</string>
+    <string name="album_genre_required_error">Please select a genre.</string>
+    <string name="album_url_required_error">Please insert a valid URL.</string>
+    <string name="album_cover_required_error">Please insert the album artwork URL.</string>
+    <string name="album_label_required_error">Please select a record label.</string>
+    <string name="album_created_success">Album created successfully</string>
+    <string name="album_created_success_message">This album has been created successfully. Do you want to see it?</string>
+
+    <string name="new_release_header">New Album</string>
+    <string name="save_button">SAVE</string>
+
+    <string name="title_form_header">ALBUM TITLE</string>
+    <string name="description_form_header">ALBUM DESCRIPTION</string>
+    <string name="artist_form_header">ARTIST / ENSEMBLE</string>
+    <string name="year_form_header">YEAR</string>
+    <string name="genre_form_header">GENRE</string>
+    <string name="cover_form_header">ARTWORK URL</string>
+    <string name="label_form_header">RECORD LABEL</string>
+
+    <string name="title_placeholder">Title</string>
+    <string name="description_placeholder">Description</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="dismiss">Dismiss</string>
+
 </resources>

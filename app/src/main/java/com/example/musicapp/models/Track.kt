@@ -6,3 +6,8 @@ data class Track (
     val duration:String,
     val albumId:Int
 )
+
+data class CreateTrack(
+    var name:String,
+    var duration:String,
+)

@@ -11,7 +11,9 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.R
 import com.example.musicapp.ui.components.molecules.CatalogCollectionHeaderMolecule
 import com.example.musicapp.ui.components.molecules.CollectorListItemMolecule
 import com.example.musicapp.ui.components.molecules.CollectorsHeroSectionMolecule
@@ -31,6 +33,9 @@ fun CollectorsContentOrganism(
 ) {
     val s = AppTheme.spacing
     var selectedChipIndex by rememberSaveable { mutableIntStateOf(0) }
+    val collectorsText = stringResource(R.string.collectors)
+    val collectorsTitle = stringResource(R.string.collectors_title)
+    val collectorsSubtitle = stringResource(R.string.collectors_subtitle)
 
     LazyColumn(
         modifier = modifier
@@ -40,14 +45,14 @@ fun CollectorsContentOrganism(
         contentPadding = PaddingValues(bottom = s.xxl),
     ) {
         item {
-            CatalogCollectionHeaderMolecule(title = "Collection")
+            CatalogCollectionHeaderMolecule(title = collectorsTitle)
         }
 
         item {
             CollectorsHeroSectionMolecule(
-                watermarkNumber = "04",
-                title = "COLLECTORS",
-                subtitle = "Connecting with the elite circles of the high-fidelity community.",
+                watermarkNumber = "03",
+                title = collectorsText,
+                subtitle = collectorsSubtitle,
             )
         }
 

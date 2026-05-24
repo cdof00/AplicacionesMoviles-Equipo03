@@ -42,6 +42,7 @@ fun AlbumCatalogScreen(
     albumViewModel: AlbumViewModel = viewModel()
 ) {
     val s = AppTheme.spacing
+    albumViewModel.refreshDataFromNetwork()
     val albumListUiState by albumViewModel.uiState.collectAsState()
 
     if (albumListUiState.albums.isEmpty()){

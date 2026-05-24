@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.example.musicapp.R
 import com.example.musicapp.ui.components.molecules.DetailTopBarMolecule
 import com.example.musicapp.ui.components.molecules.GenreChipRowMolecule
 import com.example.musicapp.ui.components.molecules.SectionHeaderMolecule
@@ -23,6 +25,9 @@ fun CollectorDetailContentOrganism(
 ) {
     val s = AppTheme.spacing
     val colors = AppTheme.colors
+
+    val musicalTaste = stringResource(R.string.musical_taste)
+    val topGenres = stringResource(R.string.top_genres)
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
@@ -55,10 +60,10 @@ fun CollectorDetailContentOrganism(
         }
         item {
             SectionHeaderMolecule(
-                title = "Musical Taste",
+                title = musicalTaste,
                 action = {
                     AppText(
-                        text = "TOP GENRES",
+                        text = topGenres,
                         style = AppTheme.typography.labelSmall,
                         color = colors.primary,
                     )

@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.musicapp.R
 import com.example.musicapp.models.Album
 import com.example.musicapp.ui.components.atoms.AppText
 import com.example.musicapp.ui.components.molecules.AlbumTileMolecule
@@ -26,12 +28,16 @@ fun RecentlyAddedSectionOrganism(
 ) {
     val s = AppTheme.spacing
     val colors = AppTheme.colors
+
+    val viewAllText = stringResource(R.string.view_all)
+    val recentlyAdded = stringResource(R.string.recently_added)
+
     Column(modifier = modifier.fillMaxWidth()) {
         SectionHeaderMolecule(
-            title = "Recently Added",
+            title = recentlyAdded,
             action = {
                 AppText(
-                    text = "VIEW ALL",
+                    text = viewAllText,
                     style = AppTheme.typography.labelSmall,
                     color = colors.primary,
                     modifier = Modifier.clickable(onClick = onViewAllClick),
